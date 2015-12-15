@@ -53,22 +53,22 @@ function home() {
 }
 
 function s1() {
-    $('#home-sketch-frame').attr('src', '/existential');
+    $('#home-sketch-frame').attr('src', 'existential/index.html');
     $('body').css('pointer-events', 'auto');
 }
 
 function s2() {
-    $('#home-sketch-frame').attr('src', '/draw');
+    $('#home-sketch-frame').attr('src', 'draw/index.html');
     $('body').css('pointer-events', 'none');
     $('section').css('pointer-events', 'auto');
 }
 
 function s3() {
-    $('#home-sketch-frame').attr('src', '/storm');
+    $('#home-sketch-frame').attr('src', 'storm/index.html');
     $('body').css('pointer-events', 'auto');
 }
 
 function s4() {
-    $('#home-sketch-frame').attr('src', '/tunes');
+    $('#home-sketch-frame').attr('src', 'tunes/index.html');
     $('body').css('pointer-events', 'auto');
 }
