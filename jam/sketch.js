@@ -32,7 +32,7 @@ var b;
 
 
 function preload() {
-  dreamer = loadSound("../sound/jazz.mp3");
+  dreamer = loadSound("../public/sound/jazz.mp3");
 }
 
 
