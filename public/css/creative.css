@@ -403,6 +403,11 @@ LIGHT BOX
     padding: 5px 0 10px 0;
 }
 
+span.featherlight-close-icon.featherlight-close {
+    width: 35px !important;
+    line-height: 35px !important;
+}
+
 
 .call-to-action h2 {
     margin: 0 auto 20px;
