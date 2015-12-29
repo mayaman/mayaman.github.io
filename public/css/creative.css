@@ -79,7 +79,7 @@ section {
 }
 
 section#contact {
-    padding: 50px;
+    padding: 50px 50px 10px 50px;
 }
 
 section#portfolio {
@@ -586,16 +586,15 @@ fieldset[disabled] .btn-primary.active {
 footer p {
     text-align: center;
     font-family: 'Playfair Display', serif;
-    background-color: black;
     margin-bottom: 0px;
     padding: 15px;
     font-size: .9em;
-    color: white;
+    color: black;
 }
 
 footer a:hover, p a:hover {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 
