@@ -1,0 +1,27 @@
+{
+  "name": "featherlight",
+  "version": "1.3.5",
+  "main": "release/featherlight.min.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "test",
+    "*.md",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "devDependencies": {
+    "jquery": "~1.7.0",
+    "requirejs": "~2.1.10",
+    "chai": "~1.9.1",
+    "chai-jquery": "*",
+    "chai-properties": "git://github.com/vbardales/chai-properties.git",
+    "lodash": "*",
+    "mocha": "~1.18.2"
+  },
+  "keywords": [
+    "featherlight",
+    "javascript",
+    "library"
+  ]
+}

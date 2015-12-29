@@ -1,0 +1,10 @@
+node_modules
+bower_components
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*~

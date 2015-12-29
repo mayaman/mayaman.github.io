@@ -4,13 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
- @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
- @import url(https://fonts.googleapis.com/css?family=Poiret+One);
- @import url(https://fonts.googleapis.com/css?family=Quicksand);
- @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 
- html,
- body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -57,6 +57,10 @@ p {
     font-family: times;
 }
 
+.hidden {
+    display: hidden;
+}
+
 .bg-primary {
     background-color: #474747;
 }
@@ -68,7 +72,6 @@ p {
 
 .text-faded, p a:hover {
     color: rgba(255,255,255,.7);
-    text-decoration: 
 }
 
 section {
@@ -234,7 +237,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 3em !important;
     font-weight: 300;
-    /*    color: rgba(255,255,255,.7);*/
+/*    color: rgba(255,255,255,.7);*/
     color: black;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
@@ -273,7 +276,7 @@ header .header-content .header-content-inner p {
 
 .service-box {
     margin: 50px auto 0;
-    /*    max-width: 400px;*/
+/*    max-width: 400px;*/
 }
 
 @media(min-width:992px) {
@@ -299,64 +302,42 @@ section#portfolio {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    /*    max-width: 650px;*/
+/*    max-width: 650px;*/
 }
 
-.portfolio-text {
-    margin-left: 0;
-}
-
-.portfolio-text h1{
-    padding-bottom: 5px;
-}
-
-.portfolio-text p {
-  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.portfolio-text {
-  font-family: 'Playfair Display', serif;
-}
-
-/*.portfolio-box .portfolio-box-caption {
+/*ADDED THIS!*/
+.portfolio-box .portfolio-box-caption {
     display: block;
-    position: absolute;
+    /*
     bottom: 0;
     text-align: center;
     color: black;
     opacity: 0;
-    /*    background: rgba(158,206,235,.9);*/
-/*    -webkit-transition: all .35s;
+   background: rgba(158,206,235,.9);
+   */
+    -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
-
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    position: absolute;
-    top: 50%;
+    /*position: absolute; */    
+    top: 80%;
     width: 100%;
     text-align: center;
-    transform: translateY(-50%);
+    z-index: -99;
+    transform: translateY(-180%);
 }
-*/
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+/* END ADDED THIS!*/
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    /*padding: 0 15px;*/
+    font-family: 'Playfair Display', serif;
     font-size: 18px;
+    color: white;
 }
 
-.portfolio-box:hover .portfolio-box-caption {
-    opacity: 1;
+.portfolio-box:hover, .portfolio-box-caption:hover {
+    border-bottom: none;
+    text-decoration: none;
 }
 
 .portfolio-box img {
@@ -370,7 +351,6 @@ section#portfolio {
     width: 100%;
     border: 20px solid #9ECEEB;
     border-bottom: 90px solid #9ECEEB;
-    opacity: .9;
 }
 
 .portfolio-box {
@@ -387,11 +367,42 @@ section#portfolio {
     }
 
     .portfolio-box {
-        height: 500px;
-        /*width: 1000px;*/
-        padding: 20px;
-    }
+    height: 500px;
+    /*width: 1000px;*/
+    padding: 20px;
+   }
 }
+
+/********************************************
+LIGHT BOX    
+********************************************/
+.lightbox {
+    padding: 5px 35px 5px 35px;
+    text-align: center;
+}
+
+.lightbox h1 {
+    text-align: center;
+    font-size: 45px !important;
+    margin-bottom: 0px;
+}
+
+.lightbox .description {
+    padding-top: 10px;
+    text-align: left;
+    width: 750px;
+}
+
+.lightbox .description p {
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-size: 20px !important;
+}
+
+.lightbox img {
+    width: 750px;
+    padding: 5px 0 10px 0;
+}
+
 
 .call-to-action h2 {
     margin: 0 auto 20px;
@@ -471,7 +482,7 @@ fieldset[disabled] .btn-default.active {
 }
 
 .bg-btn a {
- font-size: 1.2em;
+   font-size: 1.2em;
 }
 
 .btn-primary:hover,
@@ -554,7 +565,7 @@ fieldset[disabled] .btn-primary.active {
     height: 80px;
     z-index: -1;
     margin: 0;
-    opacity: .8;
+   opacity: .8;
     color: #9ECEEB;
 }
 
