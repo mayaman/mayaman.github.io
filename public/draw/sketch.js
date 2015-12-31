@@ -11,6 +11,9 @@ function setup() {
   text("click and move to start", windowWidth/2, windowHeight/5);
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function draw() {
   //if (x > 0) {
@@ -34,4 +37,6 @@ function mouseMoved() {
   cleared = true;
   }
 }
+
+
 

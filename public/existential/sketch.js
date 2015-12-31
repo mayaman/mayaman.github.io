@@ -4,6 +4,10 @@ function setup() {
   frameRate(2);
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   noStroke();
   // background(89, 89, 89, 20);
