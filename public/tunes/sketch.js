@@ -35,6 +35,10 @@ function setup() {
   dreamer.play();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   var v = amp.getLevel();
   var dat = frq.analyze();

@@ -36,6 +36,10 @@ function setup() {
   // rain.play();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
 
   var v = amp.getLevel();
@@ -96,6 +100,8 @@ function Drop() {
     line(this.x, this.y, this.x, this.y + this.length)
   }
 }
+
+
 
 // function mouseClicked() {
 //   stroke(255, 204, 0);
