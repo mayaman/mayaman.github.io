@@ -48,7 +48,7 @@ function draw() {
 
   textSize(30);
   fill(0, 0, 100);
-  text("clap for lightening!", 10, 60);
+  text("clap for lightning!", 10, 60);
 
    //imageMode(CENTER);
    //image(cloud, width/2, 100);
