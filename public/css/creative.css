@@ -320,7 +320,7 @@ section#portfolio {
     transition: all .35s;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    /*position: absolute; */    
+    /*position: absolute; */
     top: 80%;
     width: 100%;
     text-align: center;
@@ -374,7 +374,7 @@ section#portfolio {
 }
 
 /********************************************
-LIGHT BOX    
+LIGHT BOX
 ********************************************/
 .lightbox {
     padding: 5px 35px 5px 35px;
@@ -390,7 +390,7 @@ LIGHT BOX
 .lightbox .description {
     padding-top: 10px;
     text-align: left;
-    width: 750px;
+    /*width: 750px;*/
 }
 
 .lightbox .description p {
@@ -399,7 +399,9 @@ LIGHT BOX
 }
 
 .lightbox img {
-    width: 750px;
+    display: block;
+    margin: auto;
+    width: 70%;
     padding: 5px 0 10px 0;
 }
 
