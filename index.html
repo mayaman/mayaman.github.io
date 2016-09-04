@@ -81,6 +81,11 @@ $('a').css('pointer-events', 'auto');
   <div class="container-fluid">
     <div class="row no-gutter">
       <div class="col-lg-4 col-sm-6">
+        <a href="#" data-featherlight="#holodeck" class="portfolio-box">
+          <img src="public/images/holodeck.jpg" class="img-responsive" alt="">
+        </a>
+      </div>
+      <div class="col-lg-4 col-sm-6">
         <a href="#" data-featherlight="#social" class="portfolio-box">
           <img src="public/images/social.jpg" class="img-responsive" alt="">
         </a>
@@ -131,6 +136,18 @@ $('a').css('pointer-events', 'auto');
 </section>
 <!--********** info sections *********-->
 <div class="hidden">
+  <div id="holodeck" class="lightbox">
+    <h1>Surround Sound:</h1>
+    <h1>The World's Top Trending Tracks at Your Feet</h1>
+    <hr class="primary">
+    <iframe src="https://player.vimeo.com/video/180636713?title=0&byline=0&portrait=0" width="750" height="422" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="description">
+      <p>Working on the Experience Centers team at Google, another Engineering Practicum intern and I were given the task of creating an exhibit in the Holodeck space at the Google Partner Plex that somehow used the kinect sensors on the walls and the Youtube API. Using the design thinking process to brainstorm, we decided to create this immersive music visualization experience that shows off Youtube and Google's technology.</p>
+      <p>I worked on the front end of the exhibit, using Firebase as the persistent database, node.js as server side Javascript, p5.js for the visualizations and sound analysis, and the Youtube API to access the top trending music videos in specified regions. A user first walks in and stands on one of the circles on the floor, say Brazil's. The kinect cameras use depth sensing to detect that a person is on that circle and tells the wall's computer to cue one of the currently top trending music videos in Brazil and to display the music visualization specified for that location. </p>
+      <p>The exhibit is configurable: users can type in up to six countries of their choosing and see the whole exhibit change based around those regions' data. Also, the color palette of each music visualization is chosen based on the dominant colors used in the video's thumbnail. This way, each visualization's aestheic matches that of the music video it's surrounding.</p>
+      <p>skills: Javascript, p5.js, node.js, Firebase, Youtube API</p>
+    </div>
+  </div>
   <div id="social" class="lightbox">
     <h1>Socially Active: The Media Machine</h1>
     <hr class="primary">
