@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+body {
+font-family: 'Playfair Display', serif;
+font-size: 2em;
+background: #FFC65F;
+text-align: center;
+padding: 25px 100px 25px 100px !important;
+}
+
+body h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body .question {
+  text-decoration: none;
+  color: black;
+  /*background-color: black;*/
+  border: 1px;
+  background-color: #DD8F87;
+  border-style: solid;
+  border-color: #DD8F87;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  font-size: 24px;
+}
+
+body .question:hover {
+  text-decoration: none;
+  border: 1px;
+  background-color: #FFEC87;
+  border-style: solid;
+  border-color: #FFEC87;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  font-size: 24px;
+}
