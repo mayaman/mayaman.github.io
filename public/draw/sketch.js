@@ -8,7 +8,7 @@ function setup() {
   textSize(50);
   textAlign(CENTER);
   textFont("Georgia");
-  text("click and move to start", windowWidth/2, windowHeight/5);
+  //text("click and move to start", windowWidth/2, windowHeight/5);
 }
 
 function windowResized() {
@@ -16,7 +16,7 @@ function windowResized() {
 }
 
 function draw() {
-  if (x > 0) {
+  if (!(pmouseX == 0 && pmouseY == 0)) {
   strokeWeight(4);
   line(pmouseX, pmouseY, mouseX, mouseY);
   line(pmouseX, pmouseY + 10, mouseX, mouseY+10);
@@ -33,10 +33,11 @@ function mouseClicked() {
 
 function mouseMoved() {
   if (!cleared && started) {
-  text("click to clear", windowWidth/2, windowHeight/5);
+  // text("click to clear", windowWidth/2, windowHeight/5);
   cleared = true;
   }
 }
 
-
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}

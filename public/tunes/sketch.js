@@ -4,12 +4,20 @@ var v; // level of amplitude
 
 var rad = 10;
 
+// sunday morning
+// var threshold = 0.5;
+// var bassthresh = 230;
+// var lowMidThresh = 220;
+// var midthresh = 170;
+// var highMidThresh = 130;
+// var trebthresh = 130;
+
 var threshold = 0.5;
-var bassthresh = 230;
-var lowMidThresh = 220;
-var midthresh = 170;
-var highMidThresh = 130;
-var trebthresh = 130;
+var bassthresh = 210;
+var lowMidThresh = 180;
+var midthresh = 130;
+var highMidThresh = 110;
+var trebthresh = 90;
 
 
 var cutoff = 0;
@@ -18,7 +26,7 @@ var decayRate = 0.99;
 
 
 function preload() {
-  dreamer = loadSound("../sound/sunday.mp3");
+  dreamer = loadSound("../sound/jazz.mp3");
 }
 
 
@@ -56,13 +64,13 @@ function draw() {
   // if (v > threshold) {
   //   background(0, 0, 0, 20);
   // }
- 
+
 
   if (bass > bassthresh) {
     fill(16, 14, 81);
     ellipse(random(0, width/5), random(10, height), rad, rad);
     // rect(0, 0, width/5, height);
-  } 
+  }
 
   if (lowMid > lowMidThresh) {
     fill(50, 12, 245);
@@ -89,4 +97,8 @@ function draw() {
   }
 
   cutoff = cutoff * decayRate;
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
