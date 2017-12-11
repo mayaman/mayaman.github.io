@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>WebGL Globe</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+  </head>
+  <body>
+
+  <div id="container"></div>
+
+  <div id="info">
+    <strong><a href="http://www.chromeexperiments.com/globe">Created using the WebGL Globe</a></strong></a>
+  </div>
+
+  <div id="about" class="menu">
+    <span><strong><a href="/ufo/about/" id="about" class="menu-option">About</a></strong></span>
+    <span><strong><a href="/ufo/moredata/" id="data" class="menu-option">More Data</a></strong></span>
+  </div>
+
+
+  <div id="title">
+    <a href="/ufo/">
+    <img src="../assets/alien-title.png" style="width: 300px;" alt="UFO Sightings">
+    </a>
+  </div>
+
+  <div id="about-container">
+    <p> For our final project, we investigated the National UFO Reporting Center (NUFORC) data. This data consists of several textual UFO reports over the course of over half a century. We implemented a variety of data analysis algorithms such as Map-Reduce, to analyze significant aspects of the data such as location, text provided by the reporter, date, and time of night. We also created a webpage to host all of the visualizations we created so other people can access this information and gain a better understanding of the UFO sighting dataset. </p>
+
+    <p> The globe visualization on the landing page visualizes the 500 centroids generated when we ran the K-means algorithm over all of the latitude and longitude points and specified that we wanted 500 clusters. The height of each plotted centroid represents the number of sightings in that centroid's cluster. The higher number of sightings in that area, the greater the height of that point.</p>
+
+    <p> Created by <a href="http://www.mayaman.cc" > Maya Man </a>, Sonia Grunwald, Peter Xenopoulos, and Edwin Villafane.</p>
+  </div>
+
+  <a id="ce" href="http://www.chromeexperiments.com/globe">
+    <span>This is a Chrome Experiment</span>
+  </a>
+
+  </body>
+
+</html>
