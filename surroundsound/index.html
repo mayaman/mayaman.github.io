@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maya Man</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap Core CSS-->
+  <link rel="stylesheet" href="../public/css/bootstrap.min.css" type="text/css">
+  <!-- Custom Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../public/font-awesome/public/css/font-awesome.min.css" type="text/css">
+  <!-- Plugin CSS-->
+  <link rel="stylesheet" href="../public/css/animate.min.css" type="text/css">
+  <link rel="stylesheet" href="../public/css/featherlight.min.css" type="text/css">
+  <!-- Custom CSS-->
+  <link rel="stylesheet" href="../public/css/creative.css" type="text/css">
+  <link rel="icon" type="image/png" href="../public/images/icon.png">
+  <link rel="stylesheet" href="../public/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+
+  <!--********** header *********-->
+  <header>
+    <div class="header-content">
+     <div class="header-content-inner">
+      <a href="/"> <h1>Maya Man</h1> </a>
+      <div class="pages"> <a href="/work/"> work </a> <a href="/about/"> about </a> </div>
+    </div>
+   </div>
+  </header>
+
+<!--********** info sections *********-->
+<div class="content">
+  <!-- <a href="/work/"><span class="featherlight-close-icon featherlight-close right">x</span></a> -->
+    <div class="project-title">
+      <h2>Surround Sound</h2>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9 video center">
+      <iframe src="https://player.vimeo.com/video/180636713?title=0&byline=0&portrait=0" frameborder="0" align="center" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="description">
+      <p>Working on the Experience Centers team at Google, <a href="https://www.linkedin.com/in/colettetorres/">Colette Torres</a> and I were given the task of creating an exhibit in the Holodeck space at the Google Partner Plex that somehow used the kinect sensors on the walls and the Youtube API. Using the design thinking process to brainstorm, we decided to create this immersive music visualization experience that shows off Youtube and Google's technology.</p>
+      <p>I worked on the front end of the exhibit, using Firebase as the persistent database, node.js as server side Javascript, p5.js for the visualizations and sound analysis, and the Youtube API to access the top trending music videos in specified regions. A user first walks in and stands on one of the circles on the floor, say Brazil's. The kinect cameras use depth sensing to detect that a person is on that circle and tells the wall's computer to cue one of the currently top trending music videos in Brazil and to display the music visualization specified for that location. </p>
+      <p>The exhibit is configurable: users can type in up to six countries of their choosing and see the whole exhibit change based around those regions' data. Also, the color palette of each music visualization is chosen based on the dominant colors used in the video's thumbnail. This way, each visualization's aestheic matches that of the music video it's surrounding.</p>
+      <br>
+      <!-- <a href="/work/">Supporting Th</a> -->
+    </div>
+</div>
+
+<!--********** scripts *********-->
+<!-- jQuery--><script src="../public/js/jquery.js">
+</script>
+<!-- Bootstrap Core JavaScript--><script src="../public/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript--><script src="../public/js/jquery.easing.min.js"></script>
+<script src="../public/js/jquery.fittext.js"></script>
+<script src="../public/js/wow.min.js"></script>
+<script src="../public/js/featherlight.min.js"></script>
+<!-- Custom Theme JavaScript-->
+<script src="../public/js/creative.js"></script>
+</body>
+</html>
