@@ -365,6 +365,11 @@ span.featherlight-close-icon.featherlight-close {
     line-height: 35px !important;
 }
 
+span.featherlight-close-icon.featherlight-close {
+    width: 35px !important;
+    line-height: 35px !important;
+}
+
 
 .call-to-action h2 {
   margin: 0 auto 20px;
