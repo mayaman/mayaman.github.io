@@ -229,16 +229,7 @@ WORK
   -moz-transition: all .35s;
   transition: all .35s;
 }
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-  /*position: absolute; */
-  top: 80%;
-  width: 100%;
-  text-align: center;
-  z-index: -99;
-  transform: translateY(-180%);
-}
-
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
   /*padding: 0 15px;*/
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -355,6 +346,11 @@ span.featherlight-close-icon.featherlight-close {
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   /* margin: 20px; */
+}
+
+span.featherlight-close-icon.featherlight-close {
+    width: 35px !important;
+    line-height: 35px !important;
 }
 
 
@@ -558,5 +554,5 @@ img::-moz-selection {
 }
 
 body {
-  webkit-tap-highlight-color: #222;
+    webkit-tap-highlight-color: #222;
 }
