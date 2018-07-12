@@ -229,7 +229,9 @@ WORK
   -moz-transition: all .35s;
   transition: all .35s;
 }
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name
+{
   /*padding: 0 15px;*/
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
@@ -277,6 +279,11 @@ ABOUT
 
 #about p {
   font-size: 1em;
+}
+
+#about img {
+  margin-top: 20px;
+  width: 80%;
 }
 
 .about-text {
