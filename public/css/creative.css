@@ -1,8 +1,8 @@
 /*!
- * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+* Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
 
 /* font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -13,34 +13,34 @@
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body .content {
-    width: 70%;
-    max-width: 900px;
-    min-width: 300px;
-    margin: 0px auto 0px auto;
-    position: relative;
+  width: 70%;
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0px auto 20px auto;
+  position: relative;
 }
 
 a {
-    color: #000000;
-    text-decoration: none;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  color: #000000;
+  text-decoration: none;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 header a:hover,
 header a:focus {
-    color: #a6a7a8;
-    text-decoration: none;
+  color: #a6a7a8;
+  text-decoration: none;
 }
 
 .content p a {
@@ -54,37 +54,37 @@ header a:focus {
 }
 
 h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
 }
 
 h2 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-size: 3em;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 3em;
 }
 
 p {
-    font-size: 1em;
-    line-height: 1.5;
-    font-family: 'Source Serif Pro', serif;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: 'Source Serif Pro', serif;
 }
 
 .hidden {
-    display: hidden;
+  display: hidden;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 aside {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .no-padding {
-    padding: 0;
+  padding: 0;
 }
 
 /********************************************
@@ -92,23 +92,23 @@ HEADER
 ********************************************/
 
 header {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    text-align: center;
-    color: #fff;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  color: #fff;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 header .header-content {
-    position: relative;
-    width: 100%;
-    padding: 50px 15px;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  padding: 50px 15px;
+  text-align: center;
 }
 
 header .pages a {
@@ -118,60 +118,78 @@ header .pages a {
 }
 
 header .header-content .header-content-inner h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 3em !important;
-    color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 3em !important;
+  color: black;
 }
 
 header .header-content .header-content-inner hr {
-    margin: 30px auto;
+  margin: 30px auto;
 }
 
 header .header-content .header-content-inner p {
-    margin-bottom: 50px;
-    font-size: 3em !important;
-    font-weight: 300;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
+  margin-bottom: 50px;
+  font-size: 3em !important;
+  font-weight: 300;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media(max-width:768px) {
+  header {
+    max-height: 20%;
+  }
 }
 
 @media(min-width:768px) {
-    header {
-        min-height: 15%;
-    }
 
-    header .header-content {
-        position: absolute;
-        top: 50%;
-        padding: 0 50px;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-    }
+  header {
+    min-height: 15%;
+  }
 
-    header .header-content .header-content-inner {
-        margin-right: auto;
-        margin-left: auto;
-        /*max-width: 1000px;*/
-    }
+  header .header-content {
+    position: absolute;
+    top: 50%;
+    padding: 0 50px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 
-    header .header-content .header-content-inner p {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: 80%;
-        font-size: 3em;
-    }
+  header .header-content .header-content-inner {
+    margin-right: auto;
+    margin-left: auto;
+    /*max-width: 1000px;*/
+  }
+
+  header .header-content .header-content-inner p {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80%;
+    font-size: 3em;
+  }
 }
 
 #myVideo {
+  position: fixed;
+  left: -25%;
+  top: 0;
+  width: auto;
+  height: 100%;
+  z-index: -10;
+}
+
+@media(max-width:768px) {
+  #myVideo {
     position: fixed;
-    left: 0;
-    top: 15%;
-    width: 100%;
+    left: -130%;
+    top: 0;
+    width: auto;
     height: 100%;
-    z-index: -500;
+    z-index: -10;
+  }
 }
 
 
@@ -181,13 +199,13 @@ WORK
 
 .video-container {
   position: relative;
-padding-bottom: 45%;
-height: 0;
-overflow: hidden;
-margin-left: auto;
-margin-right: auto;
-display: block;
-width: 80%;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
 }
 
 .project-title {
@@ -199,67 +217,67 @@ width: 80%;
 }
 
 .portfolio-box {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-box .portfolio-box-caption {
-    display: block;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  display: block;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
-    /*position: absolute; */
-    top: 80%;
-    width: 100%;
-    text-align: center;
-    z-index: -99;
-    transform: translateY(-180%);
+  /*position: absolute; */
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  z-index: -99;
+  transform: translateY(-180%);
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    /*padding: 0 15px;*/
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: white;
+  /*padding: 0 15px;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: white;
 }
 
 .portfolio-box:hover, .portfolio-box-caption:hover {
-    border-bottom: none;
-    text-decoration: none;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 .portfolio-box img {
-    width: 100%;
-    opacity: 1;
+  width: 100%;
+  opacity: 1;
 }
 
 .portfolio-box img:hover {
-    width: 100%;
-    opacity: 0.5;
+  width: 100%;
+  opacity: 0.7;
 }
 
 .portfolio-box {
-    padding: 20px;
+  padding: 20px;
 }
 
 @media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
-    }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
 
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
-    }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
 
-    .portfolio-box {
+  .portfolio-box {
     /* height: 500px; */
     /*width: 1000px;*/
     padding: 20px;
-   }
+  }
 }
 
 /********************************************
@@ -267,7 +285,7 @@ ABOUT
 ********************************************/
 
 #about p {
- font-size: 1em;
+  font-size: 1em;
 }
 
 .about-text {
@@ -276,7 +294,7 @@ ABOUT
 
 img.me {
   margin-top: 20px;
-  width: 50%;
+  width: 80%;
 }
 
 .left {
@@ -293,32 +311,32 @@ img.me {
 LIGHT BOX
 ********************************************/
 .lightbox {
-    padding: 5px 35px 5px 35px;
-    text-align: center;
+  padding: 5px 35px 5px 35px;
+  text-align: center;
 }
 
 .lightbox h1 {
-    text-align: center;
-    font-size: 45px !important;
-    margin-bottom: 0px;
+  text-align: center;
+  font-size: 45px !important;
+  margin-bottom: 0px;
 }
 
 .lightbox .description {
-    padding-top: 10px;
-    text-align: left;
-    /*width: 750px;*/
+  padding-top: 10px;
+  text-align: left;
+  /*width: 750px;*/
 }
 
 .lightbox .description p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px !important;
 }
 
 .lightbox img {
-    display: block;
-    margin: auto;
-    width: 70%;
-    padding: 5px 0 10px 0;
+  display: block;
+  margin: auto;
+  width: 70%;
+  padding: 5px 0 10px 0;
 }
 
 .featherlight .featherlight-content {
@@ -328,39 +346,39 @@ LIGHT BOX
 }
 
 span.featherlight-close-icon.featherlight-close {
-    width: 35px !important;
-    line-height: 35px !important;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
-    /* margin: 20px; */
+  width: 35px !important;
+  line-height: 35px !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  /* margin: 20px; */
 }
 
 
 .call-to-action h2 {
-    margin: 0 auto 20px;
+  margin: 0 auto 20px;
 }
 
 .text-primary {
-    color: #f05f40;
+  color: #f05f40;
 }
 
 .no-gutter > [class*=col-] {
-    padding-right: 0;
-    padding-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .btn-default {
-    border-color: #fff;
-    border: 1px solid white!important;
-    color: white;
-    background-color: #474747;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  border-color: #fff;
+  border: 1px solid white!important;
+  color: white;
+  background-color: #474747;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 .btn-default:hover,
@@ -369,15 +387,15 @@ span.featherlight-close-icon.featherlight-close {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    border-color: #ededed;
-    color: #222;
-    background-color: #f2f2f2;
+  border-color: #ededed;
+  color: #222;
+  background-color: #f2f2f2;
 }
 
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-    background-image: none;
+  background-image: none;
 }
 
 .btn-default.disabled,
@@ -398,27 +416,27 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-    border-color: #fff;
-    background-color: #fff;
+  border-color: #fff;
+  background-color: #fff;
 }
 
 .btn-default .badge {
-    color: #fff;
-    background-color: #222;
+  color: #fff;
+  background-color: #222;
 }
 
 .btn-primary {
-    border-color: #9ECEEB;
-    margin: 10px;
-    color: #fff;
-    background-color: #9ECEEB;
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  border-color: #9ECEEB;
+  margin: 10px;
+  color: #fff;
+  background-color: #9ECEEB;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 .bg-btn a {
-   font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .btn-primary:hover,
@@ -427,15 +445,15 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #474747;;
-    color: #fff;
-    background-color: #474747;;
+  border-color: #474747;;
+  color: #fff;
+  background-color: #474747;;
 }
 
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    background-image: none;
+  background-image: none;
 }
 
 .btn-primary.disabled,
@@ -456,53 +474,53 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+  border-color: #f05f40;
+  background-color: #f05f40;
 }
 
 .btn-primary .badge {
-    color: #f05f40;
-    background-color: #fff;
+  color: #f05f40;
+  background-color: #fff;
 }
 
 .btn {
-    border: 0;
-    border-radius: 0px!important;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+  border: 0;
+  border-radius: 0px!important;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
 
 .btn-xl {
-    padding: 15px 30px;
+  padding: 15px 30px;
 }
 
 ::-moz-selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
+  text-shadow: none;
+  color: #fff;
+  background: #222;
 }
 
 ::selection {
-    text-shadow: none;
-    color: #fff;
-    background: #222;
+  text-shadow: none;
+  color: #fff;
+  background: #222;
 }
 
 .mailto img{
-    font-size: 2em;
-    height: 80px;
-    z-index: -1;
-    margin: 0;
+  font-size: 2em;
+  height: 80px;
+  z-index: -1;
+  margin: 0;
 }
 
 .mailto img:hover {
-    font-size: 2em;
-    height: 80px;
-    z-index: -1;
-    margin: 0;
-   opacity: .8;
-    color: #9ECEEB;
+  font-size: 2em;
+  height: 80px;
+  z-index: -1;
+  margin: 0;
+  opacity: .8;
+  color: #9ECEEB;
 }
 
 .connect img {
@@ -520,25 +538,25 @@ fieldset[disabled] .btn-primary.active {
 }
 
 footer p {
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 0px;
-    padding: 15px;
-    font-size: .9em;
-    color: black;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0px;
+  padding: 15px;
+  font-size: .9em;
+  color: black;
 }
 
 
 img::selection {
-    color: #fff;
-    background: 0 0;
+  color: #fff;
+  background: 0 0;
 }
 
 img::-moz-selection {
-    color: #fff;
-    background: 0 0;
+  color: #fff;
+  background: 0 0;
 }
 
 body {
-    webkit-tap-highlight-color: #222;
+  webkit-tap-highlight-color: #222;
 }
