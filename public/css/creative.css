@@ -25,15 +25,8 @@ body .content {
   width: 70%;
   max-width: 900px;
   min-width: 300px;
-  margin: 0px auto 20px auto;
+  margin: 0px auto 50px auto;
   position: relative;
-}
-
-/* MOBILE */
-@media(max-width:768px) {
-  body .content {
-    padding-top: 20px;
-  }
 }
 
 a {
@@ -155,7 +148,7 @@ header .header-content .header-content-inner p {
 /* MOBILE */
 @media(max-width:768px) {
   header {
-    max-height: 30%;
+    max-height: 23%;
   }
 }
 
