@@ -23,23 +23,33 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
 <body>
-<!--********** landing page *********-->
-<header>
-  <div class="header-content">
-   <div class="header-content-inner">
-    <a href="/"> <h1>Maya Man</h1> </a>
-    <div class="pages"> <a href="/work/"> work </a> <a href="/about/"> about </a> </div>
-  </div>
- </div>
-</header>
+  <!--********** landing page *********-->
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner">
+        <a href="/"> <h1>Maya Man</h1> </a>
+        <div class="pages"> <a href="/work/"> work </a> <a href="/about/"> about </a> </div>
+      </div>
+    </div>
+  </header>
 
-<!--********** video background *********-->
-<div class="content">
-  <video autoplay muted loop id="myVideo" src="/public/video/background_trimmed.mov">
-  </video>
-  <script>
-    document.getElementById('myVideo').play();
-</script>
+  <!--********** video background *********-->
+
+  <!-- <div class="vimeo-wrapper" id="">
+<iframe src="https://player.vimeo.com/video/279861397?background=1&autoplay=1&loop=1&autopause=0&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+</div> -->
+<div class="vimeo-wrapper">
+   <iframe src="https://player.vimeo.com/video/279861397?background=1&autoplay=1&loop=1&byline=0&title=0"
+           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+           <script src="https://player.vimeo.com/api/player.js"></script>
+           <script>
+           var iframe = document.querySelector('iframe');
+           var player = new Vimeo.Player(iframe);
+
+           player.setVolume(0);
+           </script>
 </div>
 
 
