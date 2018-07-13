@@ -29,6 +29,17 @@ body .content {
   position: relative;
 }
 
+/* MOBILE */
+@media(max-width:768px) {
+  body .content {
+    width: 70%;
+    max-width: 900px;
+    min-width: 300px;
+    margin: 0px auto 100px auto;
+    position: relative;
+  }
+}
+
 a {
   color: #000000;
   text-decoration: none;
