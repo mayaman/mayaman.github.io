@@ -155,7 +155,7 @@ header .header-content .header-content-inner p {
 /* MOBILE */
 @media(max-width:768px) {
   header {
-    /* max-height: 20%; */
+    max-height: 30%;
   }
 }
 
