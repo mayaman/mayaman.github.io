@@ -368,3 +368,21 @@ img.me {
   float: right;
   width: 48%;
 }
+
+/********************************************
+BOOKAWEEK
+********************************************/
+#book-info {
+  float: left;
+  display: inline-block;
+  width: 40%;
+  margin: 15% 2.5% 5% 5%;
+}
+
+
+#sketch1 {
+  float: right;
+  display: inline-block;
+  width: 40%;
+  margin: 15% 5% 5% 2.5%;
+}
