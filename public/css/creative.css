@@ -311,13 +311,14 @@ WORK
   opacity: 1;
 }
 
+/* portfolio hover */
 .portfolio-box img:hover {
-  width: 100%;
-  opacity: 0.7;
+  /* width: 100%;
+  opacity: 0.7; */
 }
 
 .portfolio-box {
-  padding: 20px;
+  margin: 20px;
 }
 
 @media(min-width:768px) {
@@ -332,8 +333,63 @@ WORK
   .portfolio-box {
     /* height: 500px; */
     /*width: 1000px;*/
-    padding: 20px;
+    margin: 20px;
   }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+.coral {
+  background-color: rgb(255, 153, 153);
+}
+
+.deep-purple {
+  background-color: rgb(102, 0, 102);
+}
+
+.dark-blue {
+  background-color: rgb(51, 51, 153);
+}
+
+.cool-green {
+  background-color: rgb(0, 204, 153);
+}
+
+.hot-pink {
+  background-color: rgb(204, 0, 153);
+}
+
+.dark-red {
+  background-color: rgb(153, 0, 51);
+}
+
+
+.project-title-work {
+  font-family: 'Source Serif Pro', serif;
+  color: white;
+  font-size: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.portfolio-box:hover .overlay {
+  opacity: 0;
 }
 
 /********************************************
@@ -346,17 +402,12 @@ ABOUT
 
 #about img {
   margin-top: 20px;
-  width: 80%;
+  width: 50%;
 }
 
 .about-text {
   margin-top: 20px;
   margin-bottom: 100px;
-}
-
-img.me {
-  margin-top: 20px;
-  width: 80%;
 }
 
 .left {
@@ -383,6 +434,96 @@ BOOKAWEEK
 #sketch1 {
   float: right;
   display: inline-block;
-  width: 40%;
   margin: 15% 5% 5% 2.5%;
+  border-style: solid;
+  border-width: 10px;
+  width: 500px;
+  height: 500px;
+}
+
+.weekly-entry {
+  border: none;
+  pointer-events: none;
+
+  position: relative;
+  width: 1100px;
+
+  transform: scale(0.7);
+  transform-origin: left;
+}
+
+.book-cover {
+  border: none;
+  pointer-events: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.book-cover img {
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+}
+
+.book-sketch {
+  border: none;
+  pointer-events: none;
+  position:relative;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 500px;
+  float: left;
+}
+
+.book-sketch iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+
+   resize: both;
+  overflow: auto;
+}
+
+.book-title {
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .book-cover {
+    border: none;
+    pointer-events: none;
+    float: left;
+  }
+  
+  .book-cover img {
+    width: 500px;
+    height: 500px;
+    max-width: 500px;
+  }
+  
+  .book-sketch {
+    border: none;
+    pointer-events: none;
+    position:relative;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 500px;
+    float: left;
+  }
+  
+  .book-sketch iframe {
+     border: 0;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+  
+     resize: both;
+    overflow: auto;
+  }
 }
