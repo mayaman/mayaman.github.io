@@ -121,6 +121,7 @@ header {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  margin-top: 2%;
 }
 
 header .header-content {
@@ -420,8 +421,7 @@ ABOUT
 }
 
 .about-text {
-  margin-top: 20px;
-  margin-bottom: 100px;
+  margin-top: 5%;
 }
 
 .left {
