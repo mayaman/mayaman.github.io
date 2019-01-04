@@ -27,7 +27,7 @@ function preload() {
   img = loadImage("../../public/images/bookcovers/saks.png");  // Load the image
   img.width = 500;
   img.height = 500;
-  currentSquareSize = img.width/8;
+  currentSquareSize = 500/8;
 }
 
 function setup() {
