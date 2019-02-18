@@ -289,6 +289,20 @@ WORK
 
 .project-title {
   padding-bottom: 20px;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.project-title a {
+  padding-bottom: 20px;
+  font-family: 'Source Serif Pro', serif;
+  text-decoration: underline;
+}
+
+.project-title a:hover {
+  padding-bottom: 20px;
+  font-family: 'Source Serif Pro', serif;
+  text-decoration: underline;
+  color: #a6a7a8;
 }
 
 .description {
