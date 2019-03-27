@@ -4,12 +4,15 @@
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.
 */
 
-/* font-family: 'Open Sans', sans-serif; */
+/*font-family: 'VT323', monospace; */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /* font-family: 'Slabo 27px', serif; */
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px');
-/* font-family: 'Source Serif Pro', serif; */
+/*font-family: 'VT323', monospace; */
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px|Source+Serif+Pro');
+/* font-family: 'VT323', monospace; */
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 
 html,
 body {
@@ -18,7 +21,8 @@ body {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'VT323', monospace;
+  background: #ed1288;
 }
 
 body .content {
@@ -27,6 +31,8 @@ body .content {
   min-width: 300px;
   margin: 0px auto 50px auto;
   position: relative;
+  margin-top: 5%;
+  color: lightyellow;
 }
 
 /* MOBILE */
@@ -50,42 +56,43 @@ a {
 
 header a:hover,
 header a:focus {
-  color: #a6a7a8;
+  color: #a9ff66;
   text-decoration: none;
 }
 
 .content p a {
-  color: #000000;
   text-decoration: underline;
+  color: lightyellow;
 }
 
 .content p a:hover {
-  color: #a6a7a8;
+  color: #a9ff66;
   text-decoration: underline;
 }
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'VT323', monospace;
   font-size: 1em;
 }
 
 h2 {
-  font-family: 'Source Serif Pro', serif;
+ font-family: 'VT323', monospace;
   font-size: 2.5em;
 }
 
 /* MOBILE */
 @media(max-width:768px) {
   h2 {
-    font-family: 'Source Serif Pro', serif;
+   font-family: 'VT323', monospace;
     font-size: 2em;
   }
 }
 
 p {
-  font-size: 1em;
+  font-size: 2em;
   line-height: 1.5;
-  font-family: 'Source Serif Pro', serif;
+  font-family: 'VT323', monospace;
+  color: lightyellow;
 }
 
 .hidden {
@@ -134,15 +141,24 @@ header .header-content {
 header .pages a {
   margin-left: 1%;
   margin-right: 1%;
-  font-size: 1.5em;
+  font-size: 2.5em;
+  color: lightyellow;
+}
+
+header .pages a:hover {
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 2.5em;
+  color: #a9ff66;
 }
 
 header .header-content .header-content-inner h1 {
   margin-top: 0;
   margin-bottom: 0;
   text-transform: uppercase;
-  font-size: 3em !important;
-  color: black;
+  font-size: 10em !important;
+  color: lightyellow;
+  display: inline-block;
 }
 
 header .header-content .header-content-inner hr {
@@ -154,7 +170,7 @@ header .header-content .header-content-inner p {
   font-size: 3em !important;
   font-weight: 300;
   color: black;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
 /* MOBILE */
@@ -289,20 +305,31 @@ WORK
 
 .project-title {
   padding-bottom: 20px;
-  font-family: 'Source Serif Pro', serif;
+ font-family: 'VT323', monospace;
+  color: lightyellow;
+  font-size: 1.5em;
+}
+
+.project-title h2 {
+  font-family: 'VT323', monospace;
 }
 
 .project-title a {
   padding-bottom: 20px;
-  font-family: 'Source Serif Pro', serif;
+  /*font-family: 'VT323', monospace; */
+  font-family: 'VT323', monospace;
   text-decoration: underline;
+  color: lightyellow;
+  font-size: 1.5em;
 }
 
 .project-title a:hover {
   padding-bottom: 20px;
-  font-family: 'Source Serif Pro', serif;
+  /*font-family: 'VT323', monospace; */
+  font-family: 'VT323', monospace;
   text-decoration: underline;
-  color: #a6a7a8;
+  color: #a9ff66;
+  font-size: 1.5em;
 }
 
 .description {
@@ -325,7 +352,7 @@ WORK
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name
 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'VT323', monospace;
   font-size: 18px;
   color: white;
 }
@@ -405,7 +432,7 @@ WORK
 
 
 .project-title-work {
-  font-family: 'Source Serif Pro', serif;
+ font-family: 'VT323', monospace;
   color: white;
   font-size: 1em;
   position: absolute;
@@ -419,10 +446,14 @@ WORK
 
 .project-image {
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 0 0 3% 0;
 }
 
 #glanceback-gif {
+  width: 50%;
+}
+
+.project-ps {
   width: 50%;
 }
 
@@ -435,10 +466,6 @@ WORK
 /********************************************
 ABOUT
 ********************************************/
-
-#about p {
-  font-size: 1em;
-}
 
 #about img {
   margin-top: 20px;
