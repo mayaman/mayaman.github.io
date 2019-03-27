@@ -417,9 +417,20 @@ WORK
   text-align: center;
 }
 
+.project-image {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+#glanceback-gif {
+  width: 50%;
+}
+
 .portfolio-box:hover .overlay {
   opacity: 0;
 }
+
+
 
 /********************************************
 ABOUT
