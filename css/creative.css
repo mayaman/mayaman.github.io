@@ -44,12 +44,12 @@ body .content {
 /* MOBILE */
 @media(max-width:450px) {
   body .content {
-    width: 70%;
+    /* width: 70%;
     max-width: 900px;
     min-width: 300px;
     margin: 0px auto 100px auto;
-    position: relative;
-    margin-top: 75%;
+    position: relative; */
+    margin-top: 20px;
   }
 }
 
