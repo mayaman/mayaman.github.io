@@ -1,0 +1,573 @@
+/*!
+* Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
+
+/*font-family: 'VT323', monospace; */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* font-family: 'Slabo 27px', serif; */
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+/*font-family: 'VT323', monospace; */
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px|Source+Serif+Pro');
+/* font-family: 'VT323', monospace; */
+@import url('https://fonts.googleapis.com/css?family=VT323');
+/* font-family: 'Vollkorn', serif; */
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background: #ed1288;
+  /* background: #fcfcfc; */
+}
+
+body a {
+  color: gold;
+}
+
+body .content {
+  /* width: 70%;
+  max-width: 900px;
+  min-width: 300px; */
+  margin: 0px auto 50px auto;
+  position: relative;
+  color: lightyellow;
+}
+
+/* MOBILE */
+@media(max-width:450px) {
+  body .content {
+    width: 70%;
+    max-width: 900px;
+    min-width: 300px;
+    margin: 0px auto 100px auto;
+    position: relative;
+    margin-top: 75%;
+  }
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+}
+
+.content p a {
+  text-decoration: underline;
+  color: gold;
+}
+
+.content p a:hover {
+  opacity: 0.3;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'VT323', monospace;
+  font-size: 1em;
+}
+
+h2 {
+ font-family: 'VT323', monospace;
+  font-size: 2.5em;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  h2 {
+   font-family: 'VT323', monospace;
+    font-size: 2em;
+  }
+}
+
+p {
+  font-size: 28px;
+  line-height: 1.5;
+  font-family: 'VT323', monospace;
+  color: lightyellow;
+}
+
+.hidden {
+  display: hidden;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+aside {
+  padding: 50px 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/********************************************
+HEADER
+********************************************/
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  text-align: center;
+  color: #fff;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  margin-top: 2%;
+}
+
+header .header-content {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+header .pages a {
+  text-decoration: none;
+  font-size: 28px;
+  color: lightyellow;
+  transition: 0.3s ease;
+}
+
+header .pages a:hover {
+  color: gold;
+}
+
+header .header-content .header-content-inner h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 56px !important;
+  color: lightyellow;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+header .header-content .header-content-inner h1:hover {
+  color: gold;
+}
+
+header .header-content .header-content-inner hr {
+  margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+  margin-bottom: 50px;
+  font-size: 3em !important;
+  font-weight: 300;
+  color: lightyellow;
+  font-family: 'VT323', monospace;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  header {
+    max-height: 23%;
+  }
+}
+
+@media(min-width:768px) {
+
+  header {
+    min-height: 15%;
+  }
+
+  header .header-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  header .header-content .header-content-inner {
+    margin-right: auto;
+    margin-left: auto;
+    /*max-width: 1000px;*/
+  }
+
+  header .header-content .header-content-inner p {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80%;
+    font-size: 3em;
+  }
+}
+
+#myVideo {
+  position: fixed;
+  left: -25%;
+  top: 0;
+  width: auto;
+  height: 100%;
+  z-index: -10;
+}
+
+@media(max-width:768px) {
+  #myVideo {
+    position: fixed;
+    left: -130%;
+    top: 0;
+    width: auto;
+    height: 100%;
+    z-index: -10;
+  }
+}
+
+/* .vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 130%;
+   width: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+} */
+
+.vimeo-wrapper {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  height: 50%;
+  width: 40%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
+.vimeo-wrapper iframe {
+   height: 100vh; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   width: auto;
+   min-height: 200vh;
+   min-width: 180vw;
+   /*  Given a 16:9 aspect ratio, 16/9*100 = 177.77*/
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+@media(max-width:768px) {
+  .vimeo-wrapper {
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+     pointer-events: none;
+     overflow: hidden;
+  }
+  .vimeo-wrapper iframe {
+     height: 100vh; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+     width: auto;
+     min-height: 200vh;
+     min-width: 380vw; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+  }
+}
+
+
+/********************************************
+WORK
+********************************************/
+
+.col-lg-4 {
+  padding: 0 !important;
+}
+
+.col-sm-6 {
+  padding: 0 !important;
+}
+ 
+.video-container {
+  position: relative;
+  padding-bottom: 45%;
+  height: 0;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+}
+
+.project-title {
+  font-family: 'VT323', monospace;
+  color: lightyellow;
+  font-size: 1.5em;
+}
+
+.project-title h2 {
+  font-family: 'VT323', monospace;
+  font-size: 56px;
+}
+
+.project-title a {
+  padding-bottom: 20px;
+  font-family: 'VT323', monospace;
+  text-decoration: underline;
+  font-size: 1.5em;
+  color: gold;
+}
+
+.project-title a:hover {
+  opacity: 0.3;
+  color: gold;
+}
+
+.description {
+  margin-top: 20px;
+}
+
+.portfolio-box {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-box .portfolio-box-caption {
+  display: block;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name
+{
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  color: white;
+}
+
+.portfolio-box:hover, .portfolio-box-caption:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.portfolio-box img {
+  width: 100%;
+  opacity: 1;
+}
+
+/* portfolio hover */
+.portfolio-box img:hover {
+  /* width: 100%;
+  opacity: 0.7; */
+}
+
+.portfolio-box {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+@media(min-width:768px) {
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: gold;
+}
+
+.project-title-work {
+ font-family: 'VT323', monospace;
+  color: #ed1288;
+  /* color: gold; */
+  font-size: 36px;
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 1.0;
+}
+
+.project-image {
+  width: 100%;
+  margin: 0 0 3% 0;
+}
+
+#glanceback-gif {
+  width: 50%;
+}
+
+.project-ps {
+  width: 50%;
+}
+
+
+.portfolio-box:hover .overlay {
+  opacity: 1;
+}
+
+
+
+/********************************************
+ABOUT
+********************************************/
+
+.about-text  {
+  padding-top: 20px;
+}
+
+#about img {
+  width: 50%;
+}
+
+.left {
+  float: left;
+  width: 48%;
+}
+
+.right {
+  float: right;
+  width: 48%;
+}
+
+/********************************************
+BOOKAWEEK
+********************************************/
+#book-info {
+  float: left;
+  display: inline-block;
+  width: 40%;
+  margin: 15% 2.5% 5% 5%;
+}
+
+
+#sketch1 {
+  float: right;
+  display: inline-block;
+  margin: 15% 5% 5% 2.5%;
+  border-style: solid;
+  border-width: 10px;
+  width: 500px;
+  height: 500px;
+}
+
+.weekly-entry {
+  border: none;
+  pointer-events: none;
+
+  position: relative;
+  width: 1100px;
+
+  transform: scale(0.7);
+  transform-origin: left;
+}
+
+.book-cover {
+  border: none;
+  pointer-events: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.book-cover img {
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+}
+
+.book-sketch {
+  border: none;
+  pointer-events: none;
+  position:relative;
+  min-width: 500px;
+  max-width: 500px;
+  min-height: 500px;
+  float: left;
+}
+
+.book-sketch iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+
+   resize: both;
+  overflow: auto;
+}
+
+.book-title {
+  margin-top: 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .book-cover {
+    border: none;
+    pointer-events: none;
+    float: left;
+  }
+  
+  .book-cover img {
+    width: 500px;
+    height: 500px;
+    max-width: 500px;
+  }
+  
+  .book-sketch {
+    border: none;
+    pointer-events: none;
+    position:relative;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 500px;
+    float: left;
+  }
+  
+  .book-sketch iframe {
+     border: 0;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+  
+     resize: both;
+    overflow: auto;
+  }
+}
