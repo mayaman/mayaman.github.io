@@ -85,13 +85,23 @@ h2 {
    font-family: 'VT323', monospace;
     font-size: 2em;
   }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'VT323', monospace;
+    color: lightyellow;
+  }
 }
 
-p {
-  font-size: 28px;
-  line-height: 1.5;
-  font-family: 'VT323', monospace;
-  color: lightyellow;
+/* DESKTOP */
+@media(min-width:768px) {
+  p {
+    font-size: 28px;
+    line-height: 1.5;
+    font-family: 'VT323', monospace;
+    color: lightyellow;
+  }
 }
 
 .hidden {
@@ -236,10 +246,29 @@ WORK
   font-size: 1.5em;
 }
 
-.project-title h2 {
-  font-family: 'VT323', monospace;
-  font-size: 56px;
+/* MOBILE */
+@media(max-width:768px) {
+  .project-title h2 {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+  }
+
+  .project-title a {
+    padding-bottom: 20px;
+    font-family: 'VT323', monospace;
+    text-decoration: underline;
+    font-size: 1em;
+    color: gold;
+  }
 }
+
+/* DESKTOP */
+@media(min-width:768px) {
+  .project-title h2 {
+    font-family: 'VT323', monospace;
+    font-size: 56px;
+  }
+
 
 .project-title a {
   padding-bottom: 20px;
@@ -248,6 +277,8 @@ WORK
   font-size: 1.5em;
   color: gold;
 }
+}
+
 
 .project-title a:hover {
   opacity: 0.3;
@@ -368,8 +399,18 @@ ABOUT
   padding-top: 20px;
 }
 
-#about img {
-  width: 50%;
+/* DESKTOP */
+@media(min-width:768px) {
+  #about img {
+    width: 50%;
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  #about img {
+    width: 100%;
+  }
 }
 
 .left {
