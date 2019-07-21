@@ -44,12 +44,11 @@ body .content {
 /* MOBILE */
 @media(max-width:450px) {
   body .content {
-    /* width: 70%;
-    max-width: 900px;
-    min-width: 300px;
-    margin: 0px auto 100px auto;
-    position: relative; */
     margin-top: 20px;
+  }
+
+  .portfolio-box {
+    margin-right: 0px !important;
   }
 }
 
@@ -178,12 +177,11 @@ header .header-content .header-content-inner p {
 /* MOBILE */
 @media(max-width:768px) {
   header {
-    max-height: 23%;
+    max-height: 20%;
   }
 }
 
 @media(min-width:768px) {
-
   header {
     min-height: 15%;
   }
@@ -199,7 +197,6 @@ header .header-content .header-content-inner p {
   header .header-content .header-content-inner {
     margin-right: auto;
     margin-left: auto;
-    /*max-width: 1000px;*/
   }
 
   header .header-content .header-content-inner p {
@@ -209,85 +206,6 @@ header .header-content .header-content-inner p {
     font-size: 3em;
   }
 }
-
-#myVideo {
-  position: fixed;
-  left: -25%;
-  top: 0;
-  width: auto;
-  height: 100%;
-  z-index: -10;
-}
-
-@media(max-width:768px) {
-  #myVideo {
-    position: fixed;
-    left: -130%;
-    top: 0;
-    width: auto;
-    height: 100%;
-    z-index: -10;
-  }
-}
-
-/* .vimeo-wrapper {
-   position: fixed;
-   top: 0;
-   left: 0;
-   height: 130%;
-   width: 100%;
-   z-index: -1;
-   pointer-events: none;
-   overflow: hidden;
-} */
-
-.vimeo-wrapper {
-  position: fixed;
-  top: 25%;
-  left: 30%;
-  height: 50%;
-  width: 40%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-
-.vimeo-wrapper iframe {
-   height: 100vh; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-   width: auto;
-   min-height: 200vh;
-   min-width: 180vw;
-   /*  Given a 16:9 aspect ratio, 16/9*100 = 177.77*/
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-@media(max-width:768px) {
-  .vimeo-wrapper {
-     position: fixed;
-     top: 0;
-     left: 0;
-     height: 100%;
-     width: 100%;
-     z-index: -1;
-     pointer-events: none;
-     overflow: hidden;
-  }
-  .vimeo-wrapper iframe {
-     height: 100vh; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-     width: auto;
-     min-height: 200vh;
-     min-width: 380vw; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-  }
-}
-
 
 /********************************************
 WORK
@@ -371,15 +289,10 @@ WORK
   opacity: 1;
 }
 
-/* portfolio hover */
-.portfolio-box img:hover {
-  /* width: 100%;
-  opacity: 0.7; */
-}
-
-.portfolio-box {
-  margin-right: 20px;
-  margin-bottom: 20px;
+@media(max-width:768px) {
+  .portfolio-box {
+    margin-bottom: 20px;
+  }
 }
 
 @media(min-width:768px) {
@@ -389,6 +302,11 @@ WORK
 
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
+  }
+
+  .portfolio-box {
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 }
 
