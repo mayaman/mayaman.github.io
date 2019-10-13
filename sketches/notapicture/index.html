@@ -1,0 +1,20 @@
+<html>
+<head>
+  <script language="javascript" type="text/javascript" src="../lib/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="../lib/p5.dom.js"></script>
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style> body {padding: 0; margin: 15px;} </style>
+</head>
+<body>
+    <p><button onclick="resetBackground()">Reset Background</button></p>
+    <p>
+        Mode:
+        <input type="radio" name="thresholdType" value="none">No Threshold
+        <input type="radio" name="thresholdType" value="rgb">Brightness (RGB)
+        <input type="radio" name="thresholdType" value="bw">Brightness (B&amp;W)
+    </p>
+    <p>Threshold: <input type="range" id="thresholdAmount" value="50"></p>
+    <p>Presence: <span id="presence">0</span></p>
+</body>
+</html>
