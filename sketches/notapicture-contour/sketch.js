@@ -1,14 +1,17 @@
 // https://kylemcdonald.github.io/cv-examples/
 
 let capture;
-const w = 640 / 4; // 4
-const h = 480 / 4; // 4
+const captureWidth = 640; // 4
+const captureHeight = 480; // 4
+const unitWidth = captureWidth/4;
+const unitHeight = captureHeight/4;
+
+const printScale = 0.05;
 const canvasScale = 42;
 const canvasWidth = 11 * canvasScale;
 const canvasHeight = 17 * canvasScale;
 
 const bleedBuffer = 0;
-
 
 let xPos = bleedBuffer;
 let yPos = bleedBuffer;
@@ -36,8 +39,8 @@ function setup() {
     {
       audio: false,
       video: {
-        width: w,
-        height: h
+        width: captureWidth,
+        height: captureHeight
       }
     },
     function () {
@@ -46,9 +49,7 @@ function setup() {
     }
   );
   capture.elt.setAttribute("playsinline", "");
-  capture.size(w, h);
-  // capture.parent('livefeed-container');
-  // capture.style('margin-top', '55%');
+  capture.size(captureWidth, captureHeight);
   capture.hide();
 
 
@@ -57,19 +58,19 @@ function setup() {
   background('#000');
   outputGraphic = createGraphics(canvasWidth, canvasHeight);
   outputGraphic.background('#fffffa');
-  
-  const layerWidth = canvasWidth / 2 - layerBuffer/2;
-  const layerHeight = canvasHeight / 2 - layerBuffer/2;
+
+  const layerWidth = canvasWidth / 2 - layerBuffer / 2;
+  const layerHeight = canvasHeight / 2 - layerBuffer / 2;
 
   for (let c = 0; c < 4; c++) {
     layerGraphics.push(createGraphics(layerWidth, layerHeight));
     layerGraphics[c].background('#fffffa');
   }
 
-  layerPositions.push([ width/2 - layerWidth/2 - layerBuffer/2, height/2 - layerHeight/2 - layerBuffer/2]); // top left
-  layerPositions.push([ width/2 + layerWidth / 2 + layerBuffer/2, height/2 - layerHeight/2 - layerBuffer/2]); // top right
-  layerPositions.push([ width/2 - layerWidth / 2 - layerBuffer/2, height/2 + layerHeight/2 + layerBuffer/2]); // bottom left
-  layerPositions.push([ width/2 + layerWidth / 2 + layerBuffer/2, height/2 + layerHeight/2 + layerBuffer/2]); // bottom right
+  layerPositions.push([width / 2 - layerWidth / 2 - layerBuffer / 2, height / 2 - layerHeight / 2 - layerBuffer / 2]); // top left
+  layerPositions.push([width / 2 + layerWidth / 2 + layerBuffer / 2, height / 2 - layerHeight / 2 - layerBuffer / 2]); // top right
+  layerPositions.push([width / 2 - layerWidth / 2 - layerBuffer / 2, height / 2 + layerHeight / 2 + layerBuffer / 2]); // bottom left
+  layerPositions.push([width / 2 + layerWidth / 2 + layerBuffer / 2, height / 2 + layerHeight / 2 + layerBuffer / 2]); // bottom right
 
   // document.getElementById('livefeed-container').style.width = canvasWidth;
   // document.getElementById('livefeed-container').style.height = canvasHeight;
@@ -99,8 +100,8 @@ function draw() {
       let pixels = capture.pixels;
       let thresholdAmount = (select("#thresholdAmount").value() * 255) / 100;
       let total = 0;
-      for (let y = 0; y < h; y++) {
-        for (let x = 0; x < w; x++) {
+      for (let y = 0; y < captureHeight; y++) {
+        for (let x = 0; x < captureWidth; x++) {
           // another common type of background thresholding uses absolute difference, like this:
           // let total = Math.abs(pixels[i+0] - backgroundPixels[i+0] > thresholdAmount) || ...
           let rdiff =
@@ -122,17 +123,19 @@ function draw() {
         }
       }
       capture.updatePixels();
-      captureMat.data().set(capture.pixels);
-      blurRadius = 10;
-      let threshold = 100;
-      image(capture, width/3 - width/6, height/2, canvasWidth, canvasWidth/w * h);
+      // Render input image
+      image(capture, width / 3 - width / 6, height / 2, canvasWidth, canvasWidth / captureWidth * captureHeight);
       stroke('#fff');
       strokeWeight(3);
       noFill();
       rectMode(CENTER);
-      rect(width/3 - width/6, height/2, canvasWidth, canvasWidth/w * h);
+      rect(width / 3 - width / 6, height / 2, canvasWidth, canvasWidth / captureWidth * captureHeight);
 
-      
+      captureMat.data().set(capture.pixels);
+      blurRadius = 10;
+      let threshold = 100;
+
+
       cv.cvtColor(
         captureMat,
         gray,
@@ -161,6 +164,9 @@ function draw() {
 
     layerGraphics[colorIndex].push();
     layerGraphics[colorIndex].scale(0.5);
+
+    outputGraphic.push();
+    // outputGraphic.scale(unitWidth/captureWidth * 1.5);
     if (contours && contours.size() >= 0 && !eventOver) {
       outputGraphic.noStroke();
       layerGraphics[colorIndex].noStroke();
@@ -174,7 +180,7 @@ function draw() {
         for (let j = 0; j < contour.total(); j++) {
           let x = contour.get_int_at(k++);
           let y = contour.get_int_at(k++);
-          outputGraphic.vertex(xPos + x, yPos + y);
+          outputGraphic.vertex((xPos + x), (yPos + y));
         }
         outputGraphic.endShape(CLOSE);
         layerGraphics[colorIndex].endShape(CLOSE);
@@ -182,15 +188,18 @@ function draw() {
         outputGraphic.stroke(colors[colorIndex]);
         layerGraphics[colorIndex].stroke(colors[colorIndex]);
       }
+      outputGraphic.pop();
       layerGraphics[colorIndex].pop();
 
 
-      if (xPos < canvasWidth - w - bleedBuffer) {
-        xPos += w / 2;
-      } else if (yPos < canvasHeight - h - h / 2 - bleedBuffer) {
-        yPos += h;
+      // if (xPos < canvasWidth - (w) - bleedBuffer) {
+      if (xPos < canvasWidth) {
+        xPos += unitWidth; // w/2
+        // } else if (yPos < canvasHeight -  (h*printScale) -  (h*printScale) / 2 - bleedBuffer) {
+      } else if (yPos < canvasHeight) {
+        yPos += unitHeight;
         xPos = bleedBuffer;
-      } else if (yPos >= canvasHeight - h - h / 2 - bleedBuffer && colorIndex < colors.length - 1) {
+      } else if (yPos >= canvasHeight - captureHeight - captureHeight / 2 - bleedBuffer && colorIndex < colors.length - 1) {
         // One color completed!
         xPos = bleedBuffer;
         yPos = bleedBuffer;
@@ -211,14 +220,14 @@ function draw() {
     image(layerGraphics[g], layerPositions[g][0], layerPositions[g][1]);
   }
   // Render output graphic
-  image(outputGraphic, width*2/3 + width/6, height/2);
+  image(outputGraphic, width * 2 / 3 + width / 6, height / 2);
 }
 
 function cvSetup() {
-  captureMat = new cv.Mat([h, w], cv.CV_8UC4);
-  gray = new cv.Mat([h, w], cv.CV_8UC1);
-  blurred = new cv.Mat([h, w], cv.CV_8UC1);
-  thresholded = new cv.Mat([h, w], cv.CV_8UC1);
+  captureMat = new cv.Mat([captureHeight, captureWidth], cv.CV_8UC4);
+  gray = new cv.Mat([captureHeight, captureWidth], cv.CV_8UC1);
+  blurred = new cv.Mat([captureHeight, captureWidth], cv.CV_8UC1);
+  thresholded = new cv.Mat([captureHeight, captureWidth], cv.CV_8UC1);
 }
 
 function cvReady() {
