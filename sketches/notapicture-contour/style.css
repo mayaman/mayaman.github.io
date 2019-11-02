@@ -1,6 +1,6 @@
 body {
   padding: 0;
-  margin: 15px;
+  margin: 0px;
   background: black;
 }
 
@@ -16,10 +16,11 @@ canvas {
 }
 
 .container {
-  display: inline-block;
-  margin: auto;
-  float: left;
-  margin: 5%;
+
+}
+
+#settings-container {
+  display: none;
 }
 
 #livefeed-container {
