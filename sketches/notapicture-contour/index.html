@@ -24,14 +24,15 @@
   </script>
   <script async src="cv.js"></script>
   <link rel="stylesheet" href="style.css">
-  <style> body {padding: 0; margin: 15px; background: lightgray;} </style>
 </head>
 <body>
-    <h2><a href="https://kylemcdonald.github.io/cv-examples/">cv-examples</a> Contour Detection (opencvjs) <a href="sketch.js">source</a></h2>
-    <p>Detect connected bright regions in video.</p>
     <p>Threshold: <input type="range" id="threshold" value="45"></p>
-    <p>Background threshold: <input type="range" id="thresholdAmount" value="25"></p>
+    <p>Background threshold: <input type="range" id="thresholdAmount" value="45"></p>
     <p>OpenCV Status: <span id="status">Loading OpenCV...</span></p>
-    <script src="sketch.js"></script>
+
+    <div id="main-container">
+        <div class="container" id="riso-container"> </div>
+    </div>
 </body>
+<script src="sketch.js"></script>
 </html>

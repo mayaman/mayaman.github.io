@@ -1,6 +1,6 @@
 // https://kylemcdonald.github.io/cv-examples/
 
-let capture;
+var capture;
 const w = 640 / 4; // 4
 const h = 480 / 4; // 4
 const canvasScale = 50;
@@ -24,10 +24,6 @@ let risoCanvas;
 let outputGraphic;
 let layerGraphics = [];
 let eventOver = false;
-let ready = false;
-
-let captureMat, gray, blurred, thresholded;
-let contours, hierarchy;
 
 function setup() {
   capture = createCapture(
@@ -45,24 +41,21 @@ function setup() {
   );
   capture.elt.setAttribute("playsinline", "");
   capture.size(w, h);
-  // capture.parent('livefeed-container');
-  // capture.style('margin-top', '55%');
-  capture.hide();
-
-
-  let canvasContainer = createCanvas(window.innerWidth, window.innerHeight);
-  canvasContainer.parent('riso-container');
-
-  outputGraphic = createGraphics(canvasWidth, canvasHeight);
-  outputGraphic.background('#fffffa');
+  capture.parent('livefeed-container');
+  capture.style('margin-top', '55%');
+  // capture.hide();
 
   for (let c = 0; c < 4; c++) {
     layerGraphics.push(createGraphics(canvasWidth / 2, canvasHeight / 2));
     layerGraphics[c].background('#fffffa');
-  }
 
-  // document.getElementById('livefeed-container').style.width = canvasWidth;
-  // document.getElementById('livefeed-container').style.height = canvasHeight;
+  }
+  risoCanvas = createCanvas(canvasWidth, canvasHeight);
+  risoCanvas.parent('riso-container');
+  background('#fffffa');
+
+  document.getElementById('livefeed-container').style.width = canvasWidth;
+  document.getElementById('livefeed-container').style.height = canvasHeight;
 
   const alpha = 150;
   const pink = color(326, 81, 156, alpha);
@@ -77,6 +70,24 @@ function setup() {
   frameRate(15); // make frameRate 10 FPS
 }
 
+var captureMat, gray, blurred, thresholded;
+var contours, hierarchy;
+function cvSetup() {
+  captureMat = new cv.Mat([h, w], cv.CV_8UC4);
+  gray = new cv.Mat([h, w], cv.CV_8UC1);
+  blurred = new cv.Mat([h, w], cv.CV_8UC1);
+  thresholded = new cv.Mat([h, w], cv.CV_8UC1);
+}
+
+var ready = false;
+function cvReady() {
+  if (!cv || !cv.loaded) return false;
+  if (ready) return true;
+  cvSetup();
+  ready = true;
+  return true;
+}
+
 function draw() {
   if (cvReady() && captureReady && !eventOver) {
     capture.loadPixels();
@@ -85,22 +96,22 @@ function draw() {
         backgroundPixels = Array.from(capture.pixels);
       }
 
-      let i = 0;
-      let pixels = capture.pixels;
-      let thresholdAmount = (select("#thresholdAmount").value() * 255) / 100;
-      let total = 0;
-      for (let y = 0; y < h; y++) {
-        for (let x = 0; x < w; x++) {
+      var i = 0;
+      var pixels = capture.pixels;
+      var thresholdAmount = (select("#thresholdAmount").value() * 255) / 100;
+      var total = 0;
+      for (var y = 0; y < h; y++) {
+        for (var x = 0; x < w; x++) {
           // another common type of background thresholding uses absolute difference, like this:
-          // let total = Math.abs(pixels[i+0] - backgroundPixels[i+0] > thresholdAmount) || ...
-          let rdiff =
+          // var total = Math.abs(pixels[i+0] - backgroundPixels[i+0] > thresholdAmount) || ...
+          var rdiff =
             Math.abs(backgroundPixels[i + 0] - pixels[i + 0]) > thresholdAmount;
-          let gdiff =
+          var gdiff =
             Math.abs(backgroundPixels[i + 1] - pixels[i + 1]) > thresholdAmount;
-          let bdiff =
+          var bdiff =
             Math.abs(backgroundPixels[i + 2] - pixels[i + 2]) > thresholdAmount;
-          let anydiff = rdiff || gdiff || bdiff;
-          let outputColor = [0, 0, 0];
+          var anydiff = rdiff || gdiff || bdiff;
+          var outputColor = [0, 0, 0];
           if (anydiff) {
             outputColor = [255, 255, 255];
             total++;
@@ -144,31 +155,21 @@ function draw() {
       cv.findContours(thresholded, contours, hierarchy, 3, 2, [0, 0]);
     }
 
-    layerGraphics[colorIndex].push();
-    layerGraphics[colorIndex].scale(0.5);
     if (contours && contours.size() >= 0) {
-      outputGraphic.noStroke();
-      layerGraphics[colorIndex].noStroke();
-      for (let i = 0; i < contours.size(); i++) {
-        outputGraphic.fill(colors[colorIndex]);
-        layerGraphics[colorIndex].fill(colors[colorIndex]);
-        let contour = contours.get(i);
-        outputGraphic.beginShape();
-        layerGraphics[colorIndex].beginShape();
-        let k = 0;
-        for (let j = 0; j < contour.total(); j++) {
-          let x = contour.get_int_at(k++);
-          let y = contour.get_int_at(k++);
-          outputGraphic.vertex(xPos + x, yPos + y);
+      noStroke();
+      for (var i = 0; i < contours.size(); i++) {
+        fill(colors[colorIndex]);
+        var contour = contours.get(i);
+        beginShape();
+        var k = 0;
+        for (var j = 0; j < contour.total(); j++) {
+          var x = contour.get_int_at(k++);
+          var y = contour.get_int_at(k++);
+          vertex(xPos + x, yPos + y);
         }
-        outputGraphic.endShape(CLOSE);
-        layerGraphics[colorIndex].endShape(CLOSE);
-
-        outputGraphic.stroke(colors[colorIndex]);
-        layerGraphics[colorIndex].stroke(colors[colorIndex]);
+        endShape(CLOSE);
+        stroke(colors[colorIndex]);
       }
-      layerGraphics[colorIndex].pop();
-
 
       if (xPos < canvasWidth - w - bleedBuffer) {
         xPos += w / 2;
@@ -189,25 +190,7 @@ function draw() {
     }
   }
 
-  for (let g = 0; g < layerGraphics.length; g++) {
-    image(layerGraphics[g], g * 100, g * 100);
-  }
-  image(outputGraphic, width - canvasWidth * 2, 0);
+  // image(layerGraphics[0], -100, -100);
   // image(capture, xPos, yPos, w, h);
   // background(0, 0, 0);
-}
-
-function cvSetup() {
-  captureMat = new cv.Mat([h, w], cv.CV_8UC4);
-  gray = new cv.Mat([h, w], cv.CV_8UC1);
-  blurred = new cv.Mat([h, w], cv.CV_8UC1);
-  thresholded = new cv.Mat([h, w], cv.CV_8UC1);
-}
-
-function cvReady() {
-  if (!cv || !cv.loaded) return false;
-  if (ready) return true;
-  cvSetup();
-  ready = true;
-  return true;
 }

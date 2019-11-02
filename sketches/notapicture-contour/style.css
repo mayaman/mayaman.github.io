@@ -1,4 +1,28 @@
+body {
+  padding: 0;
+  margin: 15px;
+  background: black;
+}
+
 canvas {
-    margin: auto;
-    display: block;
+  margin: auto;
+  display: block;
+}
+
+#main-container {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.container {
+  display: inline-block;
+  margin: auto;
+  float: left;
+  margin: 5%;
+}
+
+#livefeed-container {
+  background: black;
+  visibility: hidden;
 }
