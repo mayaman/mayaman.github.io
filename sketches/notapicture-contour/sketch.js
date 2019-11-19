@@ -93,7 +93,7 @@ function setup() {
 function draw() {
   background(0);
 
-  if (cvReady() && captureReady && eventStarted) {
+  if (cvReady() && captureReady) {
     capture.loadPixels();
     if (capture.pixels.length > 0) {
       if (!backgroundPixels) {
@@ -166,52 +166,53 @@ function draw() {
       cv.findContours(thresholded, contours, hierarchy, 3, 2, [0, 0]);
     }
 
-    layerGraphics[colorIndex].push();
-    layerGraphics[colorIndex].scale(0.5);
-
-    outputGraphic.push();
-    if (contours && contours.size() >= 0 && !eventOver) {
-      outputGraphic.noStroke();
-      layerGraphics[colorIndex].noStroke();
-      for (let i = 0; i < contours.size(); i++) {
-        outputGraphic.fill(colors[colorIndex]);
-        layerGraphics[colorIndex].fill(colors[colorIndex]);
-        let contour = contours.get(i);
-        outputGraphic.beginShape();
-        layerGraphics[colorIndex].beginShape();
-        let k = 0;
-        for (let j = 0; j < contour.total(); j++) {
-          let x = contour.get_int_at(k++);
-          let y = contour.get_int_at(k++);
-          outputGraphic.vertex((xPos + x/4), (yPos + y/4));
+    if (eventStarted) {
+      layerGraphics[colorIndex].push();
+      layerGraphics[colorIndex].scale(0.5);
+      outputGraphic.push();
+      if (contours && contours.size() >= 0 && !eventOver) {
+        outputGraphic.noStroke();
+        layerGraphics[colorIndex].noStroke();
+        for (let i = 0; i < contours.size(); i++) {
+          outputGraphic.fill(colors[colorIndex]);
+          layerGraphics[colorIndex].fill(colors[colorIndex]);
+          let contour = contours.get(i);
+          outputGraphic.beginShape();
+          layerGraphics[colorIndex].beginShape();
+          let k = 0;
+          for (let j = 0; j < contour.total(); j++) {
+            let x = contour.get_int_at(k++);
+            let y = contour.get_int_at(k++);
+            outputGraphic.vertex((xPos + x / 4), (yPos + y / 4));
+          }
+          outputGraphic.endShape(CLOSE);
+          layerGraphics[colorIndex].endShape(CLOSE);
+          outputGraphic.stroke(colors[colorIndex]);
+          layerGraphics[colorIndex].stroke(colors[colorIndex]);
         }
-        outputGraphic.endShape(CLOSE);
-        layerGraphics[colorIndex].endShape(CLOSE);
-        outputGraphic.stroke(colors[colorIndex]);
-        layerGraphics[colorIndex].stroke(colors[colorIndex]);
-      }
-      outputGraphic.pop();
-      layerGraphics[colorIndex].pop();
+        outputGraphic.pop();
+        layerGraphics[colorIndex].pop();
 
 
-      // if (xPos < canvasWidth - (w) - bleedBuffer) {
-      if (xPos < canvasWidth - unitWidth) {
-        xPos += unitWidth; // w/2
-        // } else if (yPos < canvasHeight -  (h*printScale) -  (h*printScale) / 2 - bleedBuffer) {
-      } else if (yPos < canvasHeight) {
-        yPos += unitHeight;
-        xPos = bleedBuffer;
-      } else if (yPos >= canvasHeight - captureHeight - captureHeight / 2 - bleedBuffer && colorIndex < colors.length - 1) {
-        // One color completed!
-        xPos = bleedBuffer;
-        yPos = bleedBuffer;
-        // save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
-        colorIndex++;
-      } else {
-        // Finished!
-        // save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
-        // save(outputGraphic,"output.png");
-        eventOver = true;
+        // if (xPos < canvasWidth - (w) - bleedBuffer) {
+        if (xPos < canvasWidth - unitWidth) {
+          xPos += unitWidth / 2; // w/2
+          // } else if (yPos < canvasHeight -  (h*printScale) -  (h*printScale) / 2 - bleedBuffer) {
+        } else if (yPos < canvasHeight) {
+          yPos += unitHeight;
+          xPos = bleedBuffer;
+        } else if (yPos >= canvasHeight - captureHeight - captureHeight / 2 - bleedBuffer && colorIndex < colors.length - 1) {
+          // One color completed!
+          xPos = bleedBuffer;
+          yPos = bleedBuffer;
+          // save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
+          colorIndex++;
+        } else {
+          // Finished!
+          // save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
+          // save(outputGraphic,"output.png");
+          eventOver = true;
+        }
       }
     }
   }
@@ -226,7 +227,9 @@ function draw() {
 
   if (!eventStarted && countdown > 0) {
     fill(10, 200);
-    rect(0, 0, width, height);
+    rectMode(CENTER);
+    noStroke();
+    rect(width/2, height/2, width, height);
 
     fill(255);
     textAlign(CENTER);
@@ -266,4 +269,6 @@ function kickOff() {
   }, 2050);
 }
 
-kickOff();
+setTimeout(() => {
+  kickOff();
+}, 1000);
