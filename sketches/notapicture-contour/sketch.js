@@ -3,8 +3,8 @@
 let capture;
 const captureWidth = 640; // 4
 const captureHeight = 480; // 4
-const unitWidth = captureWidth/4;
-const unitHeight = captureHeight/4;
+const unitWidth = captureWidth / 4;
+const unitHeight = captureHeight / 4;
 
 const printScale = 0.05;
 const canvasScale = 42;
@@ -33,6 +33,9 @@ let captureMat, gray, blurred, thresholded;
 let contours, hierarchy;
 let layerPositions = [];
 const layerBuffer = 25;
+let eventStarted = false;
+let captureClone;
+let countdown = 3;
 
 function setup() {
   capture = createCapture(
@@ -51,7 +54,6 @@ function setup() {
   capture.elt.setAttribute("playsinline", "");
   capture.size(captureWidth, captureHeight);
   capture.hide();
-
 
   let canvasContainer = createCanvas(window.innerWidth, window.innerHeight);
   canvasContainer.parent('riso-container');
@@ -89,7 +91,9 @@ function setup() {
 }
 
 function draw() {
-  if (cvReady() && captureReady) {
+  background(0);
+
+  if (cvReady() && captureReady && eventStarted) {
     capture.loadPixels();
     if (capture.pixels.length > 0) {
       if (!backgroundPixels) {
@@ -123,6 +127,7 @@ function draw() {
         }
       }
       capture.updatePixels();
+
       // Render input image
       image(capture, width / 3 - width / 6, height / 2, canvasWidth, canvasWidth / captureWidth * captureHeight);
       stroke('#fff');
@@ -134,7 +139,6 @@ function draw() {
       captureMat.data().set(capture.pixels);
       blurRadius = 10;
       let threshold = 100;
-
 
       cv.cvtColor(
         captureMat,
@@ -166,7 +170,6 @@ function draw() {
     layerGraphics[colorIndex].scale(0.5);
 
     outputGraphic.push();
-    // outputGraphic.scale(unitWidth/captureWidth * 1.5);
     if (contours && contours.size() >= 0 && !eventOver) {
       outputGraphic.noStroke();
       layerGraphics[colorIndex].noStroke();
@@ -180,11 +183,10 @@ function draw() {
         for (let j = 0; j < contour.total(); j++) {
           let x = contour.get_int_at(k++);
           let y = contour.get_int_at(k++);
-          outputGraphic.vertex((xPos + x), (yPos + y));
+          outputGraphic.vertex((xPos + x/4), (yPos + y/4));
         }
         outputGraphic.endShape(CLOSE);
         layerGraphics[colorIndex].endShape(CLOSE);
-
         outputGraphic.stroke(colors[colorIndex]);
         layerGraphics[colorIndex].stroke(colors[colorIndex]);
       }
@@ -193,7 +195,7 @@ function draw() {
 
 
       // if (xPos < canvasWidth - (w) - bleedBuffer) {
-      if (xPos < canvasWidth) {
+      if (xPos < canvasWidth - unitWidth) {
         xPos += unitWidth; // w/2
         // } else if (yPos < canvasHeight -  (h*printScale) -  (h*printScale) / 2 - bleedBuffer) {
       } else if (yPos < canvasHeight) {
@@ -221,6 +223,17 @@ function draw() {
   }
   // Render output graphic
   image(outputGraphic, width * 2 / 3 + width / 6, height / 2);
+
+  if (!eventStarted && countdown > 0) {
+    fill(10, 200);
+    rect(0, 0, width, height);
+
+    fill(255);
+    textAlign(CENTER);
+    textSize(100);
+    textFont('Roboto Mono');
+    text(countdown, width / 2, height / 2);
+  }
 }
 
 function cvSetup() {
@@ -237,3 +250,20 @@ function cvReady() {
   ready = true;
   return true;
 }
+
+function kickOff() {
+  setTimeout(() => {
+    eventStarted = true;
+  }, 5050);
+  setTimeout(() => {
+    countdown--;
+  }, 4050);
+  setTimeout(() => {
+    countdown--;
+  }, 3050);
+  setTimeout(() => {
+    countdown--;
+  }, 2050);
+}
+
+kickOff();
