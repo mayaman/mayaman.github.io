@@ -26,16 +26,19 @@ let liveFeed;
 let risoCanvas;
 let outputGraphic;
 let layerGraphics = [];
+let hiresLayerGraphics = [];
 let eventOver = false;
 let ready = false;
 
 let captureMat, gray, blurred, thresholded;
 let contours, hierarchy;
 let layerPositions = [];
-const layerBuffer = 25;
+const layerBuffer = 25; // 25
 let eventStarted = false;
 let captureClone;
 let countdown = 3;
+
+let risoBlue, risoPink, risoMint, risoYellow;
 
 function setup() {
   capture = createCapture(
@@ -61,12 +64,14 @@ function setup() {
   outputGraphic = createGraphics(canvasWidth, canvasHeight);
   outputGraphic.background('#fffffa');
 
-  const layerWidth = canvasWidth / 2 - layerBuffer / 2;
-  const layerHeight = canvasHeight / 2 - layerBuffer / 2;
+  const layerWidth = canvasWidth - layerBuffer / 2;
+  const layerHeight = canvasHeight - layerBuffer / 2;
 
   for (let c = 0; c < 4; c++) {
     layerGraphics.push(createGraphics(layerWidth, layerHeight));
+    hiresLayerGraphics.push(createGraphics(canvasWidth, canvasHeight));
     layerGraphics[c].background('#fffffa');
+    hiresLayerGraphics[c].background('#fffffa');
   }
 
   layerPositions.push([width / 2 - layerWidth / 2 - layerBuffer / 2, height / 2 - layerHeight / 2 - layerBuffer / 2]); // top left
@@ -84,10 +89,28 @@ function setup() {
   const yellow = color(255, 231, 0, alpha);
   const mint = color(131, 216, 213, alpha);
   const darkblue = color(61, 84, 135, alpha);
+  const green = color(104, 179, 69);
+  const bisque = color(242, 206, 207);
 
-  colors = [darkblue, pink, mint, yellow];
+  colors = [darkblue, pink, mint, yellow]; // 3
+  // colors = [pink, yellow, mint, darkblue]; // 2
+  // colors = [yellow, darkblue, mint, pink]; // 1 
 
-  frameRate(15); // make frameRate 10 FPS
+  pixelDensity(1);
+  risoBlue = new Riso('MEDIUMBLUE');
+  risoPink = new Riso('FLUORESCENTPINK');
+  risoMint = new Riso('MINT');
+  risoYellow = new Riso('YELLOW');
+
+  clearRiso();
+
+  allLayers = [risoBlue, risoPink, risoMint, risoYellow];
+  allLayers.forEach(layer => {
+    layer.background('#fffffa');
+  })
+
+  noCursor();
+  frameRate(30); // make frameRate 10 FPS
 }
 
 function draw() {
@@ -102,7 +125,7 @@ function draw() {
 
       let i = 0;
       let pixels = capture.pixels;
-      let thresholdAmount = (select("#thresholdAmount").value() * 255) / 100;
+      let thresholdAmount = (50 * 255) / 100; // Originally 45
       let total = 0;
       for (let y = 0; y < captureHeight; y++) {
         for (let x = 0; x < captureWidth; x++) {
@@ -168,17 +191,23 @@ function draw() {
 
     if (eventStarted) {
       layerGraphics[colorIndex].push();
-      layerGraphics[colorIndex].scale(0.5);
-      outputGraphic.push();
+      // hiresLayerGraphics[colorIndex].push();
+      // layerGraphics[colorIndex].scale(0.5);
       if (contours && contours.size() >= 0 && !eventOver) {
         outputGraphic.noStroke();
         layerGraphics[colorIndex].noStroke();
+        allLayers[colorIndex].noStroke();
         for (let i = 0; i < contours.size(); i++) {
           outputGraphic.fill(colors[colorIndex]);
           layerGraphics[colorIndex].fill(colors[colorIndex]);
+          allLayers[colorIndex].fill(colors[colorIndex]);
+          // hiresLayerGraphics[colorIndex].fill(colors[colorIndex]);
+
           let contour = contours.get(i);
           outputGraphic.beginShape();
           layerGraphics[colorIndex].beginShape();
+          allLayers[colorIndex].beginShape();
+
           let k = 0;
           for (let j = 0; j < contour.total(); j++) {
             let x = contour.get_int_at(k++);
@@ -187,17 +216,18 @@ function draw() {
           }
           outputGraphic.endShape(CLOSE);
           layerGraphics[colorIndex].endShape(CLOSE);
+          allLayers[colorIndex].endShape(CLOSE);
+
           outputGraphic.stroke(colors[colorIndex]);
           layerGraphics[colorIndex].stroke(colors[colorIndex]);
+          allLayers[colorIndex].stroke(colors[colorIndex]);
         }
-        outputGraphic.pop();
+        // hiresLayerGraphics.pop();
         layerGraphics[colorIndex].pop();
 
 
-        // if (xPos < canvasWidth - (w) - bleedBuffer) {
         if (xPos < canvasWidth - unitWidth) {
-          xPos += unitWidth / 2; // w/2
-          // } else if (yPos < canvasHeight -  (h*printScale) -  (h*printScale) / 2 - bleedBuffer) {
+          xPos += unitWidth/2; // w/2
         } else if (yPos < canvasHeight) {
           yPos += unitHeight;
           xPos = bleedBuffer;
@@ -205,12 +235,12 @@ function draw() {
           // One color completed!
           xPos = bleedBuffer;
           yPos = bleedBuffer;
-          // save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
+          save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
           colorIndex++;
         } else {
           // Finished!
-          // save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
-          // save(outputGraphic,"output.png");
+          save(layerGraphics[colorIndex],"layer_"+colorIndex+".png");
+          save(outputGraphic,"output.png");
           eventOver = true;
         }
       }
@@ -220,7 +250,13 @@ function draw() {
   imageMode(CENTER);
   // Render layer graphics
   for (let g = 0; g < layerGraphics.length; g++) {
+    push();
+    const layerScale = 0.5;
+    scale(layerScale);
+    // translate(width/2 + layerBuffer*4, height/2 + layerBuffer*4);
+    translate(width/2, height/2);
     image(layerGraphics[g], layerPositions[g][0], layerPositions[g][1]);
+    pop();
   }
   // Render output graphic
   image(outputGraphic, width * 2 / 3 + width / 6, height / 2);
@@ -237,6 +273,8 @@ function draw() {
     textFont('Roboto Mono');
     text(countdown, width / 2, height / 2);
   }
+
+  // drawRiso();
 }
 
 function cvSetup() {
@@ -252,6 +290,10 @@ function cvReady() {
   cvSetup();
   ready = true;
   return true;
+}
+
+function mousePressed() {
+  // exportRiso();
 }
 
 function kickOff() {
