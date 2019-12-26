@@ -6,7 +6,7 @@ let colors = [];
 let backgroundColor;
 
 const borderWidth = 5;
-const places = ['Fort Greene', 'Chelsea', 'Park Slope', 'Taipei', 'Mountain View', 'Tel Aviv', 'Seattle', 'Orcus Island', 'Las Vegas', 'Mojave Desert','Beacon', 'Avon', 'Boston', 'Salt Lake City', 'Black Rock City', 'Poughkeepsie', 'Catskills', 'Tokyo', 'Kyoto', 'Bangkok', 'Chiang Mai', '...', '...', '...']
+const places = ['Fort Greene', 'Chelsea', 'Park Slope', 'Taipei', 'Mountain View', 'Tel Aviv', 'Seattle', 'Orcus Island', 'Las Vegas', 'Mojave Desert', 'Beacon', 'Avon', 'Boston', 'Gramercy', 'Salt Lake City', 'Black Rock City', 'Poughkeepsie', 'Catskills', 'Tokyo', 'Kyoto', 'Bangkok', 'Chiang Mai', 'Fort Greene']
 let placeIndex = 0;
 let startedDrawing = false;
 
@@ -19,7 +19,7 @@ function setup() {
   backgroundColor = color(252);
   background(backgroundColor);
   imageMode(CENTER);
-  image(poster, width/2, height/2, canvasWidth, canvasHeight);
+  image(poster, width / 2, height / 2, canvasWidth, canvasHeight);
 }
 
 function draw() {
@@ -31,16 +31,25 @@ function draw() {
 }
 
 function mouseReleased() {
-  startedDrawing = true;
-  stroke(255);
-  fill(255);
-  strokeWeight(0.5);
-  textAlign(CENTER);
-  textSize(12);
-  text(places[placeIndex], mouseX, mouseY - 15);
-  noStroke();
-  ellipse(mouseX, mouseY, 10, 10);
-  placeIndex++;
+  if (placeIndex < places.length) {
+    startedDrawing = true;
+    // Place Name
+    stroke(255);
+    fill(255);
+    strokeWeight(0.5);
+    textAlign(CENTER);
+    textSize(12);
+    text(places[placeIndex], mouseX, mouseY - 15);
+
+    // Circle
+    noStroke();
+    ellipse(mouseX, mouseY, 10, 10);
+
+    placeIndex++;
+    if (placeIndex >= places.length) {
+      startedDrawing = false;
+    }
+  }
 }
 
 
