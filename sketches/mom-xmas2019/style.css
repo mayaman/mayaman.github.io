@@ -1,0 +1,11 @@
+body {
+    background: #000000;
+    /* background: #00c2dc; */
+    cursor: pointer;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}
