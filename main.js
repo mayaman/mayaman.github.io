@@ -158,8 +158,9 @@ function initIndex() {
 
 // *~*~*~*~*~*~*~*~* INFO *~*~*~*~*~*~*~*~* //
 function initInfo() {
-    document.title = 'INFO' + TITLE_SUFFIX;
+    console.log(window.history);
 
+    document.title = 'INFO' + TITLE_SUFFIX;
     var navContainer = document.getElementById('nav-container');
     addCloseNav(navContainer);
 }
@@ -282,7 +283,8 @@ function initProject(projectPath) {
 }
 
 // *~*~*~*~*~*~*~*~* HELPER *~*~*~*~*~*~*~*~* //
-var closeNavHTML = '<div class="nav-link"> <a href="javascript:window.history.back()">CLOSE</a></div>';
+// var closeNavHTML = '<div class="nav-link"> <a href="javascript:closeBack()">MAIN</a> <a href="javascript:closeBack()">INDEX</a></div>';
+var closeNavHTML = '<div class="nav-link"> <a href="/">MAIN</a> </div> <div class="nav-link"> <a href="/index">INDEX</a> </div>';
 
 function addCloseNav(elt) {
     elt.innerHTML = closeNavHTML;
