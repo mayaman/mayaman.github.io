@@ -162,7 +162,7 @@ function initInfo() {
 
     document.title = 'INFO' + TITLE_SUFFIX;
     var navContainer = document.getElementById('nav-container');
-    addCloseNav(navContainer);
+    navContainer.innerHTML = '<div class="nav-link"> <a href="/">MAIN</a> </div> <div class="nav-link"> <a href="/index">INDEX</a> </div> <div id="active-link" class="nav-link"> <a href="/info">INFO</a> </div>';
 }
 
 // *~*~*~*~*~*~*~*~* PROJECT *~*~*~*~*~*~*~*~* //
@@ -186,6 +186,7 @@ function initProject(projectPath) {
     var title = document.createElement('h1');
     title.innerText = projectData.title;
     title.classList.add('text-L');
+    title.id = 'active-link';
     projectContainer.appendChild(title);
 
     var linkData = projectData.link;
@@ -284,7 +285,7 @@ function initProject(projectPath) {
 
 // *~*~*~*~*~*~*~*~* HELPER *~*~*~*~*~*~*~*~* //
 // var closeNavHTML = '<div class="nav-link"> <a href="javascript:closeBack()">MAIN</a> <a href="javascript:closeBack()">INDEX</a></div>';
-var closeNavHTML = '<div class="nav-link"> <a href="/">MAIN</a> </div> <div class="nav-link"> <a href="/index">INDEX</a> </div>';
+var closeNavHTML = '<div class="nav-link"> <a href="/">MAIN</a> </div> <div class="nav-link"> <a href="/index">INDEX</a> </div> <div class="nav-link"> <a href="/info">INFO</a> </div>';
 
 function addCloseNav(elt) {
     elt.innerHTML = closeNavHTML;

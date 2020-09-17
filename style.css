@@ -57,46 +57,6 @@ body a:hover {
     font-style: italic;
 }
 
-/* COLORS */
-.white {
-    color: white;
-}
-
-.white a {
-    color: white;
-}
-
-a.white {
-    color: white;
-}
-
-.black {
-    color: black;
-}
-
-.pink {
-    color: #ed1288;
-}
-
-.hide {
-    display: none;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-::-moz-selection {
-    /* Code for Firefox */
-    /* color: #ed1288; */
-    background: #ed1288;
-}
-
-::selection {
-    /* color: #ed1288; */
-    background: #ed1288;
-}
-
 /*******************
 NAV
 ********************/
@@ -169,7 +129,7 @@ INDEX
     width: 108px;
     max-width: 100%;
     height: auto;
-    margin-right: 36px;
+    margin-right: 18px 0px 18px 0px;
     display: flex;
     align-self: center;
     border: 2px solid #00000000;
@@ -240,6 +200,19 @@ MOBILE
         letter-spacing: 0.02em;
     }
 
+    .nav {
+        position: inherit;
+        z-index: 9;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-link {
+        margin: 3px 0px 18px 0px;
+        text-align: center;
+    }
+
     .copy-container {
         width: 75%;
     }
@@ -298,4 +271,47 @@ MOBILE
     100% {
         transform: translate(-70%, 0);
     }
+}
+
+/* COLORS */
+.white {
+    color: white;
+}
+
+.white a {
+    color: white;
+}
+
+a.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+#active-link,
+#active-link a {
+    color: #ed1288;
+}
+
+.pink {
+    color: #ed1288;
+}
+
+.hide {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    background: #ed1288;
+}
+
+::selection {
+    background: #ed1288;
 }

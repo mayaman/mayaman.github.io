@@ -1,4 +1,7 @@
 let data = {
+    "colors": {
+        "heavypink": "#ed1288",
+    },
     "announcement": {
         "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
         "link": "https://www.racialjusticebookshelf.com/"
