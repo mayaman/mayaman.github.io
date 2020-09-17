@@ -38,7 +38,7 @@ let data = {
                 "url": "https://www.billtjonesai.com/",
                 "text": "billtjonesai.com"
             },
-            "mainImageIndices": [0, 1, 2, 4],
+            "mainImageIndices": [0, 1, 4],
             "thumbnailImageIndex": 0,
             "images": [
                 {
@@ -293,14 +293,34 @@ let data = {
     },
     "other": [
         {
-            "title": "A collage I made about the Internet from New York Times clippings and Seventeen Magazine",
+            "title": "[!!!!!] I'm teaching a virtual intro to visual coding class, sign up here",
+            "link": "https://mailchi.mp/liganova/ozephqar0u",
+            "image": "manifest.png"
+        },
+        {
+            "title": ":-) every day is dance day every place is dance space",
+            "link": "https://www.instagram.com/p/B_n6NvNgT1r/",
+            "image": "wordstoliveby.png"
+        },
+        {
+            "title": "Collage I made about the Internet from New York Times and Seventeen Magazine clippings",
             "link": "https://www.instagram.com/p/CCmljiNgB_L/",
             "image": "collage_internet.png"
         },
         {
-            "title": "Special Special's show and tell that featured Glance Back",
-            "link": "https://mailchi.mp/6ad6af09ceb2/glanceback",
-            "image": "special.gif"
+            "title": "A photo of me scrolling on my phone on instagram",
+            "link": "https://www.instagram.com/p/CDUTFF3AKaQ/",
+            "image": "scrolling.png"
+        },
+        {
+            "title": "Are.na channel where I collect things I can not believe exist on the Internet",
+            "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
+            "image": "cannotbelieve.png"
+        },
+        {
+            "title": "In class learning choreo I loooove by Bo Belza and Alice Wu",
+            "link": "https://www.instagram.com/p/BzgAQEbAwKn/",
+            "image": "bo.gif"
         },
         {
             "title": "This is now hanging in my apartment! A dream collaboration between two A+ artists, get the poster at the link in the tweet",
@@ -318,6 +338,11 @@ let data = {
             "image": "pink.png"
         },
         {
+            "title": "Special Special's show and tell that featured Glance Back",
+            "link": "https://mailchi.mp/6ad6af09ceb2/glanceback",
+            "image": "special.gif"
+        },
+        {
             "title": "Interview with The Limit Does Not Exist Podcast where I talk about making work for screens and online identity",
             "link": "http://tldnepodcast.com/107",
             "image": "tldne1.png"
@@ -326,27 +351,7 @@ let data = {
             "title": "My younger sibling Chella is amazing and I will support everything he does forever",
             "link": "https://twitter.com/chellamanart/status/1135380307430006785",
             "image": "chellaman.png"
-        },
-        {
-            "title": "A photo of me scrolling on my phone on instagram",
-            "link": "https://www.instagram.com/p/CDUTFF3AKaQ/",
-            "image": "scrolling.png"
-        },
-        {
-            "title": "In class learning choreo I loooove by Bo Belza and Alice Wu",
-            "link": "https://www.instagram.com/p/BzgAQEbAwKn/",
-            "image": "bo.gif"
-        },
-        {
-            "title": "Are.na channel where I collect things I can not believe exist on the Internet",
-            "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
-            "image": "cannotbelieve.png"
-        },
-        {
-            "title": ":-) every day is dance day every place is dance space",
-            "link": "https://www.instagram.com/p/B_n6NvNgT1r/",
-            "image": "wordstoliveby.png"
-        },
+        }
     ],
     "otherArchive": [
         {

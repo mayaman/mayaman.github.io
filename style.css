@@ -172,6 +172,11 @@ INDEX
     margin-right: 36px;
     display: flex;
     align-self: center;
+    border: 2px solid #00000000;
+}
+
+.index-image:hover {
+    border: 2px solid #ed1288;
 }
 
 /*******************

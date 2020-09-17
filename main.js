@@ -71,21 +71,13 @@ function placeEntries() { // Causing spacing issues on mobile
     var colInterval = window.innerWidth / numCols;
     var colCounter = 0;
 
-    var numRows = 5;
-    var rowInterval = window.innerHeight / numRows;
-    var rowCounter = 0;
-
     for (var e = 0; e < entries.length; e++) {
         var currentEntry = entries[e];
-        var newWidth = (Math.random() * widthScale) + minWidth; // + minScale
+        var newWidth = (Math.random() * widthScale) + minWidth;
         currentEntry.style.width = newWidth + 'px';
-
-        // var randomLeft = Math.floor(Math.random() * (window.innerWidth - newWidth - 40)); // window.innerWidth
-        // currentEntry.style.left = randomLeft + 'px';
 
         var offset = 0;
         if (colCounter == (numCols - 1)) {
-            console.log('SETTING OFFSET')
             offset = newWidth + 40;
         }
 
@@ -95,17 +87,7 @@ function placeEntries() { // Causing spacing issues on mobile
         var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth));
         currentEntry.style.top = randomTop + 'px';
 
-        // var rowOffset = 0;
-        // if (rowCounter == (numRows - 1)) {
-        //     console.log('SETTING OFFSET')
-        //     rowOffset = newWidth + 40;
-        // }
-
-        // var randomTop = Math.floor(Math.random() * (rowInterval - rowOffset)) + (rowCounter * rowInterval);
-        // currentEntry.style.top = randomTop + 'px';
-
         colCounter = (colCounter + 1) % (numCols);
-        rowCounter = (rowCounter + 3) % (numRows);
     }
     window.scrollTo(0, 0);
 }
