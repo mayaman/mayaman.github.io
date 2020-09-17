@@ -1,0 +1,230 @@
+body {
+    background: white;
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+    /* font-weight: bold; */
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+    margin: 0px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+    margin: 0px;
+    font-size: inherit;
+    font-weight: normal;
+}
+
+body a {
+    color: black;
+}
+
+body a:hover {
+    /* font-style: italic; */
+    color: #ed1288;
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 18px;
+    min-height: 100vh;
+}
+
+.copy-container {
+    width: 50%;
+}
+
+/* TEXT */
+.text-L {
+    /* font-family: Helvetica, sans-serif;
+    font-style: normal; */
+    /* font-weight: bold; */
+    /* font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 0.02em; */
+    text-transform: uppercase;
+}
+
+.italics {
+    font-style: italic;
+}
+
+/* COLORS */
+.white {
+    color: white;
+}
+
+.white a {
+    color: white;
+}
+
+a.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.pink {
+    color: #ed1288;
+}
+
+.hide {
+    display: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    /* color: #ed1288; */
+    background: #ed1288;
+}
+
+::selection {
+    /* color: #ed1288; */
+    background: #ed1288;
+}
+
+/*******************
+NAV
+********************/
+.nav {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9;
+}
+
+.nav-link {
+    display: inline-block;
+    margin-left: 18px;
+    position: relative;
+}
+
+.nav-link a {
+    text-decoration: none;
+}
+
+/*******************
+MAIN 
+********************/
+#main {
+    position: relative;
+    z-index: 0;
+}
+
+.entry {
+    /* border: 2px solid; */
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+    z-index: 0;
+}
+
+.entry img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #00000000;
+    position: relative;
+}
+
+.entry img:hover {
+    border: 2px solid #ed1288;
+}
+
+/*******************
+INDEX
+********************/
+.entry-index {
+    display: flex;
+    margin: 36px 0px;
+}
+
+.entry-index a {
+    display: flex;
+    align-items: center;
+}
+
+.index-image {
+    width: 144px;
+    max-width: 100%;
+    height: auto;
+    margin-right: 36px;
+    display: flex;
+    align-self: center;
+}
+
+/*******************
+PROJECT 
+********************/
+
+.project-image {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+}
+
+.project-video {
+    width: 100%;
+    margin-top: 18px;
+    position: relative;
+    padding-bottom: 62.5%;
+    height: 0;
+}
+
+.project-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 99.5%;
+    height: 100%;
+}
+
+.project-description {
+    margin-top: 18px;
+}
+
+/*******************
+INFO 
+********************/
+#info-container {
+    background: #000000;
+    color: white;
+}
+
+#info-container a {
+    color: white;
+}
+
+#info-container a:hover {
+    color: #ed1288;
+}
+
+#info-text {
+    width: 50%;
+}
+
+/*******************
+MOBILE 
+********************/
+/* On screens that are 768px wide or less, go from four columns to two columns */
+@media screen and (max-width: 768px) {
+    .copy-container {
+        width: 75%;
+    }
+}

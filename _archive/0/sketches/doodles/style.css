@@ -1,0 +1,10 @@
+body {
+    background: white;
+    cursor: pointer;
+}
+
+canvas {
+    margin: 0;
+    display: block;
+    cursor: pointer;
+}

@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Maya Man</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!-- Bootstrap Core CSS-->
-    <link
-      rel="stylesheet"
-      href="../css/bootstrap.min.css"
-      type="text/css"
-    />
-    <!-- Custom CSS-->
-    <link rel="stylesheet" href="../css/creative.css" type="text/css" />
-    <link rel="icon" type="image/png" href="../assets/images/icon.png" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  </head>
-  <body>
-    <!--********** header *********-->
-    <header>
-        <div class="header-content">
-         <div class="header-content-inner">
-          <a href="/"> <h1>Maya Man</h1></a>
-          <div class="pages"> <a href="/about/"> ~ info ~ </a> </div>
-        </div>
-       </div>
-      </header>
-    <!--********** info sections *********-->
-    <div class="content">
-        <div class="embed-responsive embed-responsive-16by9 video">
-            <iframe src="https://player.vimeo.com/video/351534893?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-        <br>
-      <div>
-      <div class="project-title">
-        <h2>PoseNet Sketchbook</h2>
-        <h4><a href="https://googlecreativelab.github.io/posenet-sketchbook/">googlecreativelab.github.io/posenet-sketchbook/</a></h4>
-      </div>
-      <div class="description">
-        <p>
-            Designed, developed, and open sourced this collection of web experiments created to allude to the artistic possibilities of using PoseNet (running on tensorflow.js) to create a relationship between movement and machine.
-        </p>
 
-        <p>
-          Try them out on the live site <a href="https://googlecreativelab.github.io/posenet-sketchbook/">here</a> and get the open source code on the Google Creative Lab's github <a href="https://github.com/googlecreativelab/posenet-sketchbook">here</a>. 
-        </p>
-      </div>
-      <br>
-      <div>
-          <img
-            class="project-image"
-            src="ShapeShifter.gif"
-            alt=""
-          />
-          <img
-            class="project-image"
-            src="BodyPainter.gif"
-            alt=""
-          />
-          <img
-            class="project-image"
-            src="Collager.gif"
-            alt=""
-          />
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="description" content="Maya Man's personal website">
+  <meta name="author" content="Maya Man">
+  <meta name="keywords" content="art, code, dance, internet, maya man">
+  <meta property="og:title" content="Maya Man" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Maya Man is a New York City based artist, programmer, and dancer." />
+  <meta property="og:image" content="https://mayaontheinter.net/assets/main.png" />
+  <meta property="og:url" content="https://mayaontheinter.net/" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mayaonthenet">
+  <meta name="twitter:title" content="Maya Man">
+  <meta name="twitter:description" content="Maya Man is a New York City based artist, programmer, and dancer." />
+  <meta name="twitter:image" content="https://mayaontheinter.net/assets/main.png" />
+  <meta name="twitter:image:alt"
+    content="A screenshot of Maya's website homepage with many project images, selfies, and screenshots are stacked all over the screen." />
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="/assets/blue_globewithmeridians.png">
+  <script src="/data.js"></script>
+  <script src="/main.js"></script>
+  <script>
+    window.onload = () => {
+      initProject('posenetsketchbook');
+    };
+  </script>
+</head>
+
+<body>
+  <div class="container" id="">
+    <div class="nav" id="nav-container">
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

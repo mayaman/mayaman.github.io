@@ -1,0 +1,113 @@
+{
+    "projects": {
+        "glanceback": {
+            "title": "Glance Back",
+            "link": {
+                "url": "https://glanceback.info/",
+                "text": "glanceback.info"
+            },
+            "path": "glanceback",
+            "images": [
+                "reel_me.gif",
+                "question.png",
+                "mainpage.png",
+                "scroll.png"
+            ],
+            "description": "You spend so much time staring at your computer... doesn't your computer deserve a chance to glance back at you? <br><br> Glance Back is a <a target='_blank' href='https://chrome.google.com/webstore/detail/glance-back/hgickafobcmcfffbjiamhhejkockfccm'>chrome extension</a> that acts as a daily photo diary, capturing the moments shared between you and your computer. Once a day, when you open a new tab, Glance Back will unexpectedly take your photo, ask you what you’re thinking about, and save both the photo and written thought to its locally stored archive. <br><br> Read more about the project and get the extension <a target='_blank' href='https://glanceback.info/'>here</a>."
+        },
+        "bodymovementlanguage": {
+            "title": "Body, Movement, Language: A.I. Sketches with Bill T. Jones",
+            "link": {
+                "url": "https://www.billtjonesai.com/",
+                "text": "billtjonesai.com"
+            },
+            "path": "bodymovementlanguage",
+            "images": [
+                "manifesto_2.gif",
+                "holdthatthought.gif",
+                "poster.jpg",
+                "working.png",
+                "workshop.png"
+            ],
+            "videos": [
+                {
+                    "platform": "youtube",
+                    "id": "RVyh1ewep84"
+                }
+            ],
+            "press": [
+                {
+                    "url": "https://design.google/library/google-design-2019/",
+                    "title": "Google Best of Design 2019"
+                },
+                {
+                    "url": "https://aicpawards.awardcore.com/shortlist/list.php?catID=26&type=next",
+                    "title": "AICP NEXT Awards Shortlist for Digital Experiences"
+                },
+                {
+                    "url": "https://www.blackenterprise.com/google-and-legendary-dancer-bill-t-jones-create-interactive-dance-experience-for-anyone/",
+                    "title": "Black Enterprise"
+                }
+            ],
+            "writing": [
+                {
+                    "url": "https://medium.com/artists-and-machine-intelligence/mixing-movement-and-machine-848095ea5596",
+                    "title": "Mixing movement and machine: A behind the scenes look at building A.I. experiments with dance legend Bill T. Jones"
+                }
+            ],
+            "description": "<span class='italics'>Body, Movement, Language</span> is a collection of experiments made at the intersection of art, technology, identity, and the body that were created during a two-way residency between award-winning choreographer Bill T. Jones and the Google Creative Lab. <br><br> All four experiments in the collection were built using PoseNet, a machine learning model running on Tensorflow.js. PoseNet runs in the browser, making it accessible to anyone using a modern Internet browser and a web camera.<br><br>Read more about the project on its <a target='_blank' href='https://experiments.withgoogle.com/billtjonesai'>Experiment page</a>."
+        },
+        "pastetodownload": {
+            "title": "Paste to download",
+            "link": {
+                "url": "https://www.pastetodownload.com/",
+                "text": "pastetodownload.com"
+            },
+            "path": "pastetodownload",
+            "images": [
+                "site.gif",
+                "extension.png",
+                "downloaded.png",
+                "done.png",
+                "reviews_anon.png"
+            ],
+            "description": "Paste to download is a <a target='_blank' href='https://chrome.google.com/webstore/detail/paste-to-download/jghdppgkpdccfpobmilnnhgahhpjhbne'>chrome extension</a> that makes it easy to save images copied to your clipboard. It's especially useful to download media embedded in tough to export places like Google Slides."
+        },
+        "paintmeinpixels": {
+            "title": "Paint me in pixels so I can dance forever",
+            "path": "paintmeinpixels",
+            "images": [
+                "paintme_02.gif",
+                "timessquare.gif"
+            ],
+            "videos": [
+                {
+                    "platform": "vimeo",
+                    "id": "376744401"
+                },
+                {
+                    "platform": "vimeo",
+                    "id": "376744460"
+                }
+            ],
+            "description": "This series exhibits the output of a computer program written to continually layer a dancer's form on screen, creating a unique portrait of their past movement. While any motion performed in ~real life~ lasts only a moment, by rendering myself in pixels I am able to allow my movement to linger on screen indefinitely. <br><br> Shown at CADAF Miami for Art Basel and in Times Square and Lightbox in New York City."
+        }
+    },
+    "other": [
+        {
+            "title": "A photo of me scrolling on my phone on instagram",
+            "link": "https://www.instagram.com/p/CDUTFF3AKaQ/",
+            "image": "scrolling.png"
+        },
+        {
+            "title": "Work comissioned by the Processing Foundation for their #SupportP5 Campaign",
+            "link": "https://medium.com/processing-foundation/supportp5-artist-maya-man-48ace1fbd2ac",
+            "image": "supportp5.png"
+        },
+        {
+            "title": "My Are.na channel where I collect pink saturated images that make me FEEL",
+            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
+            "image": "pinkasafeeling.png"
+        }
+    ]
+}

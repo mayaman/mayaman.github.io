@@ -1,57 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Maya Man</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <!-- Bootstrap Core CSS-->
-    <link
-      rel="stylesheet"
-      href="../css/bootstrap.min.css"
-      type="text/css"
-    />
-    <!-- Custom CSS-->
-    <link rel="stylesheet" href="../css/creative.css" type="text/css" />
-    <link rel="icon" type="image/png" href="../assets/images/icon.png" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  </head>
-  <body>
-    <!--********** header *********-->
-    <header>
-        <div class="header-content">
-         <div class="header-content-inner">
-          <a href="/"> <h1>Maya Man</h1> </a>
-          <div class="pages"> <a href="/about/"> ~ info ~ </a> </div>
-        </div>
-       </div>
-      </header>
-    <!--********** info sections *********-->
-    <div class="content">
-      <!-- <a href="/work/"><span class="featherlight-close-icon featherlight-close right">x</span></a> -->
-      <div>
-        <img
-          class="project-image"
-          src="../assets/images/projects/pastetodownload_extensiondemo.gif"
-          alt=""
-        />
-      </div>
-      <!-- <div><img class="project-image" src="../assets/images/projects/ptd2.png" alt=""></div> -->
-      <div class="project-title">
-        <h2>Paste to Download</h2>
-        <h4>
-          <a href="https://www.pastetodownload.com">pastetodownload.com</a>
-        </h4>
-      </div>
-      <div class="description">
-        <p>
-          A chrome extension that makes it easy to download online images and
-          gifs. Especially useful for tough situations like media from Google
-          slides. Simply copy and paste to download!
-        </p>
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+  <meta name="description" content="Maya Man's personal website">
+  <meta name="author" content="Maya Man">
+  <meta name="keywords" content="art, code, dance, internet, maya man">
+  <meta property="og:title" content="Maya Man" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Maya Man is a New York City based artist, programmer, and dancer." />
+  <meta property="og:image" content="https://mayaontheinter.net/assets/main.png" />
+  <meta property="og:url" content="https://mayaontheinter.net/" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@mayaonthenet">
+  <meta name="twitter:title" content="Maya Man">
+  <meta name="twitter:description" content="Maya Man is a New York City based artist, programmer, and dancer." />
+  <meta name="twitter:image" content="https://mayaontheinter.net/assets/main.png" />
+  <meta name="twitter:image:alt"
+    content="A screenshot of Maya's website homepage with many project images, selfies, and screenshots are stacked all over the screen." />
+  <link rel="stylesheet" href="/style.css" type="text/css">
+  <link rel="icon" type="image/png" href="/assets/blue_globewithmeridians.png">
+  <script src="/data.js"></script>
+  <script src="/main.js"></script>
+  <script>
+    window.onload = () => {
+      initProject('pastetodownload');
+    };
+  </script>
+</head>
+
+<body>
+  <div class="container" id="">
+    <div class="nav" id="nav-container">
     </div>
-  </body>
+  </div>
+</body>
 </html>
