@@ -42,7 +42,7 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "manifesto_2.gif",
+                    "path": "manifesto_02.gif",
                     "alt": "Dancer moving a trail of words following his wrist around on screen"
                 },
                 {
