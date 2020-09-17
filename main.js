@@ -61,11 +61,13 @@ function initMain() {
 function placeEntries() { // Causing spacing issues on mobile
     var entries = document.getElementsByClassName('entry');
     var minWidth = 75;
+    var widthScale = 250;
+
     if (isMobile) {
-        minWidth = 75;
+        minWidth = 50;
+        widthScale = 100;
     }
 
-    var widthScale = 250;
 
     var numCols = 5;
     var colInterval = window.innerWidth / numCols;
@@ -81,8 +83,13 @@ function placeEntries() { // Causing spacing issues on mobile
             offset = newWidth + 40;
         }
 
-        var randomLeft = Math.floor(Math.random() * (colInterval - offset)) + (colCounter * colInterval); // window.innerWidth
-        currentEntry.style.left = randomLeft + 'px';
+        if (isMobile) {
+            var randomLeft = Math.floor(Math.random() * (window.innerWidth - newWidth - 40)); // window.innerWidth
+            currentEntry.style.left = randomLeft + 'px';
+        } else {
+            var randomLeft = Math.floor(Math.random() * (colInterval - offset)) + (colCounter * colInterval); // window.innerWidth
+            currentEntry.style.left = randomLeft + 'px';
+        }
 
         var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth));
         currentEntry.style.top = randomTop + 'px';
