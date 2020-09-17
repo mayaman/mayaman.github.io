@@ -7,6 +7,12 @@ var isMobile = isMobile();
 // *~*~*~*~*~*~*~*~* MAIN *~*~*~*~*~*~*~*~* //
 function initMain() {
     document.title = document.title + TITLE_SUFFIX;
+    var annoucementLink = document.getElementById('annoucement');
+    annoucementLink.href = data.announcement.link;
+
+    var annoucementText = document.createElement('span');
+    annoucementText.innerText = data.announcement.title + data.announcement.title + data.announcement.title + data.announcement.title + data.announcement.title + data.announcement.title + data.announcement.title + data.announcement.title + data.announcement.title;
+    annoucementLink.appendChild(annoucementText);
 
     var mainContainer = document.getElementById('main');
     for (var [projectPath, projectData] of Object.entries(data.projects)) {
@@ -14,7 +20,6 @@ function initMain() {
         var imageIndicies = projectData.mainImageIndices;
         var numImages = imageIndicies.length;
         for (var i = 0; i < numImages; i++) {
-            var imagePath = images[imageIndicies[i]];
             var entry = document.createElement('div');
             entry.classList.add('entry');
 
@@ -22,7 +27,9 @@ function initMain() {
             link.href = '/' + projectPath + '/';
 
             var image = new Image();
-            image.src = 'assets/projects/' + projectPath + '/' + imagePath;
+            var currentImage = images[imageIndicies[i]];
+            image.src = 'assets/projects/' + projectPath + '/' + currentImage.path;
+            image.alt = currentImage.alt;
             link.appendChild(image);
             entry.appendChild(link);
             mainContainer.appendChild(entry);
@@ -40,6 +47,7 @@ function initMain() {
 
         var image = new Image();
         image.src = '/assets/other/' + thing.image;
+        image.alt = thing.title;
         link.appendChild(image);
 
 
@@ -52,21 +60,52 @@ function initMain() {
 
 function placeEntries() { // Causing spacing issues on mobile
     var entries = document.getElementsByClassName('entry');
-    var widthScale = 150;
+    var minWidth = 75;
     if (isMobile) {
-        widthScale = 75;
+        minWidth = 75;
     }
+
+    var widthScale = 250;
+
+    var numCols = 5;
+    var colInterval = window.innerWidth / numCols;
+    var colCounter = 0;
+
+    var numRows = 5;
+    var rowInterval = window.innerHeight / numRows;
+    var rowCounter = 0;
 
     for (var e = 0; e < entries.length; e++) {
         var currentEntry = entries[e];
-        var newWidth = (Math.random() * widthScale) + widthScale; // + minScale
+        var newWidth = (Math.random() * widthScale) + minWidth; // + minScale
         currentEntry.style.width = newWidth + 'px';
 
-        var randomLeft = Math.floor(Math.random() * (window.innerWidth - newWidth - 40)); // window.innerWidth
+        // var randomLeft = Math.floor(Math.random() * (window.innerWidth - newWidth - 40)); // window.innerWidth
+        // currentEntry.style.left = randomLeft + 'px';
+
+        var offset = 0;
+        if (colCounter == (numCols - 1)) {
+            console.log('SETTING OFFSET')
+            offset = newWidth + 40;
+        }
+
+        var randomLeft = Math.floor(Math.random() * (colInterval - offset)) + (colCounter * colInterval); // window.innerWidth
         currentEntry.style.left = randomLeft + 'px';
 
-        var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth - 40));
+        var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth));
         currentEntry.style.top = randomTop + 'px';
+
+        // var rowOffset = 0;
+        // if (rowCounter == (numRows - 1)) {
+        //     console.log('SETTING OFFSET')
+        //     rowOffset = newWidth + 40;
+        // }
+
+        // var randomTop = Math.floor(Math.random() * (rowInterval - rowOffset)) + (rowCounter * rowInterval);
+        // currentEntry.style.top = randomTop + 'px';
+
+        colCounter = (colCounter + 1) % (numCols);
+        rowCounter = (rowCounter + 3) % (numRows);
     }
     window.scrollTo(0, 0);
 }
@@ -86,7 +125,8 @@ function initIndex() {
         var imageLink = document.createElement('a');
         imageLink.href = '/' + projectPath + '/';
         var image = new Image();
-        image.src = '/assets/projects/' + projectPath + '/' + projectData.images[projectData.thumbnailImageIndex];
+        image.src = '/assets/projects/' + projectPath + '/' + projectData.images[projectData.thumbnailImageIndex].path;
+        image.alt = projectData.images[projectData.thumbnailImageIndex].alt;
         image.classList.add('index-image');
         imageLink.appendChild(image);
         entry.appendChild(imageLink);
@@ -95,7 +135,7 @@ function initIndex() {
         var link = document.createElement('a');
         link.href = '/' + projectPath + '/';
         link.innerText = projectData.title;
-
+        link.classList.add('index-title');
 
         entry.appendChild(link);
         document.getElementById('project-list').appendChild(entry);
@@ -111,6 +151,7 @@ function initIndex() {
 
         var image = new Image();
         image.src = '/assets/other/' + thing.image;
+        image.alt = thing.title;
         image.classList.add('index-image');
         imageLink.appendChild(image);
         entry.appendChild(imageLink);
@@ -119,13 +160,14 @@ function initIndex() {
         link.href = thing.link;
         link.target = '_blank';
         link.innerText = thing.title;
+        link.classList.add('index-title');
 
         entry.appendChild(link);
         document.getElementById('other-list').appendChild(entry);
     })
 }
 
-// *~*~*~*~*~*~*~*~* INDEX *~*~*~*~*~*~*~*~* //
+// *~*~*~*~*~*~*~*~* INFO *~*~*~*~*~*~*~*~* //
 function initInfo() {
     document.title = 'INFO' + TITLE_SUFFIX;
 
@@ -134,9 +176,6 @@ function initInfo() {
 }
 
 // *~*~*~*~*~*~*~*~* PROJECT *~*~*~*~*~*~*~*~* //
-// var vimeoString1 = '<div style="padding:47.07% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/';
-// var vimeoString2 = '?color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:99.5%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>';
-
 var vimeoString1 = '<div style="padding:62.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/'; // 56 padding before
 var vimeoString2 = '?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:99.5%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
 
@@ -158,7 +197,6 @@ function initProject(projectPath) {
     title.innerText = projectData.title;
     title.classList.add('text-L');
     projectContainer.appendChild(title);
-
 
     var linkData = projectData.link;
     if (linkData) {
@@ -191,9 +229,10 @@ function initProject(projectPath) {
     }
 
     // Images
-    projectData.images.forEach((imagePath) => {
+    projectData.images.forEach((imageData) => {
         var image = new Image();
-        image.src = '/assets/projects/' + projectPath + '/' + imagePath;
+        image.src = '/assets/projects/' + projectPath + '/' + imageData.path;
+        image.alt = imageData.alt;
         image.classList.add('project-image');
         projectContainer.appendChild(image);
     });

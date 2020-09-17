@@ -1,4 +1,8 @@
 let data = {
+    "announcement": {
+        "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
+        "link": "https://www.racialjusticebookshelf.com/"
+    },
     "projects": {
         "glanceback": {
             "title": "Glance Back",
@@ -9,10 +13,22 @@ let data = {
             "mainImageIndices": [0, 1, 2],
             "thumbnailImageIndex": 0,
             "images": [
-                "reel_me.gif",
-                "question.png",
-                "mainpage.png",
-                "scroll.png"
+                {
+                    "path": "reel_me.gif",
+                    "alt": "A flip book of Maya's Glance Back captured images showing her staring at her computer and captioned with her thought at that moment"
+                },
+                {
+                    "path": "question.png",
+                    "alt": "A screenshot of a browser window showing an image of Maya full screen with the prompt What are you thinking about? printed on top and a blank line for a response below"
+                },
+                {
+                    "path": "mainpage.png",
+                    "alt": "A screenshot of a browser window showing a gallery of Glance Back photos"
+                },
+                {
+                    "path": "scroll.png",
+                    "alt": "A screenshot of a browser window showing a gallery of Glance Back photos"
+                }
             ],
             "description": "You spend so much time staring at your computer... doesn't your computer deserve a chance to glance back at you? <br><br> Glance Back is a <a target='_blank' href='https://chrome.google.com/webstore/detail/glance-back/hgickafobcmcfffbjiamhhejkockfccm'>chrome extension</a> that acts as a daily photo diary, capturing the moments shared between you and your computer. Once a day, when you open a new tab, Glance Back will unexpectedly take your photo, ask you what you’re thinking about, and save both the photo and written thought to its locally stored archive. <br><br> Read more about the project and get the extension <a target='_blank' href='https://glanceback.info/'>here</a>."
         },
@@ -22,14 +38,29 @@ let data = {
                 "url": "https://www.billtjonesai.com/",
                 "text": "billtjonesai.com"
             },
-            "mainImageIndices": [0, 1],
+            "mainImageIndices": [0, 1, 2, 4],
             "thumbnailImageIndex": 0,
             "images": [
-                "manifesto_2.gif",
-                "holdthatthought.gif",
-                "poster.jpg",
-                "working.png",
-                "workshop.png"
+                {
+                    "path": "manifesto_2.gif",
+                    "alt": "Dancer moving a trail of words following his wrist around on screen"
+                },
+                {
+                    "path": "holdthatthought.gif",
+                    "alt": "As dancer says Hey I thought of you yesterday, those words appear between her outstretched hands"
+                },
+                {
+                    "path": "poster.jpg",
+                    "alt": "A photo of Bill T. Jones posing with the words Body, Movement, Language on top of the image"
+                },
+                {
+                    "path": "working.png",
+                    "alt": "Maya gesturing toward a screen showing a dancer and a trail of circles while speaking to a group"
+                },
+                {
+                    "path": "workshop.png",
+                    "alt": "A behind the scenes shot of Bill watching a dancer experiment with moving words around on screen"
+                },
             ],
             "videos": [
                 {
@@ -49,6 +80,10 @@ let data = {
                 {
                     "url": "https://www.blackenterprise.com/google-and-legendary-dancer-bill-t-jones-create-interactive-dance-experience-for-anyone/",
                     "title": "Black Enterprise"
+                },
+                {
+                    "url": "https://dance.land/bill-t-jones-artificial-intelligence-google-creative-lab-body-movement-language-ai/",
+                    "title": "Dance Land"
                 }
             ],
             "writing": [
@@ -65,14 +100,29 @@ let data = {
                 "url": "https://www.pastetodownload.com/",
                 "text": "pastetodownload.com"
             },
-            "mainImageIndices": [0, 1],
+            "mainImageIndices": [0, 1, 4],
             "thumbnailImageIndex": 0,
             "images": [
-                "site.gif",
-                "extension.png",
-                "downloaded.png",
-                "done.png",
-                "reviews_anon.png"
+                {
+                    "path": "site.gif",
+                    "alt": "Screenshot of very pink Paste to download website that shows the prompt Paste here to download"
+                },
+                {
+                    "path": "extension.png",
+                    "alt": "Screenshot of the Paste to download chrome extension in the upper corner of the screen with a Google Slides presentation in the background, says Paste here to download"
+                },
+                {
+                    "path": "downloaded.png",
+                    "alt": "Screenshot of the Paste to download chrome extension in the upper corner of the screen with a Google Slides presentation in the background, says Downloaded"
+                },
+                {
+                    "path": "done.png",
+                    "alt": "Shows that the the image from the Slides presentation has been downloaded"
+                },
+                {
+                    "path": "reviews_anon.png",
+                    "alt": "Reviews of the Chrome extension that say OMG THIS IS THE BEST and AMAZING! MUCH NEEDED."
+                }
             ],
             "description": "Paste to download is a <a target='_blank' href='https://chrome.google.com/webstore/detail/paste-to-download/jghdppgkpdccfpobmilnnhgahhpjhbne'>chrome extension</a> that makes it easy to save images copied to your clipboard. It's especially useful to download media embedded in tough to export places like Google Slides."
         },
@@ -85,14 +135,38 @@ let data = {
             "mainImageIndices": [0, 1, 2, 3],
             "thumbnailImageIndex": 2,
             "images": [
-                "main.png",
-                "race.png",
-                "art.png",
-                "essays.png",
-                "policy.png",
-                "env.png",
-                "food.png",
-                "stores.png"
+                {
+                    "path": "main.png",
+                    "alt": "Screenshot of a browser window showing the Racial Justice Bookshelf website landing page that reads Buy anti-racist books from Black-owned bookstores."
+                },
+                {
+                    "path": "race.png",
+                    "alt": "Screenshot of the Race shelf on the website with a purple background"
+                },
+                {
+                    "path": "art.png",
+                    "alt": "Screenshot of the Art and Design shelf on the website with a bright blue background"
+                },
+                {
+                    "path": "essays.png",
+                    "alt": "Screenshot of the Essays and Poetry shelf on the website with a pink background"
+                },
+                {
+                    "path": "policy.png",
+                    "alt": "Screenshot of the Policy and Sociology shelf on the website with a red/orange background"
+                },
+                {
+                    "path": "env.png",
+                    "alt": "Screenshot of the Environment shelf on the website with an orange background"
+                },
+                {
+                    "path": "food.png",
+                    "alt": "Screenshot of the Food shelf on the website with a gray/purple background"
+                },
+                {
+                    "path": "stores.png",
+                    "alt": "Screenshot of the list of Black-owned bookstores featured on the website"
+                }
             ],
             "press": [
                 {
@@ -116,16 +190,37 @@ let data = {
         },
         "notapicture": {
             "title": "Not a picture but an event",
-            "mainImageIndices": [0, 4, 5, 6],
+            "mainImageIndices": [0, 5],
             "thumbnailImageIndex": 0,
             "images": [
-                "moving.gif",
-                "v1_riso.png",
-                "v2_riso.png",
-                "v3_riso.png",
-                "process.jpg",
-                "me.png",
-                "text.png"
+                {
+                    "path": "moving.gif",
+                    "alt": "Maya dancing on the left side of the screen with her form being continually output and layered on the right to create a poster image"
+                },
+                {
+                    "path": "v1_riso.png",
+                    "alt": "Risograph printed poster of Maya's dancing form layered in yellow, teal, pink, and blue"
+                },
+                {
+                    "path": "v2_riso.png",
+                    "alt": "Risograph printed poster of Maya's dancing form layered in yellow, teal, blue, and pink"
+                },
+                {
+                    "path": "v3_riso.png",
+                    "alt": "Risograph printed poster of Maya's dancing form layered in teal, blue, pink, and yellow"
+                },
+                {
+                    "path": "process.jpg",
+                    "alt": "Prints layered on a table after coming off of the Risograph printing press"
+                },
+                {
+                    "path": "me.png",
+                    "alt": "Maya smiling and holding up on of the prints in the Risograph prints"
+                },
+                {
+                    "path": "text.png",
+                    "alt": "A screenshot of two text messages: The first is a photo of the three prints, the second reads Just got home to Brooklyn to these :)"
+                }
             ],
             "videos": [
                 {
@@ -137,12 +232,21 @@ let data = {
         },
         "paintmeinpixels": {
             "title": "Paint me in pixels so I can dance forever",
-            "mainImageIndices": [0, 2],
+            "mainImageIndices": [1, 2],
             "thumbnailImageIndex": 0,
             "images": [
-                "paintme_01.gif",
-                "paintme_02.gif",
-                "timessquare.gif"
+                {
+                    "path": "paintme_01.gif",
+                    "alt": "A dancer moving on screen with their form continually layered as they move in changing random colors"
+                },
+                {
+                    "path": "paintme_02.gif",
+                    "alt": "A dancer moving on screen with their form continually layered as they move in changing random colors"
+                },
+                {
+                    "path": "timessquare.gif",
+                    "alt": "The piece up on three large screens in Times Square in New York City"
+                },
             ],
             "videos": [
                 {
@@ -162,12 +266,21 @@ let data = {
                 "url": "https://googlecreativelab.github.io/posenet-sketchbook/",
                 "text": "googlecreativelab.github.io/posenet-sketchbook/"
             },
-            "mainImageIndices": [0, 1],
+            "mainImageIndices": [0],
             "thumbnailImageIndex": 0,
             "images": [
-                "01.png",
-                "02.png",
-                "03.png"
+                {
+                    "path": "01.png",
+                    "alt": "Landing page of the PoseNet Sketchbook website"
+                },
+                {
+                    "path": "02.png",
+                    "alt": "Images of six PoseNet Sketchbook demos on the website"
+                },
+                {
+                    "path": "03.png",
+                    "alt": "Images of six PoseNet Sketchbook demos on the website"
+                }
             ],
             "videos": [
                 {
@@ -179,6 +292,41 @@ let data = {
         }
     },
     "other": [
+        {
+            "title": "A collage I made about the Internet from New York Times clippings and Seventeen Magazine",
+            "link": "https://www.instagram.com/p/CCmljiNgB_L/",
+            "image": "collage_internet.png"
+        },
+        {
+            "title": "Special Special's show and tell that featured Glance Back",
+            "link": "https://mailchi.mp/6ad6af09ceb2/glanceback",
+            "image": "special.gif"
+        },
+        {
+            "title": "This is now hanging in my apartment! A dream collaboration between two A+ artists, get the poster at the link in the tweet",
+            "link": "https://twitter.com/tchoi8/status/1120649482134278144",
+            "image": "dwoc_taeyoon.png"
+        },
+        {
+            "title": "Interview with Artists + Machine Intelligence where I mention that my current state of mind is Chaos!",
+            "link": "https://medium.com/artists-and-machine-intelligence/q-a-with-maya-man-35ccf653c920",
+            "image": "chaos.png"
+        },
+        {
+            "title": "Pink saturated images that make me FEEL",
+            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
+            "image": "pink.png"
+        },
+        {
+            "title": "Interview with The Limit Does Not Exist Podcast where I talk about making work for screens and online identity",
+            "link": "http://tldnepodcast.com/107",
+            "image": "tldne1.png"
+        },
+        {
+            "title": "My younger sibling Chella is amazing and I will support everything he does forever",
+            "link": "https://twitter.com/chellamanart/status/1135380307430006785",
+            "image": "chellaman.png"
+        },
         {
             "title": "A photo of me scrolling on my phone on instagram",
             "link": "https://www.instagram.com/p/CDUTFF3AKaQ/",
@@ -195,34 +343,26 @@ let data = {
             "image": "cannotbelieve.png"
         },
         {
-            "title": "A collage I made about the Internet from New York Times clippings and Seventeen Magazine",
-            "link": "https://www.instagram.com/p/CCmljiNgB_L/",
-            "image": "collage_internet.png"
-        },
-        {
-            "title": "Special Special's show and tell that featured Glance Back",
-            "link": "https://mailchi.mp/6ad6af09ceb2/glanceback",
-            "image": "special.gif"
-        },
-        {
-            "title": "Interview with Artists + Machine Intelligence where I say my state of mind is Chaos!",
-            "link": "https://medium.com/artists-and-machine-intelligence/q-a-with-maya-man-35ccf653c920",
-            "image": "chaos.png"
-        },
-        {
-            "title": "Pink saturated images that make me FEEL",
-            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
-            "image": "pink.png"
-        },
-        {
-            "title": "This poster is hanging in my apartment and it's a collab between two friends I greatly admire",
-            "link": "https://taeyoon-workshop.myshopify.com/collections/frontpage/products/dwc-poster",
-            "image": "wordstoliveby.png"
-        },
-        {
             "title": ":-) every day is dance day every place is dance space",
             "link": "https://www.instagram.com/p/B_n6NvNgT1r/",
             "image": "wordstoliveby.png"
+        },
+    ],
+    "otherArchive": [
+        {
+            "title": "Wearing the very special care over control hoodie by friend Taeyoon",
+            "link": "https://www.instagram.com/p/B3xKv08FRT9/",
+            "image": "care.png"
+        },
+        {
+            "title": "Wearing the very special care over control hoodie by friend Taeyoon",
+            "link": "https://www.instagram.com/p/B3xKv08FRT9/",
+            "image": "dwoc_hanging.jpeg"
+        },
+        {
+            "title": "Me and a giant cut out of my younger sibling Chella (who you should follow)",
+            "link": "https://twitter.com/chellamanart/status/1136494650410377216",
+            "image": "chella.jpg"
         }
     ]
 };
