@@ -3,8 +3,14 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
-        "link": "https://www.racialjusticebookshelf.com/"
+        "title": "SIGN UP FOR MY VIRTUAL INTRO CODING CLASS: MANIFEST YOUR DREAMS ON SCREEN * ! * ! * ! * ! * ",
+        "link": "https://mailchi.mp/liganova/ozephqar0u",
+        "archive": [
+            {
+                "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
+                "link": "https://www.racialjusticebookshelf.com/"
+            }
+        ]
     },
     "projects": {
         "glanceback": {
