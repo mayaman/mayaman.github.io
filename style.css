@@ -96,14 +96,16 @@ MAIN
     z-index: 0;
 }
 
-.entry img {
+.entry img,
+.entry video {
     width: 100%;
     height: auto;
     border: 2px solid #00000000;
     position: relative;
 }
 
-.entry img:hover {
+.entry img:hover,
+.entry video:hover {
     border: 2px solid #ed1288;
 }
 
@@ -219,6 +221,8 @@ MOBILE
 
     .entry-index {
         display: block;
+        margin: 18px 0px 18px 0px;
+        position: relative;
     }
 
     .index-title {
@@ -271,6 +275,16 @@ MOBILE
     100% {
         transform: translate(-70%, 0);
     }
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 /* COLORS */

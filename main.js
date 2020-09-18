@@ -26,29 +26,85 @@ function initMain() {
             var link = document.createElement('a');
             link.href = '/' + projectPath + '/';
 
-            var image = new Image();
-            var currentImage = images[imageIndicies[i]];
-            image.src = 'assets/projects/' + projectPath + '/' + currentImage.path;
-            image.alt = currentImage.alt;
-            link.appendChild(image);
+            var imageData = images[imageIndicies[i]];
+            if (imageData.type && imageData.type == 'video') {
+                var video = document.createElement('video');
+                video.muted = true;
+                video.autoplay = true;
+                video.playsinline = true;
+                video.loop = true;
+
+                var sourceMP4 = document.createElement("source");
+                sourceMP4.type = "video/mp4";
+                sourceMP4.src = 'assets/projects/' + projectPath + '/' + imageData.path_mp4;
+                video.appendChild(sourceMP4);
+
+                var sourceWebM = document.createElement("source");
+                sourceWebM.type = "video/webm";
+                sourceWebM.src = 'assets/projects/' + projectPath + '/' + imageData.path_webm;
+                video.appendChild(sourceWebM);
+
+                var videoAlt = document.createElement('div');
+                videoAlt.innerText = imageData.alt;
+                var videoAltID = imageData.path_mp4.split('.')[0];
+                videoAlt.id = videoAltID;
+                videoAlt.classList.add('visually-hidden');
+                video.setAttribute('aria-describedby', videoAltID);
+                entry.appendChild(videoAlt);
+
+                link.appendChild(video);
+            } else {
+                var image = new Image();
+                image.src = 'assets/projects/' + projectPath + '/' + imageData.path;
+                image.alt = imageData.alt;
+                image.loading = 'lazy';
+                link.appendChild(image);
+            }
             entry.appendChild(link);
             mainContainer.appendChild(entry);
         }
     }
 
-    data.other.forEach((thing) => {
+    data.other.forEach((imageData) => {
         var entry = document.createElement('div');
         entry.classList.add('entry');
 
         var link = document.createElement('a');
-        link.href = thing.link;
+        link.href = imageData.link;
         link.target = '_blank';
-        link.innerText = thing.title;
+        link.innerText = imageData.title;
 
-        var image = new Image();
-        image.src = '/assets/other/' + thing.image;
-        image.alt = thing.title;
-        link.appendChild(image);
+        if (imageData.type && imageData.type == 'video') {
+            var video = document.createElement('video');
+            video.muted = true;
+            video.autoplay = true;
+            video.playsinline = true;
+            video.loop = true;
+
+            var sourceMP4 = document.createElement("source");
+            sourceMP4.type = "video/mp4";
+            sourceMP4.src = '/assets/other/' + imageData.path_mp4;
+            video.appendChild(sourceMP4);
+
+            var sourceWebM = document.createElement("source");
+            sourceWebM.type = "video/webm";
+            sourceWebM.src = '/assets/other/' + imageData.path_webm;
+            video.appendChild(sourceWebM);
+
+            var videoAlt = document.createElement('div');
+            videoAlt.innerText = imageData.alt;
+            var videoAltID = imageData.path_mp4.split('.')[0];
+            videoAlt.id = videoAltID;
+            videoAlt.classList.add('visually-hidden');
+            video.setAttribute('aria-describedby', videoAltID);
+            link.appendChild(video);
+        } else {
+            var image = new Image();
+            image.src = '/assets/other/' + imageData.image;
+            image.alt = imageData.title;
+            image.loading = 'lazy';
+            link.appendChild(image);
+        }
 
 
         entry.appendChild(link);
@@ -113,11 +169,43 @@ function initIndex() {
 
         var imageLink = document.createElement('a');
         imageLink.href = '/' + projectPath + '/';
-        var image = new Image();
-        image.src = '/assets/projects/' + projectPath + '/' + projectData.images[projectData.thumbnailImageIndex].path;
-        image.alt = projectData.images[projectData.thumbnailImageIndex].alt;
-        image.classList.add('index-image');
-        imageLink.appendChild(image);
+
+        var imageData = projectData.images[projectData.thumbnailImageIndex];
+        if (imageData.type && imageData.type == 'video') {
+            var video = document.createElement('video');
+            video.muted = true;
+            video.autoplay = true;
+            video.playsinline = true;
+            video.loop = true;
+            video.classList.add('index-image');
+
+            var sourceMP4 = document.createElement("source");
+            sourceMP4.type = "video/mp4";
+            sourceMP4.src = '/assets/projects/' + projectPath + '/' + imageData.path_mp4;
+            video.appendChild(sourceMP4);
+
+            var sourceWebM = document.createElement("source");
+            sourceWebM.type = "video/webm";
+            sourceWebM.src = '/assets/projects/' + projectPath + '/' + imageData.path_webm;
+            video.appendChild(sourceWebM);
+
+            var videoAlt = document.createElement('div');
+            videoAlt.innerText = imageData.alt;
+            var videoAltID = imageData.path_mp4.split('.')[0];
+            videoAlt.id = videoAltID;
+            videoAlt.classList.add('visually-hidden');
+            video.setAttribute('aria-describedby', videoAltID);
+            entry.appendChild(videoAlt);
+
+            imageLink.appendChild(video);
+        } else {
+            var image = new Image();
+            image.src = '/assets/projects/' + projectPath + '/' + imageData.path;
+            image.alt = projectData.images[projectData.thumbnailImageIndex].alt;
+            image.classList.add('index-image');
+            imageLink.appendChild(image);
+        }
+
         entry.appendChild(imageLink);
 
 
@@ -130,25 +218,53 @@ function initIndex() {
         document.getElementById('project-list').appendChild(entry);
     }
 
-    data.other.forEach((thing) => {
+    data.other.forEach((imageData) => {
         var entry = document.createElement('div');
         entry.classList.add('entry-index');
 
         var imageLink = document.createElement('a');
-        imageLink.href = thing.link;
+        imageLink.href = imageData.link;
         imageLink.target = '_blank';
 
-        var image = new Image();
-        image.src = '/assets/other/' + thing.image;
-        image.alt = thing.title;
-        image.classList.add('index-image');
-        imageLink.appendChild(image);
-        entry.appendChild(imageLink);
+        if (imageData.type && imageData.type == 'video') {
+            var video = document.createElement('video');
+            video.muted = true;
+            video.autoplay = true;
+            video.playsinline = true;
+            video.loop = true;
+            video.classList.add('index-image');
+
+            var sourceMP4 = document.createElement("source");
+            sourceMP4.type = "video/mp4";
+            sourceMP4.src = '/assets/other/' + imageData.path_mp4;
+            video.appendChild(sourceMP4);
+
+            var sourceWebM = document.createElement("source");
+            sourceWebM.type = "video/webm";
+            sourceWebM.src = '/assets/other/' + imageData.path_webm;
+            video.appendChild(sourceWebM);
+
+            var videoAlt = document.createElement('div');
+            videoAlt.innerText = imageData.alt;
+            var videoAltID = imageData.path_mp4.split('.')[0];
+            videoAlt.id = videoAltID;
+            videoAlt.classList.add('visually-hidden');
+            video.setAttribute('aria-describedby', videoAltID);
+            imageLink.appendChild(video);
+            entry.appendChild(imageLink);
+        } else {
+            var image = new Image();
+            image.src = '/assets/other/' + imageData.image;
+            image.alt = imageData.title;
+            image.classList.add('index-image');
+            imageLink.appendChild(image);
+            entry.appendChild(imageLink);
+        }
 
         var link = document.createElement('a');
-        link.href = thing.link;
+        link.href = imageData.link;
         link.target = '_blank';
-        link.innerText = thing.title;
+        link.innerText = imageData.title;
         link.classList.add('index-title');
 
         entry.appendChild(link);
@@ -158,11 +274,7 @@ function initIndex() {
 
 // *~*~*~*~*~*~*~*~* INFO *~*~*~*~*~*~*~*~* //
 function initInfo() {
-    console.log(window.history);
-
     document.title = 'INFO' + TITLE_SUFFIX;
-    var navContainer = document.getElementById('nav-container');
-    navContainer.innerHTML = '<div class="nav-link"> <a href="/">MAIN</a> </div> <div class="nav-link"> <a href="/index">INDEX</a> </div> <div id="active-link" class="nav-link"> <a href="/info">INFO</a> </div>';
 }
 
 // *~*~*~*~*~*~*~*~* PROJECT *~*~*~*~*~*~*~*~* //
@@ -221,11 +333,42 @@ function initProject(projectPath) {
 
     // Images
     projectData.images.forEach((imageData) => {
-        var image = new Image();
-        image.src = '/assets/projects/' + projectPath + '/' + imageData.path;
-        image.alt = imageData.alt;
-        image.classList.add('project-image');
-        projectContainer.appendChild(image);
+        if (imageData.type && imageData.type == 'video') {
+            var video = document.createElement('video');
+            video.muted = true;
+            video.autoplay = true;
+            video.playsinline = true;
+            video.loop = true;
+            video.classList.add('project-image');
+
+            var sourceMP4 = document.createElement("source");
+            sourceMP4.type = "video/mp4";
+            sourceMP4.src = '/assets/projects/' + projectPath + '/' + imageData.path_mp4;
+            video.appendChild(sourceMP4);
+
+            var sourceWebM = document.createElement("source");
+            sourceWebM.type = "video/webm";
+            sourceWebM.src = '/assets/projects/' + projectPath + '/' + imageData.path_webm;
+            video.appendChild(sourceWebM);
+
+            var videoAlt = document.createElement('div');
+            videoAlt.innerText = imageData.alt;
+            var videoAltID = imageData.path_mp4.split('.')[0];
+            videoAlt.id = videoAltID;
+            videoAlt.classList.add('visually-hidden');
+            projectContainer.appendChild(videoAlt);
+            video.setAttribute('aria-describedby', videoAltID);
+
+            projectContainer.appendChild(video);
+        } else {
+            var image = new Image();
+            image.src = '/assets/projects/' + projectPath + '/' + imageData.path;
+            image.alt = imageData.alt;
+            image.classList.add('project-image');
+            projectContainer.appendChild(image);
+        }
+
+
     });
 
     // Writing

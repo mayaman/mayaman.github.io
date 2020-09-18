@@ -17,19 +17,21 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "reel_me.gif",
+                    "type": "video",
+                    "path_mp4": "reel_me.mp4",
+                    "path_webm": "reel_me.webm",
                     "alt": "A flip book of Maya's Glance Back captured images showing her staring at her computer and captioned with her thought at that moment"
                 },
                 {
-                    "path": "question.png",
+                    "path": "question.jpg",
                     "alt": "A screenshot of a browser window showing an image of Maya full screen with the prompt What are you thinking about? printed on top and a blank line for a response below"
                 },
                 {
-                    "path": "mainpage.png",
+                    "path": "mainpage.jpg",
                     "alt": "A screenshot of a browser window showing a gallery of Glance Back photos"
                 },
                 {
-                    "path": "scroll.png",
+                    "path": "scroll.jpg",
                     "alt": "A screenshot of a browser window showing a gallery of Glance Back photos"
                 }
             ],
@@ -45,11 +47,15 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "manifesto_02.gif",
+                    "type": "video",
+                    "path_mp4": "manifesto_02.mp4",
+                    "path_webm": "manifesto_02.webm",
                     "alt": "Dancer moving a trail of words following his wrist around on screen"
                 },
                 {
-                    "path": "holdthatthought.gif",
+                    "type": "video",
+                    "path_mp4": "holdthatthought.mp4",
+                    "path_webm": "holdthatthought.webm",
                     "alt": "As dancer says Hey I thought of you yesterday, those words appear between her outstretched hands"
                 },
                 {
@@ -57,11 +63,11 @@ let data = {
                     "alt": "A photo of Bill T. Jones posing with the words Body, Movement, Language on top of the image"
                 },
                 {
-                    "path": "working.png",
+                    "path": "working.jpg",
                     "alt": "Maya gesturing toward a screen showing a dancer and a trail of circles while speaking to a group"
                 },
                 {
-                    "path": "workshop.png",
+                    "path": "workshop.jpg",
                     "alt": "A behind the scenes shot of Bill watching a dancer experiment with moving words around on screen"
                 },
             ],
@@ -107,23 +113,25 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "site.gif",
+                    "type": "video",
+                    "path_mp4": "site.mp4",
+                    "path_webm": "site.webm",
                     "alt": "Screenshot of very pink Paste to download website that shows the prompt Paste here to download"
                 },
                 {
-                    "path": "extension.png",
+                    "path": "extension.jpg",
                     "alt": "Screenshot of the Paste to download chrome extension in the upper corner of the screen with a Google Slides presentation in the background, says Paste here to download"
                 },
                 {
-                    "path": "downloaded.png",
+                    "path": "downloaded.jpg",
                     "alt": "Screenshot of the Paste to download chrome extension in the upper corner of the screen with a Google Slides presentation in the background, says Downloaded"
                 },
                 {
-                    "path": "done.png",
+                    "path": "done.jpg",
                     "alt": "Shows that the the image from the Slides presentation has been downloaded"
                 },
                 {
-                    "path": "reviews_anon.png",
+                    "path": "reviews_anon.jpg",
                     "alt": "Reviews of the Chrome extension that say OMG THIS IS THE BEST and AMAZING! MUCH NEEDED."
                 }
             ],
@@ -139,35 +147,35 @@ let data = {
             "thumbnailImageIndex": 2,
             "images": [
                 {
-                    "path": "main.png",
+                    "path": "main.jpg",
                     "alt": "Screenshot of a browser window showing the Racial Justice Bookshelf website landing page that reads Buy anti-racist books from Black-owned bookstores."
                 },
                 {
-                    "path": "race.png",
+                    "path": "race.jpg",
                     "alt": "Screenshot of the Race shelf on the website with a purple background"
                 },
                 {
-                    "path": "art.png",
+                    "path": "art.jpg",
                     "alt": "Screenshot of the Art and Design shelf on the website with a bright blue background"
                 },
                 {
-                    "path": "essays.png",
+                    "path": "essays.jpg",
                     "alt": "Screenshot of the Essays and Poetry shelf on the website with a pink background"
                 },
                 {
-                    "path": "policy.png",
+                    "path": "policy.jpg",
                     "alt": "Screenshot of the Policy and Sociology shelf on the website with a red/orange background"
                 },
                 {
-                    "path": "env.png",
+                    "path": "env.jpg",
                     "alt": "Screenshot of the Environment shelf on the website with an orange background"
                 },
                 {
-                    "path": "food.png",
+                    "path": "food.jpg",
                     "alt": "Screenshot of the Food shelf on the website with a gray/purple background"
                 },
                 {
-                    "path": "stores.png",
+                    "path": "stores.jpg",
                     "alt": "Screenshot of the list of Black-owned bookstores featured on the website"
                 }
             ],
@@ -197,7 +205,9 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "moving.gif",
+                    "type": "video",
+                    "path_mp4": "moving.mp4",
+                    "path_webm": "moving.webm",
                     "alt": "Maya dancing on the left side of the screen with her form being continually output and layered on the right to create a poster image"
                 },
                 {
@@ -217,11 +227,11 @@ let data = {
                     "alt": "Prints layered on a table after coming off of the Risograph printing press"
                 },
                 {
-                    "path": "me.png",
+                    "path": "me.jpeg",
                     "alt": "Maya smiling and holding up on of the prints in the Risograph prints"
                 },
                 {
-                    "path": "text.png",
+                    "path": "text.jpeg",
                     "alt": "A screenshot of two text messages: The first is a photo of the three prints, the second reads Just got home to Brooklyn to these :)"
                 }
             ],
@@ -239,17 +249,23 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "paintme_01.gif",
+                    "type": "video",
+                    "path_mp4": "paintme_01.mp4",
+                    "path_webm": "paintme_01.webm",
                     "alt": "A dancer moving on screen with their form continually layered as they move in changing random colors"
                 },
                 {
-                    "path": "paintme_02.gif",
+                    "type": "video",
+                    "path_mp4": "paintme_02.mp4",
+                    "path_webm": "paintme_02.webm",
                     "alt": "A dancer moving on screen with their form continually layered as they move in changing random colors"
                 },
                 {
-                    "path": "timessquare.gif",
+                    "type": "video",
+                    "path_mp4": "timessquare.mp4",
+                    "path_webm": "timessquare.webm",
                     "alt": "The piece up on three large screens in Times Square in New York City"
-                },
+                }
             ],
             "videos": [
                 {
@@ -273,15 +289,15 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "01.png",
+                    "path": "01.jpg",
                     "alt": "Landing page of the PoseNet Sketchbook website"
                 },
                 {
-                    "path": "02.png",
+                    "path": "02.jpg",
                     "alt": "Images of six PoseNet Sketchbook demos on the website"
                 },
                 {
-                    "path": "03.png",
+                    "path": "03.jpg",
                     "alt": "Images of six PoseNet Sketchbook demos on the website"
                 }
             ],
@@ -298,69 +314,73 @@ let data = {
         {
             "title": "[!!!!!] I'm teaching a virtual intro to visual coding class, sign up here",
             "link": "https://mailchi.mp/liganova/ozephqar0u",
-            "image": "manifest.png"
-        },
-        {
-            "title": ":-) every day is dance day every place is dance space",
-            "link": "https://www.instagram.com/p/B_n6NvNgT1r/",
-            "image": "wordstoliveby.png"
-        },
-        {
-            "title": "Collage I made about the Internet from New York Times and Seventeen Magazine clippings",
-            "link": "https://www.instagram.com/p/CCmljiNgB_L/",
-            "image": "collage_internet.png"
-        },
-        {
-            "title": "A photo of me scrolling on my phone on instagram",
-            "link": "https://www.instagram.com/p/CDUTFF3AKaQ/",
-            "image": "scrolling.png"
-        },
-        {
-            "title": "Are.na channel where I collect things I can not believe exist on the Internet",
-            "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
-            "image": "cannotbelieve.png"
-        },
-        {
-            "title": "In class learning choreo I loooove by Bo Belza and Alice Wu",
-            "link": "https://www.instagram.com/p/BzgAQEbAwKn/",
-            "image": "bo.gif"
-        },
-        {
-            "title": "This is now hanging in my apartment! A dream collaboration between two A+ artists, get the poster at the link in the tweet",
-            "link": "https://twitter.com/tchoi8/status/1120649482134278144",
-            "image": "dwoc_taeyoon.png"
-        },
-        {
-            "title": "Interview with Artists + Machine Intelligence where I mention that my current state of mind is Chaos!",
-            "link": "https://medium.com/artists-and-machine-intelligence/q-a-with-maya-man-35ccf653c920",
-            "image": "chaos.png"
-        },
-        {
-            "title": "Pink saturated images that make me FEEL",
-            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
-            "image": "pink.png"
+            "image": "manifest.jpg"
         },
         {
             "title": "Special Special's show and tell that featured Glance Back",
             "link": "https://mailchi.mp/6ad6af09ceb2/glanceback",
-            "image": "special.gif"
+            "type": "video",
+            "path_mp4": "special.mp4",
+            "path_webm": "special.webm"
+        },
+        {
+            "title": ":-) every day is dance day every place is dance space",
+            "link": "https://www.instagram.com/p/B_n6NvNgT1r/",
+            "image": "wordstoliveby.jpg"
+        },
+        {
+            "title": "Collage I made about the Internet from New York Times and Seventeen Magazine clippings",
+            "link": "https://www.instagram.com/p/CCmljiNgB_L/",
+            "image": "collage_internet.jpg"
+        },
+        {
+            "title": "A photo of me scrolling on my phone on instagram",
+            "link": "https://www.instagram.com/p/CDUTFF3AKaQ/",
+            "image": "scrolling.jpg"
+        },
+        {
+            "title": "Are.na channel where I collect things I can not believe exist on the Internet",
+            "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
+            "image": "cannotbelieve.jpg"
+        },
+        {
+            "title": "In class learning choreo I loooove by Bo Belza and Alice Wu",
+            "link": "https://www.instagram.com/p/BzgAQEbAwKn/",
+            "type": "video",
+            "path_mp4": "bo.mp4",
+            "path_webm": "bo.webm"
+        },
+        {
+            "title": "This is now hanging in my apartment! A dream collaboration between two A+ artists, get the poster at the link in the tweet",
+            "link": "https://twitter.com/tchoi8/status/1120649482134278144",
+            "image": "dwoc_taeyoon.jpg"
+        },
+        {
+            "title": "Interview with Artists + Machine Intelligence where I mention that my current state of mind is Chaos!",
+            "link": "https://medium.com/artists-and-machine-intelligence/q-a-with-maya-man-35ccf653c920",
+            "image": "chaos.jpg"
+        },
+        {
+            "title": "Pink saturated images that make me FEEL",
+            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
+            "image": "pink.jpg"
         },
         {
             "title": "Interview with The Limit Does Not Exist Podcast where I talk about making work for screens and online identity",
             "link": "http://tldnepodcast.com/107",
-            "image": "tldne1.png"
+            "image": "tldne1.jpg"
         },
         {
             "title": "My younger sibling Chella is amazing and I will support everything he does forever",
             "link": "https://twitter.com/chellamanart/status/1135380307430006785",
-            "image": "chellaman.png"
+            "image": "chellaman.jpg"
         }
     ],
     "otherArchive": [
         {
             "title": "Wearing the very special care over control hoodie by friend Taeyoon",
             "link": "https://www.instagram.com/p/B3xKv08FRT9/",
-            "image": "care.png"
+            "image": "care.jpg"
         },
         {
             "title": "Wearing the very special care over control hoodie by friend Taeyoon",
