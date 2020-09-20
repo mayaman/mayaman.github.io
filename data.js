@@ -3,7 +3,7 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "SIGN UP FOR MY VIRTUAL INTRO CODING CLASS: MANIFEST YOUR DREAMS ON SCREEN * ! * ! * ! * ! * ",
+        "title": "SIGN UP FOR MY INTRO CODING CLASS: MANIFEST YOUR DREAMS ON SCREEN * ! * ! * ! * ! * ",
         "link": "https://mailchi.mp/liganova/ozephqar0u",
         "archive": [
             {
@@ -318,7 +318,7 @@ let data = {
     },
     "other": [
         {
-            "title": "[!!!!!] I'm teaching a virtual intro to visual coding class, sign up here",
+            "title": "[!!!!!] I'm teaching a virtual intro to coding with p5.js class, sign up here",
             "link": "https://mailchi.mp/liganova/ozephqar0u",
             "image": "manifest.jpg"
         },
