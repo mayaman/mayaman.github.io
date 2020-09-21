@@ -29,15 +29,15 @@ let data = {
                     "alt": "A flip book of Maya's Glance Back captured images showing her staring at her computer and captioned with her thought at that moment"
                 },
                 {
-                    "path": "question.jpg",
+                    "path": "question.png",
                     "alt": "A screenshot of a browser window showing an image of Maya full screen with the prompt What are you thinking about? printed on top and a blank line for a response below"
                 },
                 {
-                    "path": "mainpage.jpg",
+                    "path": "mainpage.png",
                     "alt": "A screenshot of a browser window showing a gallery of Glance Back photos"
                 },
                 {
-                    "path": "scroll.jpg",
+                    "path": "scroll.png",
                     "alt": "A screenshot of a browser window showing a gallery of Glance Back photos"
                 }
             ],
@@ -125,15 +125,15 @@ let data = {
                     "alt": "Screenshot of very pink Paste to download website that shows the prompt Paste here to download"
                 },
                 {
-                    "path": "extension.jpg",
+                    "path": "extension.png",
                     "alt": "Screenshot of the Paste to download chrome extension in the upper corner of the screen with a Google Slides presentation in the background, says Paste here to download"
                 },
                 {
-                    "path": "downloaded.jpg",
+                    "path": "downloaded.png",
                     "alt": "Screenshot of the Paste to download chrome extension in the upper corner of the screen with a Google Slides presentation in the background, says Downloaded"
                 },
                 {
-                    "path": "done.jpg",
+                    "path": "done.png",
                     "alt": "Shows that the the image from the Slides presentation has been downloaded"
                 },
                 {
@@ -153,35 +153,35 @@ let data = {
             "thumbnailImageIndex": 2,
             "images": [
                 {
-                    "path": "main.jpg",
+                    "path": "main.png",
                     "alt": "Screenshot of a browser window showing the Racial Justice Bookshelf website landing page that reads Buy anti-racist books from Black-owned bookstores."
                 },
                 {
-                    "path": "race.jpg",
+                    "path": "race.png",
                     "alt": "Screenshot of the Race shelf on the website with a purple background"
                 },
                 {
-                    "path": "art.jpg",
+                    "path": "art.png",
                     "alt": "Screenshot of the Art and Design shelf on the website with a bright blue background"
                 },
                 {
-                    "path": "essays.jpg",
+                    "path": "essays.png",
                     "alt": "Screenshot of the Essays and Poetry shelf on the website with a pink background"
                 },
                 {
-                    "path": "policy.jpg",
+                    "path": "policy.png",
                     "alt": "Screenshot of the Policy and Sociology shelf on the website with a red/orange background"
                 },
                 {
-                    "path": "env.jpg",
+                    "path": "env.png",
                     "alt": "Screenshot of the Environment shelf on the website with an orange background"
                 },
                 {
-                    "path": "food.jpg",
+                    "path": "food.png",
                     "alt": "Screenshot of the Food shelf on the website with a gray/purple background"
                 },
                 {
-                    "path": "stores.jpg",
+                    "path": "stores.png",
                     "alt": "Screenshot of the list of Black-owned bookstores featured on the website"
                 }
             ],
@@ -295,15 +295,15 @@ let data = {
             "thumbnailImageIndex": 0,
             "images": [
                 {
-                    "path": "01.jpg",
+                    "path": "01.png",
                     "alt": "Landing page of the PoseNet Sketchbook website"
                 },
                 {
-                    "path": "02.jpg",
+                    "path": "02.png",
                     "alt": "Images of six PoseNet Sketchbook demos on the website"
                 },
                 {
-                    "path": "03.jpg",
+                    "path": "03.png",
                     "alt": "Images of six PoseNet Sketchbook demos on the website"
                 }
             ],
