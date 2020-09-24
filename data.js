@@ -3,12 +3,16 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "SIGN UP FOR MY INTRO CODING CLASS: MANIFEST YOUR DREAMS ON SCREEN * ! * ! * ! * ! * ",
-        "link": "https://mailchi.mp/liganova/ozephqar0u",
+        "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
+        "link": "https://www.racialjusticebookshelf.com/",
         "archive": [
             {
                 "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
                 "link": "https://www.racialjusticebookshelf.com/"
+            },
+            {
+                "title": "SIGN UP FOR MY INTRO CODING CLASS: MANIFEST YOUR DREAMS ON SCREEN * ! * ! * ! * ! * ",
+                "link": "https://mailchi.mp/liganova/ozephqar0u"
             }
         ]
     },
@@ -318,7 +322,7 @@ let data = {
     },
     "other": [
         {
-            "title": "[!!!!!] I'm teaching a virtual intro to coding with p5.js class, sign up here",
+            "title": "Led a virtual intro to p5.js workshop where we sketched what we dreamed with code",
             "link": "https://mailchi.mp/liganova/ozephqar0u",
             "image": "manifest.jpg"
         },
