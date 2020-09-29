@@ -428,7 +428,7 @@ function initProject(projectPath) {
 
 // *~*~*~*~*~*~*~*~* HELPER *~*~*~*~*~*~*~*~* //
 // var closeNavHTML = '<div class="nav-link"> <a href="javascript:closeBack()">MAIN</a> <a href="javascript:closeBack()">INDEX</a></div>';
-var closeNavHTML = '<div class="nav-link"> <a href="/">:-) !?!?!!</a> </div> <div class="nav-link"> <a href="/index">INDEX</a> </div> <div class="nav-link"> <a href="/info">INFO</a> </div>';
+var closeNavHTML = '<div class="nav-link"> <a href="/">:-) !?!?!!</a> </div> <div class="nav-link"> <a href="/index/">INDEX</a> </div> <div class="nav-link"> <a href="/info/">INFO</a> </div>';
 
 function addCloseNav(elt) {
     elt.innerHTML = closeNavHTML;
