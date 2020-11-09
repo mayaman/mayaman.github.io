@@ -330,3 +330,19 @@ button:hover {
 ::selection {
     background: #ed1288;
 }
+
+/*******************
+PUTTING YOURSELF ON SCREEN
+********************/
+
+h1 {
+    font-size: 2em;
+}
+
+#main-container {
+    background: linear-gradient(180deg, lightpink, hotpink);
+}
+
+.intro-img {
+    width: 25%;
+}
