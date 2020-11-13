@@ -3,9 +3,17 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
-        "link": "https://www.racialjusticebookshelf.com/",
+        "title": "WATCH *THE MAKING OF JOJI - 777* ON VIMEO !!! ",
+        "link": "https://vimeo.com/470406299",
         "archive": [
+            {
+                "title": "WATCH *THE MAKING OF JOJI - 777* ON VIMEO !!! ",
+                "link": "https://vimeo.com/470406299",
+            },
+            {
+                "title": "WATCH JOJI'S 777 MUSIC VIDEO OUT NOW ON VIMEO !!! ",
+                "link": "https://vimeo.com/472199853"
+            },
             {
                 "title": "BUY ANTI-RACIST BOOKS FROM BLACK-OWNED BOOKSTORES @ racialjusticebookshelf.com * ! * ! * ! * ! * ",
                 "link": "https://www.racialjusticebookshelf.com/"
@@ -112,6 +120,92 @@ let data = {
                 }
             ],
             "description": "<span class='italics'>Body, Movement, Language</span> is a collection of experiments made at the intersection of art, technology, identity, and the body. The project resulted from a two-way residency between award-winning choreographer Bill T. Jones and the Google Creative Lab. <br><br>  Inspired by Jones' long history of intertwining improvised speech and dance, these experiments invite anyone to explore the possibilities of combining speech, movement, and machine learning while making new connections with Jones’ iconic work. Built using <a target='_blank' href='https://github.com/tensorflow/tfjs-models/tree/master/posenet'>PoseNet</a>, a machine learning model running in browsesr on Tensorflow.js, these experiences are accessible to anyone with a computer, webcam, and internet connection.<br><br>Visit the <a target='_blank' href='https://www.billtjonesai.com/'>website</a> to try the experiments for yourself and read more about the project on its <a target='_blank' href='https://experiments.withgoogle.com/billtjonesai'>Experiment page</a>."
+        },
+        "777": {
+            "title": 'Dance and choreography for JOJI\'s "777"',
+            "link": {
+                "url": "https://vimeo.com/472199853",
+                "text": "Watch on vimeo"
+            },
+            "mainImageIndices": [0],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "type": "video",
+                    "path_mp4": "777_sq_1.mp4",
+                    "alt": "Figure in a white suit stumbling backward on a stage with lots of otehr characters crawling after him."
+                },
+                {
+                    "type": "video",
+                    "path_mp4": "777_sq_4.mp4",
+                    "alt": "Figure in a white suit running toward the camera followed by a man sprouting angel wings."
+                },
+                {
+                    "type": "video",
+                    "path_mp4": "bts.mp4",
+                    "alt": "Showing the process starting with Maya sitting in a chair in a motion capture suit to a rendered angel sitting in a chair with wings on her back."
+                },
+                {
+                    "path": "still_1.png",
+                    "alt": "White man with a large skull mask standing in front of a table. 777 drawn in cursive script over top."
+                }
+            ],
+            "videos": [
+                {
+                    "platform": "vimeo",
+                    "id": "472199853"
+                },
+                {
+                    "platform": "vimeo",
+                    "id": "470406299"
+                }
+            ],
+            "press": [
+                {
+                    "url": "https://beforesandafters.com/?p=37482&preview=1&_ppp=6e8d1e7b93",
+                    "title": "befores & afters"
+                },
+                {
+                    "url": "https://www.nme.com/en_asia/news/watch-jojis-renaissance-painting-inspired-video-for-777-2802920",
+                    "title": "NME"
+                },
+                {
+                    "url": "https://www.cartoonbrew.com/cartoon-brew-pick/short-pick-of-the-day-777-by-saad-moosajee-198158.html",
+                    "title": "Cartoon Brew"
+                },
+                {
+                    "url": "https://shots.net/news/view/jojis-heavenly-digital-dancers",
+                    "title": "shots"
+                },
+                {
+                    "url": "https://tv.booooooom.com/2020/11/04/joji-777/",
+                    "title": "booooooom.com"
+                }
+            ],
+            "description": "The video, which portrays a contemporary depiction of heaven, was directed by Saad Moosajee and produced by the Brooklyn-based creative studio, Pomp&Clout. <br><br> Aesthetically, the video resembles a Renaissance painting come to life with a modern twist. While the video is in fact fully animated, it at times tricks the eye making the viewer question if it was shot practically. <br><br>I choreographed and performed the movement of every character in the video. The figures were then sequenced amongst hundreds of digital lights by animators Zuheng Yin and Chanyu Chen."
+        },
+        "underthetable": {
+            "title": 'Under The Table Trio, Screen Recording 2020-10-20 at 4.47.45 PM',
+            "link": {
+                "url": "https://vimeo.com/472233410",
+                "text": "Watch on vimeo"
+            },
+            "mainImageIndices": [0],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "type": "video",
+                    "path_mp4": "UnderTheTable_clip.mp4",
+                    "alt": "Clip from the full piece featuring three different videos of Maya dancing all positioned on her computer screen's desktop"
+                }
+            ],
+            "videos": [
+                {
+                    "platform": "vimeo",
+                    "id": "472233410"
+                }
+            ],
+            "description": "Commissioned by <a href='https://forfreedoms.org/' target='_blank'> For Freedoms</a> for their virtual show to celebrate Civic Joy and Early Voting Day in collaboration with <a target='_blank' href='https://www.clubhouse-global.com/'>Clubhouse Global</a> and <a target='_blank' href='https://m4bl.org/'>Movement for Black Lives</a>. <br><br> Felt right to set this 2020 performance on my computer screen to <a href='https://www.youtube.com/watch?v=WBUxinJhntk' target='_blank'>this Fiona Apple song</a>."
         },
         "pastetodownload": {
             "title": "Paste to download",
@@ -321,6 +415,16 @@ let data = {
         }
     },
     "other": [
+        {
+            "title": "Really trying to make sense of it",
+            "link": "https://www.are.na/maya-man/making-sense-of-tiktok",
+            "image": "makingsenseoftiktok.png"
+        },
+        {
+            "title": "Every day I watch the sunset on my computer in quarantine",
+            "link": "https://www.instagram.com/p/CGGYyczgXxe/",
+            "image": "computersunset.jpeg"
+        },
         {
             "title": "Led a virtual intro to p5.js workshop where we sketched what we dreamed with code",
             "link": "https://mailchi.mp/liganova/ozephqar0u",

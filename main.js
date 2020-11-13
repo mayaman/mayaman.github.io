@@ -116,8 +116,8 @@ function initMain() {
 
 function placeEntries() { // Causing spacing issues on mobile
     var entries = document.getElementsByClassName('entry');
-    var minWidth = 75;
-    var widthScale = 250;
+    var minWidth = 50;
+    var widthScale = 150;
 
     if (isMobile) {
         minWidth = 50;
@@ -148,6 +148,8 @@ function placeEntries() { // Causing spacing issues on mobile
         }
 
         var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth));
+        // var randomTop = Math.floor(Math.random() * (colInterval - offset));
+
         currentEntry.style.top = randomTop + 'px';
 
         colCounter = (colCounter + 1) % (numCols);

@@ -117,19 +117,21 @@ INDEX
     display: flex;
     margin: 36px 0px;
     position: relative;
+    max-width: 50%;
 }
 
 .index-title {
     display: flex;
     align-items: center;
     position: absolute;
-    left: 162px;
+    left: 275px;
     top: 50%;
     transform: translate(0, -50%);
+    text-transform: uppercase;
 }
 
 .index-image {
-    width: 108px;
+    width: 200px;
     max-width: 100%;
     height: auto;
     margin-right: 18px 0px 18px 0px;
