@@ -1,0 +1,21 @@
+h1,
+p,
+a {
+    background: white;
+    display: inline;
+    line-height: 2em;
+    font-size: 24px;
+}
+
+div.project {
+    line-height: 2em;
+    font-size: 24px;
+    background: white;
+    margin: 1em 0;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 2em;
+    display: inline;
+}
