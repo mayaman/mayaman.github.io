@@ -3,9 +3,13 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "WATCH *THE MAKING OF JOJI - 777* ON VIMEO !!! ",
-        "link": "https://vimeo.com/470406299",
+        "title": "WATCH ME STARE AT MY COMPUTER SCREEN EVERY DAY OF 2020 * ",
+        "link": "https://www.instagram.com/p/CJeIPregmOU/",
         "archive": [
+            {
+                "title": "WATCH MY 2020 GLANCE BACK REEL !!! * ",
+                "link": "https://www.instagram.com/p/CJeIPregmOU/",
+            },
             {
                 "title": "WATCH *THE MAKING OF JOJI - 777* ON VIMEO !!! ",
                 "link": "https://vimeo.com/470406299",
@@ -180,6 +184,10 @@ let data = {
                 {
                     "url": "https://tv.booooooom.com/2020/11/04/joji-777/",
                     "title": "booooooom.com"
+                },
+                {
+                    "url": "https://directorsnotes.com/2020/12/07/saad-moosajee-777/",
+                    "title": "Director's Notes"
                 }
             ],
             "description": "The video, which portrays a contemporary depiction of heaven, was directed by Saad Moosajee and produced by the Brooklyn-based creative studio, Pomp&Clout. <br><br> Aesthetically, the video resembles a Renaissance painting come to life with a modern twist. While the video is in fact fully animated, it at times tricks the eye making the viewer question if it was shot practically. <br><br>I choreographed and performed the movement of every character in the video. The figures were then sequenced amongst hundreds of digital lights by animators Zuheng Yin and Chanyu Chen."
