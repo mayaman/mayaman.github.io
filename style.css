@@ -1,8 +1,18 @@
 body {
     background: white;
+    /* background-image: url(https://cutewallpaper.org/21/pastel-tumblr-backgrounds/88-880016background-photoshop-tumblr-pastel-blue-cloud-.jpg); */
+    /* background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bling-empire-1610666794.jpg); */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
     font-family: Helvetica, sans-serif;
     font-style: normal;
-    /* font-weight: bold; */
     font-size: 18px;
     line-height: 27px;
     letter-spacing: 0.02em;
@@ -10,6 +20,10 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+.special-background {
+    /* background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bling-empire-1610666794.jpg); */
 }
 
 h1,
@@ -37,6 +51,7 @@ body a:hover {
     box-sizing: border-box;
     padding: 18px 18px;
     min-height: 100vh;
+    /* background: white; */
 }
 
 .copy-container {
@@ -62,16 +77,19 @@ body a:hover {
 NAV
 ********************/
 .nav {
-    position: fixed;
+    /* position: fixed;
     top: 18px;
-    right: 18px;
+    right: 18px; */
     z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    margin: 9px 0px 36px 0px;
 }
 
 .nav-link {
     display: inline-block;
-    margin-left: 18px;
     position: relative;
+    text-decoration: underline;
 }
 
 .nav-link a {
@@ -117,21 +135,11 @@ INDEX
     display: flex;
     margin: 36px 0px;
     position: relative;
-    max-width: 50%;
-}
-
-.index-title {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 275px;
-    top: 50%;
-    transform: translate(0, -50%);
-    text-transform: uppercase;
+    max-width: 80%;
 }
 
 .index-image {
-    width: 200px;
+    width: 150px;
     max-width: 100%;
     height: auto;
     margin-right: 18px 0px 18px 0px;
@@ -142,6 +150,18 @@ INDEX
 
 .index-image:hover {
     border: 2px solid #ed1288;
+}
+
+.index-title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 /*******************
@@ -253,6 +273,7 @@ MOBILE
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
+    z-index: 99999999;
 }
 
 .marquee span {

@@ -434,7 +434,7 @@ let data = {
             "image": "computersunset.jpeg"
         },
         {
-            "title": "Led a virtual intro to p5.js workshop where we sketched what we dreamed with code",
+            "title": "Led a virtual workshop where we sketched our dreams with code",
             "link": "https://mailchi.mp/liganova/ozephqar0u",
             "image": "manifest.jpg"
         },
@@ -451,7 +451,7 @@ let data = {
             "image": "wordstoliveby.jpg"
         },
         {
-            "title": "Collage I made about the Internet from New York Times and Seventeen Magazine clippings",
+            "title": "Collage I made from NYT and Seventeen Magazine clippings",
             "link": "https://www.instagram.com/p/CCmljiNgB_L/",
             "image": "collage_internet.jpg"
         },
@@ -461,7 +461,7 @@ let data = {
             "image": "scrolling.jpg"
         },
         {
-            "title": "Are.na channel where I collect things I can not believe exist on the Internet",
+            "title": "Where I collect things I can not believe exist on the Internet",
             "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
             "image": "cannotbelieve.jpg"
         },
@@ -473,12 +473,12 @@ let data = {
             "path_webm": "bo.webm"
         },
         {
-            "title": "This is now hanging in my apartment! A dream collaboration between two A+ artists, get the poster at the link in the tweet",
+            "title": "This is now hanging in my apartment!",
             "link": "https://twitter.com/tchoi8/status/1120649482134278144",
             "image": "dwoc_taeyoon.jpg"
         },
         {
-            "title": "Interview with Artists + Machine Intelligence where I mention that my current state of mind is Chaos!",
+            "title": "Interview with Artists + Machine Intelligence",
             "link": "https://medium.com/artists-and-machine-intelligence/q-a-with-maya-man-35ccf653c920",
             "image": "chaos.jpg"
         },
@@ -488,14 +488,9 @@ let data = {
             "image": "pink.jpg"
         },
         {
-            "title": "Interview with The Limit Does Not Exist Podcast where I talk about making work for screens and online identity",
+            "title": "Interview where I talk about making work for screens and online identity",
             "link": "http://tldnepodcast.com/107",
             "image": "tldne1.jpg"
-        },
-        {
-            "title": "My younger sibling Chella is amazing and I will support everything he does forever",
-            "link": "https://twitter.com/chellamanart/status/1135380307430006785",
-            "image": "chellaman.jpg"
         }
     ],
     "otherArchive": [
@@ -513,6 +508,11 @@ let data = {
             "title": "Me and a giant cut out of my younger sibling Chella (who you should follow)",
             "link": "https://twitter.com/chellamanart/status/1136494650410377216",
             "image": "chella.jpg"
+        },
+        {
+            "title": "Chella is amazing and I will support everything he does forever",
+            "link": "https://twitter.com/chellamanart/status/1135380307430006785",
+            "image": "chellaman.jpg"
         }
     ]
 };

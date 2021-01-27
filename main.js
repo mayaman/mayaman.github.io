@@ -1,5 +1,5 @@
 // *~*~*~*~*~*~*~*~* varANTS *~*~*~*~*~*~*~*~* //
-var TITLE_SUFFIX = ' ~ Maya Man'
+var TITLE_SUFFIX = ' * MAYA MAN'
 
 // *~*~*~*~*~*~*~*~* VARIABLES *~*~*~*~*~*~*~*~* //
 var isMobile = isMobile();
@@ -147,7 +147,7 @@ function placeEntries() { // Causing spacing issues on mobile
             currentEntry.style.left = randomLeft + 'px';
         }
 
-        var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth));
+        var randomTop = Math.floor(Math.random() * (window.innerHeight - newWidth * 2));
         // var randomTop = Math.floor(Math.random() * (colInterval - offset));
 
         currentEntry.style.top = randomTop + 'px';
@@ -210,13 +210,12 @@ function initIndex() {
 
         entry.appendChild(imageLink);
 
-
         var link = document.createElement('a');
         link.href = '/' + projectPath + '/';
-        link.innerText = projectData.title;
+        link.innerHTML = projectData.title;
         link.classList.add('index-title');
-
         entry.appendChild(link);
+
         document.getElementById('project-list').appendChild(entry);
     }
 
@@ -430,7 +429,7 @@ function initProject(projectPath) {
 
 // *~*~*~*~*~*~*~*~* HELPER *~*~*~*~*~*~*~*~* //
 // var closeNavHTML = '<div class="nav-link"> <a href="javascript:closeBack()">MAIN</a> <a href="javascript:closeBack()">INDEX</a></div>';
-var closeNavHTML = '<div class="nav-link"> <a href="/">:-) !?!?!!</a> </div> <div class="nav-link"> <a href="/index/">INDEX</a> </div> <div class="nav-link"> <a href="/info/">INFO</a> </div>';
+var closeNavHTML = ' <div class="nav-link"> <a href="/index/">INDEX</a> </div> <div class="nav-link"> <a href="/">☆:*💞🌸!!💘🆒:-)👾🌼💖⛅️🌞<3🍇💌 ✿📓💓💟💭</a> </div> <div class="nav-link"> <a href="/info/">INFO</a> </div>';
 
 function addCloseNav(elt) {
     elt.innerHTML = closeNavHTML;
