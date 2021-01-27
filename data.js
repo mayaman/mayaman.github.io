@@ -420,6 +420,62 @@ let data = {
                 }
             ],
             "description": "A collection of open source, interactive web experiments designed to allude to the possibilities of using PoseNet (running on tensorflow.js) to create a relationship between movement and machine."
+        },
+        "mixlab": {
+            "title": "Mix Lab",
+            "link": {
+                "url": "https://mixlab.withgoogle.com/",
+                "text": "mixlab.withgoogle.com"
+            },
+            "mainImageIndices": [],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "path": "main.png",
+                    "alt": "MixLab's homepage that reads Hey Google, talk to MixLab"
+                },
+                {
+                    "path": "demo.gif",
+                    "alt": "Screengrab of the website prompting the visitor to click the mic and say something"
+                },
+                {
+                    "path": "listening.gif",
+                    "alt": "Two people sitting with a Google Home listening to it play music"
+                }
+            ],
+            "videos": [
+                {
+                    "platform": "youtube",
+                    "id": "rSc3VoXWMHc"
+                }
+            ],
+            "description": "MixLab is an experiment that makes it easier for anyone to create music, using simple voice commands. Just say things like 'Play me a funky bass,' or 'Add some jazz drums.' Or let MixLab surprise you by simply saying 'Play me something.' Try it on a Google Home by saying 'Hey Google, talk to MixLab,' or try it on the site."
+        },
+        "scannablesigns": {
+            "title": "Scannable Signs",
+            "link": {
+                "url": "https://scannablesigns.com/",
+                "text": "scannablesigns.com"
+            },
+            "mainImageIndices": [],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "path": "CreativeLab_ScannableSigns_01.gif",
+                    "alt": "Gif flipping through various signs"
+                },
+                {
+                    "path": "homepage.png",
+                    "alt": "Scannable Signs website homepage"
+                },
+                {
+                    "path": "sign.png",
+                    "alt": "Sign that says BUY ANTI RACIST BOOKS FROM BLACK OWNED BOOKSTORES"
+                }
+            ],
+            "videos": [
+            ],
+            "description": "Scannable Signs is a simple online tool that makes it easy to create QR-code signs for your business, cause, or community. It provides a quick, contactless way to collect orders, tips, or signatures – or a new way to make appointments, share a menu, or leave a review. The project launched on Experiments with Google’s <a target='_blank' href='https://experiments.withgoogle.com/hacktohelp'>Hack to Help</a> collection."
         }
     },
     "other": [
