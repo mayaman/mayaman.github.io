@@ -192,6 +192,29 @@ let data = {
             ],
             "description": "The video, which portrays a contemporary depiction of heaven, was directed by Saad Moosajee and produced by the Brooklyn-based creative studio, Pomp&Clout. <br><br> Aesthetically, the video resembles a Renaissance painting come to life with a modern twist. While the video is in fact fully animated, it at times tricks the eye making the viewer question if it was shot practically. <br><br>I choreographed and performed the movement of every character in the video. The figures were then sequenced amongst hundreds of digital lights by animators Zuheng Yin and Chanyu Chen."
         },
+        "madelinesnotes": {
+            "title": "madelinesnotes.cloud",
+            "link": {
+                "url": "https://madelinesnotes.cloud/",
+                "text": "madelinesnotes.cloud"
+            },
+            "mainImageIndices": [0],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "type": "video",
+                    "path_mp4": "preview.mp4",
+                    "alt": "Text boxes blurred out with clouds moving over a blue sky in the background."
+                },
+                {
+                    "path": "madelinesnotes.gif",
+                    "alt": "Horizontally scrolling through the site."
+                }
+            ],
+            "videos": [
+            ],
+            "description": "When Madeline Greenberg commissioned me to create a portrait of her based on personal data she'd collected across Apple, Google, Facebook, etc. I wasn't sure where to start... until I discovered every note she's typed into her Apple Notes app since 2017. <br><br> <a href='https://madelinesnotes.cloud/info/' target='_blank'>Read more...</a>"
+        },
         "underthetable": {
             "title": 'Under The Table Trio, Screen Recording 2020-10-20 at 4.47.45 PM',
             "link": {
