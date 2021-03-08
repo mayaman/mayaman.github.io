@@ -117,7 +117,7 @@ function initMain() {
 function placeEntries() { // Causing spacing issues on mobile
     var entries = document.getElementsByClassName('entry');
     var minWidth = 50;
-    var widthScale = 150;
+    var widthScale = 200;
 
     if (isMobile) {
         minWidth = 50;

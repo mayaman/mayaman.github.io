@@ -213,7 +213,7 @@ let data = {
             ],
             "videos": [
             ],
-            "description": "When Madeline Greenberg commissioned me to create a portrait of her based on personal data she'd collected across Apple, Google, Facebook, etc. I wasn't sure where to start... until I discovered every note she's typed into her Apple Notes app since 2017. <br><br> <a href='https://madelinesnotes.cloud/info/' target='_blank'>Read more...</a>"
+            "description": "When <a href='https://sites.google.com/brown.edu/face-the-data/home' target='_blank'>Madeline Greenberg</a> commissioned me to create a portrait of her based on personal data she'd collected across Apple, Google, Facebook, etc. I wasn't sure where to start... until I discovered every note she's typed into her Apple Notes app since 2017. <br><br> <a href='https://madelinesnotes.cloud/info/' target='_blank'>Read more...</a>"
         },
         "underthetable": {
             "title": 'Under The Table Trio, Screen Recording 2020-10-20 at 4.47.45 PM',
