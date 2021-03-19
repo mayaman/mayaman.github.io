@@ -3,11 +3,11 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "WATCH ME STARE AT MY COMPUTER SCREEN EVERY DAY OF 2020 * ",
-        "link": "https://www.instagram.com/p/CJeIPregmOU/",
+        "title": "CHECK OUT SOCIAL CODES ON FERAL FILE * ",
+        "link": "https://feralfile.com/exhibitions",
         "archive": [
             {
-                "title": "WATCH MY 2020 GLANCE BACK REEL !!! * ",
+                "title": "WATCH ME STARE AT MY COMPUTER SCREEN EVERY DAY OF 2020 * ",
                 "link": "https://www.instagram.com/p/CJeIPregmOU/",
             },
             {
