@@ -540,9 +540,9 @@ let data = {
             "image": "scrolling.jpg"
         },
         {
-            "title": "Where I collect things I can not believe exist on the Internet",
-            "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
-            "image": "cannotbelieve.jpg"
+            "title": "Collection of machines I think are pretty",
+            "link": "https://www.are.na/maya-man/pretty-machines",
+            "image": "pretty_machines.jpg"
         },
         {
             "title": "In class learning choreo I loooove by Bo Belza and Alice Wu",
@@ -562,17 +562,17 @@ let data = {
             "image": "chaos.jpg"
         },
         {
-            "title": "Pink saturated images that make me FEEL",
-            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
-            "image": "pink.jpg"
-        },
-        {
             "title": "Interview where I talk about making work for screens and online identity",
             "link": "http://tldnepodcast.com/107",
             "image": "tldne1.jpg"
         }
     ],
     "otherArchive": [
+        {
+            "title": "Pink saturated images that make me FEEL",
+            "link": "https://www.are.na/maya-man/pink-as-a-feeling",
+            "image": "pink.jpg"
+        },
         {
             "title": "Wearing the very special care over control hoodie by friend Taeyoon",
             "link": "https://www.instagram.com/p/B3xKv08FRT9/",
@@ -592,6 +592,11 @@ let data = {
             "title": "Chella is amazing and I will support everything he does forever",
             "link": "https://twitter.com/chellamanart/status/1135380307430006785",
             "image": "chellaman.jpg"
-        }
+        },
+        {
+            "title": "Where I collect things I can not believe exist on the Internet",
+            "link": "https://www.are.na/maya-man/can-not-believe-this-exists",
+            "image": "cannotbelieve.jpg"
+        },
     ]
 };
