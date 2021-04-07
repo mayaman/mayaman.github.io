@@ -65,13 +65,9 @@ let data = {
                 {
                     "url": "https://letscircleback.substack.com/p/circle-back-vol-2",
                     "title": "Circle Back"
-                },
-                {
-                    "url": "https://specialspecial.com/blogs/journal/showandtell14",
-                    "title": "Special Special Show and Tell"
-                },
+                }
             ],
-            "description": "You spend so much time staring at your computer... doesn't your computer deserve a chance to glance back at you? <br><br> Glance Back is a <a target='_blank' href='https://chrome.google.com/webstore/detail/glance-back/hgickafobcmcfffbjiamhhejkockfccm'>chrome extension</a> that acts as a daily photo diary, capturing the moments shared between you and your computer. Once a day, when you open a new tab, Glance Back will unexpectedly take your photo, ask you what you’re thinking about, and save both the photo and written thought to its locally stored archive. <br><br> Read more about the project and get the extension <a target='_blank' href='https://glanceback.info/'>here</a>."
+            "description": "You spend so much time staring at your computer... doesn't your computer deserve a chance to glance back at you? <br><br> Glance Back is a <a target='_blank' href='https://chrome.google.com/webstore/detail/glance-back/hgickafobcmcfffbjiamhhejkockfccm'>chrome extension</a> that acts as a daily photo diary, capturing the moments shared between you and your computer. Once a day, when you open a new tab, Glance Back will unexpectedly take your photo, ask you what you’re thinking about, and save both the photo and written thought to its locally stored archive. <br><br> Read more about the project and get the extension <a target='_blank' href='https://glanceback.info/'>here</a>. <br><br> Watch my 2020 Glance Back reel <a target='_blank' href='https://www.instagram.com/p/CJeIPregmOU/'>here</a>."
         },
         "bodymovementlanguage": {
             "title": "Body, Movement, Language: A.I. Sketches with Bill T. Jones",

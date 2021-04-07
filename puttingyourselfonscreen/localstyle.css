@@ -12,10 +12,15 @@ div.project {
     font-size: 24px;
     background: white;
     margin: 1em 0;
+    width: 75%;
     display: inline-block;
 }
 
 h1 {
     font-size: 2em;
     display: inline;
+}
+
+.project a {
+    font-style: italic;
 }
