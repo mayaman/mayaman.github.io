@@ -202,6 +202,40 @@ let data = {
             ],
             "description": "The video, which portrays a contemporary depiction of heaven, was directed by Saad Moosajee and produced by the Brooklyn-based creative studio, Pomp&Clout. <br><br> Aesthetically, the video resembles a Renaissance painting come to life with a modern twist. While the video is in fact fully animated, it at times tricks the eye making the viewer question if it was shot practically. <br><br>I choreographed and performed the movement of every character in the video. The figures were then sequenced amongst hundreds of digital lights by animators Zuheng Yin and Chanyu Chen."
         },
+        "intba": {
+            "title": 'Dance and choreography for Jack Symes\'s "I Need to Be Alone"',
+            "link": {
+                "url": "https://www.youtube.com/watch?v=rcqmpD4fbA4",
+                "text": "Watch on YouTube"
+            },
+            "mainImageIndices": [0],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "path": "01.jpeg",
+                    "alt": "Maya on a rooftop reaching toward the camera with both arms."
+                },
+                {
+                    "path": "02.jpeg",
+                    "alt": "Maya draped over Jack, both wearing red tshirts."
+                },
+                {
+                    "path": "03.jpeg",
+                    "alt": "Maya and Jack's faces very close together, staring down at a cell phone."
+                },
+                {
+                    "path": "04.jpeg",
+                    "alt": "Maya looking straight into the camera appearing very annoyed with the words layered I need to be alone over her face."
+                }
+            ],
+            "videos": [
+                {
+                    "platform": "youtube",
+                    "id": "rcqmpD4fbA4"
+                }
+            ],
+            "description": 'This is the official music video for "I Need to Be Alone" by Jack Symes. The song is off his album "Tompkins Park." <br><br> Starring Maya Man & Jack Symes <br> Written, Directed, Produced, Edited by Jeff Rutherford <br> Produced by Kyra Bailey <br> Director of Photography Jason Brownrigg <br> Gaffer Jay Warrior <br> Additional Editing and Sound by Ramzi Bashour <br> Colorist Patrick Devine'
+        },
         "madelinesnotes": {
             "title": "madelinesnotes.cloud",
             "link": {
