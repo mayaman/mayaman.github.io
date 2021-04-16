@@ -29,6 +29,49 @@ let data = {
         ]
     },
     "projects": {
+        "canigo": {
+            "title": "can I go where you go?",
+            "link": {
+                "url": "https://feralfile.com/artworks/can-i-go-where-you-go-zg5?fromExhibition=social-codes-pcl",
+                "text": "View the artwork on Feral File"
+            },
+            "mainImageIndices": [0],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "type": "video",
+                    "path_mp4": "canigo_clip.mp4",
+                    "alt": "A screen recording of the mouse moving maya's colored in form on screen."
+                },
+                {
+                    "path": "01.png",
+                    "alt": "A screenshot of Maya's piece featuring a tan background, video of her dancing, and pink, purple, mint, and dark blue outline for her body drawn on screen wherever the mouse moves"
+                },
+                {
+                    "path": "02.png",
+                    "alt": "A screenshot of Maya's piece featuring a tan background, video of her dancing, and pink, purple, mint, and dark blue outline for her body drawn on screen wherever the mouse moves"
+                },
+                {
+                    "path": "03.png",
+                    "alt": "A screenshot of Maya's piece featuring a tan background, video of her dancing, and pink, purple, mint, and dark blue outline for her body drawn on screen wherever the mouse moves"
+                }
+            ],
+            "press": [
+                {
+                    "url": "https://www.artnews.com/art-in-america/features/social-codes-casey-reas-community-generative-art-1234589396/",
+                    "title": "Art in America"
+                },
+                {
+                    "url": "https://news.artnet.com/market/galleries-give-green-light-nfts-artists-real-winners-1956422",
+                    "title": "artnet"
+                },
+                {
+                    "url": "https://bruces.medium.com/social-codes-at-feralfile-399840a43757",
+                    "title": "Bruce Sterling via Medium"
+                }
+            ],
+            "description": "<i>can I go where you go?</i> is included in Feral File's first exhibition <i>Social Codes</i>, curated by Casey Reas. <br><br> This piece is an attempt to connect with you (to you ?). <br><br> As you move your hand in space and your mouse on screen, I follow.We are moving, making, manifesting this image into existence together. <br><br> Over the past year, I've gradually felt more and more distant from you. <br><br> To fight this feeling, it helps me to tether myself to you and our shared context... even if right now, that means mostly only here, on screen."
+        },
         "glanceback": {
             "title": "Glance Back",
             "link": {
@@ -134,73 +177,6 @@ let data = {
                 }
             ],
             "description": "<span class='italics'>Body, Movement, Language</span> is a collection of experiments made at the intersection of art, technology, identity, and the body. The project resulted from a two-way residency between award-winning choreographer Bill T. Jones and the Google Creative Lab. <br><br>  Inspired by Jones' long history of intertwining improvised speech and dance, these experiments invite anyone to explore the possibilities of combining speech, movement, and machine learning while making new connections with Jones’ iconic work. Built using <a target='_blank' href='https://github.com/tensorflow/tfjs-models/tree/master/posenet'>PoseNet</a>, a machine learning model running in browsesr on Tensorflow.js, these experiences are accessible to anyone with a computer, webcam, and internet connection.<br><br>Visit the <a target='_blank' href='https://www.billtjonesai.com/'>website</a> to try the experiments for yourself and read more about the project on its <a target='_blank' href='https://experiments.withgoogle.com/billtjonesai'>Experiment page</a>."
-        },
-        "777": {
-            "title": 'Dance and choreography for JOJI\'s "777"',
-            "link": {
-                "url": "https://vimeo.com/472199853",
-                "text": "Watch on vimeo"
-            },
-            "mainImageIndices": [0],
-            "thumbnailImageIndex": 0,
-            "images": [
-                {
-                    "type": "video",
-                    "path_mp4": "777_sq_1.mp4",
-                    "alt": "Figure in a white suit stumbling backward on a stage with lots of otehr characters crawling after him."
-                },
-                {
-                    "type": "video",
-                    "path_mp4": "777_sq_4.mp4",
-                    "alt": "Figure in a white suit running toward the camera followed by a man sprouting angel wings."
-                },
-                {
-                    "type": "video",
-                    "path_mp4": "bts.mp4",
-                    "alt": "Showing the process starting with Maya sitting in a chair in a motion capture suit to a rendered angel sitting in a chair with wings on her back."
-                },
-                {
-                    "path": "still_1.png",
-                    "alt": "White man with a large skull mask standing in front of a table. 777 drawn in cursive script over top."
-                }
-            ],
-            "videos": [
-                {
-                    "platform": "vimeo",
-                    "id": "472199853"
-                },
-                {
-                    "platform": "vimeo",
-                    "id": "470406299"
-                }
-            ],
-            "press": [
-                {
-                    "url": "https://beforesandafters.com/?p=37482&preview=1&_ppp=6e8d1e7b93",
-                    "title": "befores & afters"
-                },
-                {
-                    "url": "https://www.nme.com/en_asia/news/watch-jojis-renaissance-painting-inspired-video-for-777-2802920",
-                    "title": "NME"
-                },
-                {
-                    "url": "https://www.cartoonbrew.com/cartoon-brew-pick/short-pick-of-the-day-777-by-saad-moosajee-198158.html",
-                    "title": "Cartoon Brew"
-                },
-                {
-                    "url": "https://shots.net/news/view/jojis-heavenly-digital-dancers",
-                    "title": "shots"
-                },
-                {
-                    "url": "https://tv.booooooom.com/2020/11/04/joji-777/",
-                    "title": "booooooom.com"
-                },
-                {
-                    "url": "https://directorsnotes.com/2020/12/07/saad-moosajee-777/",
-                    "title": "Director's Notes"
-                }
-            ],
-            "description": "The video, which portrays a contemporary depiction of heaven, was directed by Saad Moosajee and produced by the Brooklyn-based creative studio, Pomp&Clout. <br><br> Aesthetically, the video resembles a Renaissance painting come to life with a modern twist. While the video is in fact fully animated, it at times tricks the eye making the viewer question if it was shot practically. <br><br>I choreographed and performed the movement of every character in the video. The figures were then sequenced amongst hundreds of digital lights by animators Zuheng Yin and Chanyu Chen."
         },
         "intba": {
             "title": 'Dance and choreography for Jack Symes\'s "I Need to Be Alone"',
@@ -518,6 +494,73 @@ let data = {
             ],
             "description": "MixLab is an experiment that makes it easier for anyone to create music, using simple voice commands. Just say things like 'Play me a funky bass,' or 'Add some jazz drums.' Or let MixLab surprise you by simply saying 'Play me something.' Try it on a Google Home by saying 'Hey Google, talk to MixLab,' or try it on the site."
         },
+        "777": {
+            "title": 'Dance and choreography for JOJI\'s "777"',
+            "link": {
+                "url": "https://vimeo.com/472199853",
+                "text": "Watch on vimeo"
+            },
+            "mainImageIndices": [0],
+            "thumbnailImageIndex": 0,
+            "images": [
+                {
+                    "type": "video",
+                    "path_mp4": "777_sq_1.mp4",
+                    "alt": "Figure in a white suit stumbling backward on a stage with lots of otehr characters crawling after him."
+                },
+                {
+                    "type": "video",
+                    "path_mp4": "777_sq_4.mp4",
+                    "alt": "Figure in a white suit running toward the camera followed by a man sprouting angel wings."
+                },
+                {
+                    "type": "video",
+                    "path_mp4": "bts.mp4",
+                    "alt": "Showing the process starting with Maya sitting in a chair in a motion capture suit to a rendered angel sitting in a chair with wings on her back."
+                },
+                {
+                    "path": "still_1.png",
+                    "alt": "White man with a large skull mask standing in front of a table. 777 drawn in cursive script over top."
+                }
+            ],
+            "videos": [
+                {
+                    "platform": "vimeo",
+                    "id": "472199853"
+                },
+                {
+                    "platform": "vimeo",
+                    "id": "470406299"
+                }
+            ],
+            "press": [
+                {
+                    "url": "https://beforesandafters.com/?p=37482&preview=1&_ppp=6e8d1e7b93",
+                    "title": "befores & afters"
+                },
+                {
+                    "url": "https://www.nme.com/en_asia/news/watch-jojis-renaissance-painting-inspired-video-for-777-2802920",
+                    "title": "NME"
+                },
+                {
+                    "url": "https://www.cartoonbrew.com/cartoon-brew-pick/short-pick-of-the-day-777-by-saad-moosajee-198158.html",
+                    "title": "Cartoon Brew"
+                },
+                {
+                    "url": "https://shots.net/news/view/jojis-heavenly-digital-dancers",
+                    "title": "shots"
+                },
+                {
+                    "url": "https://tv.booooooom.com/2020/11/04/joji-777/",
+                    "title": "booooooom.com"
+                },
+                {
+                    "url": "https://directorsnotes.com/2020/12/07/saad-moosajee-777/",
+                    "title": "Director's Notes"
+                }
+            ],
+            "description": "The video, which portrays a contemporary depiction of heaven, was directed by Saad Moosajee and produced by the Brooklyn-based creative studio, Pomp&Clout. <br><br> Aesthetically, the video resembles a Renaissance painting come to life with a modern twist. While the video is in fact fully animated, it at times tricks the eye making the viewer question if it was shot practically. <br><br>I choreographed and performed the movement of every character in the video. The figures were then sequenced amongst hundreds of digital lights by animators Zuheng Yin and Chanyu Chen."
+        },
         "scannablesigns": {
             "title": "Scannable Signs",
             "link": {
@@ -547,19 +590,29 @@ let data = {
     },
     "other": [
         {
+            "title": "I'M CURRENTLY READING...",
+            "link": "https://www.akpress.org/pleasure-activism.html",
+            "image": "currentlyreading.jpg"
+        },
+        {
             "title": "Really trying to make sense of it",
             "link": "https://www.are.na/maya-man/making-sense-of-tiktok",
             "image": "makingsenseoftiktok.png"
         },
         {
+            "title": "Exhibition now live online for Power Station of Art Shanghai",
+            "link": "https://ecp2020-bluecables.powerstationofart.com/",
+            "image": "bluecables_chinese.jpeg"
+        },
+        {
+            "title": "Art in America feature  by Theadora Walsh peep my piece",
+            "link": "https://www.artnews.com/art-in-america/features/social-codes-casey-reas-community-generative-art-1234589396/",
+            "image": "artinamerica.jpeg"
+        },
+        {
             "title": "Every day I watch the sunset on my computer in quarantine",
             "link": "https://www.instagram.com/p/CGGYyczgXxe/",
             "image": "computersunset.jpeg"
-        },
-        {
-            "title": "Led a virtual workshop where we sketched our dreams with code",
-            "link": "https://mailchi.mp/liganova/ozephqar0u",
-            "image": "manifest.jpg"
         },
         {
             "title": "Special Special's show and tell that featured Glance Back",
@@ -604,14 +657,19 @@ let data = {
             "title": "Interview with Artists + Machine Intelligence",
             "link": "https://medium.com/artists-and-machine-intelligence/q-a-with-maya-man-35ccf653c920",
             "image": "chaos.jpg"
-        },
+        }
+    ],
+    "otherArchive": [
         {
             "title": "Interview where I talk about making work for screens and online identity",
             "link": "http://tldnepodcast.com/107",
             "image": "tldne1.jpg"
-        }
-    ],
-    "otherArchive": [
+        },
+        {
+            "title": "Led a virtual workshop where we sketched our dreams with code",
+            "link": "https://mailchi.mp/liganova/ozephqar0u",
+            "image": "manifest.jpg"
+        },
         {
             "title": "Pink saturated images that make me FEEL",
             "link": "https://www.are.na/maya-man/pink-as-a-feeling",
