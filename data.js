@@ -3,9 +3,13 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "CHECK OUT SOCIAL CODES ON FERAL FILE * ",
-        "link": "https://feralfile.com/exhibitions",
+        "title": "INTERVIEW WITH KILLSCREEN * ",
+        "link": "https://killscreen.com/maya-man/",
         "archive": [
+            {
+                "title": "CHECK OUT SOCIAL CODES ON FERAL FILE * ",
+                "link": "https://feralfile.com/exhibitions",
+            },
             {
                 "title": "WATCH ME STARE AT MY COMPUTER SCREEN EVERY DAY OF 2020 * ",
                 "link": "https://www.instagram.com/p/CJeIPregmOU/",
