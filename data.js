@@ -3,9 +3,13 @@ let data = {
         "heavypink": "#ed1288",
     },
     "announcement": {
-        "title": "INTERVIEW WITH KILLSCREEN * ",
-        "link": "https://killscreen.com/maya-man/",
+        "title": "THE MODEL MINORITY IS A MYTH! CALL (412) 256-8055 FOR TRUTH * ",
+        "link": "https://twitter.com/mayaonthenet/status/1399024055810940932",
         "archive": [
+            {
+                "title": "INTERVIEW WITH KILLSCREEN * ",
+                "link": "https://killscreen.com/maya-man/",
+            },
             {
                 "title": "CHECK OUT SOCIAL CODES ON FERAL FILE * ",
                 "link": "https://feralfile.com/exhibitions",

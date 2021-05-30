@@ -353,3 +353,8 @@ button:hover {
 ::selection {
     background: #ed1288;
 }
+
+.ms-style .ms-style-override {
+    color: hotpink;
+    font-family: 'Times New Roman', Times, serif;
+}
